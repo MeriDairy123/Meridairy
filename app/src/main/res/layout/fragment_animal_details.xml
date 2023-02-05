@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300sp"
+                android:background="@color/colorBlack"
+                android:layout_margin="@dimen/_5sdp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/circle_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    app:centered="true"
+                    app:fillColor="@color/colorPrimary"
+                    app:snap="false" />
+            </RelativeLayout>
+
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textStyle="bold"
+                android:background="@android:color/transparent"
+                android:text="123444"
+                android:textColor="@color/color_blue"
+                android:textSize="@dimen/_16sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="1245789009"
+                    android:autoLink="phone"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:drawableTint="@color/colorPrimary"
+                    android:padding="@dimen/_5sdp"
+                    android:drawableLeft="@android:drawable/stat_sys_phone_call"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorDarkOrange"
+                    android:textSize="@dimen/_14sdp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutVideo"
+                android:layout_marginRight="@dimen/_10sdp"
+
+                android:layout_gravity="right">
+
+                <VideoView
+                    android:id="@+id/animal_video"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp" />
+
+                <ImageView
+                    android:id="@+id/btn_video_icon"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_play_video" />
+
+            </RelativeLayout>
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                android:id="@+id/details_textView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/dark_gray"
+                android:textStyle="bold"
+                android:gravity="start|center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/Description"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <LinearLayout
+                android:id="@+id/first_detail_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/unique_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/ID"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvId"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="3746"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorDarkOrange"
+                    android:textSize="@dimen/_13sdp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/gender_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/Gender"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvGender"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/category_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/Category"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvCategory"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="Cow"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/breed_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/Breed"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvBreed"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="Sahiwal Graded"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/age_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/Age"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvAge"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="4 Years"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/castration_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/castration_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/Castration"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvCastration"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="4 Years"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/milking_status_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/milkStatus_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/MilkingStatus"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvMilkStatus"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="5.1 foot"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/peak_yeild_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/yield_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/PeakMilkYield"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvYeild"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="14 Liters"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lactation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/lactation_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/LactationNo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvLactation"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="2"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/last_calving_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/last_calving_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/LastCalvingOccured"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvLast_calving"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="2"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inter_calving_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/inter_calving_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/Inter_CalvingPeriod"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvInter_calving"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="2"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pregnant_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/pregnant_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/Is_pregnant"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvIsPregnant"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="4 Month"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_calf_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/calf_gender_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/Gender_of_calf_at_foot"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvCalf_gender"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="@string/Address"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/tvAddress"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="Jaipur"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/description_textView_key"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="@string/Description"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_13sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:id="@+id/tvDescription"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="0.5"
+                    android:text="Cow"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                android:id="@+id/btn_more_details"
+                android:layout_width="wrap_content"
+                android:layout_height="30sp"
+                android:layout_gravity="right"
+                android:text="@string/MORE_DETAILS"
+                android:textAllCaps="true"
+                android:textColor="@color/color_Green"
+                android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/more_details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:orientation="vertical">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/dark_gray"
+                    android:textStyle="bold"
+                    android:gravity="start|center_vertical"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/Vaccination"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/fmd_vaccination_key"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="@string/FMD_Vaccination_done"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_fmd_vaccination_value"
+                        android:layout_width="0sp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.25"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/ic_checked"
+                       />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_fmd_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/fmd_vaccination_period"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="@string/FMD_Vaccination_period"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/fmd_vaccination_period_value"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="1245789009"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/hs_vaccination_key"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="@string/H_S_Vaccination_done"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_hs_vaccination_value"
+                        android:layout_width="0sp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.25"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/ic_checked"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_hs_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/hs_vaccination_period"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="HS Vaccination Period"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/hs_vaccination_period_value"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="1245789009"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/black_quarter_vaccination_key"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="@string/BlackQuarter_VaccinationDone"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_black_quarter_vaccination_value"
+                        android:layout_width="0sp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.25"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/ic_checked"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_quarter_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/black_quarter_vaccination_period"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="Black Quarter Vaccination Period"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/black_quarter_vaccination_period_value"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="1245789009"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/brucellousis_vaccination_key"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="@string/Brucellousis_VaccinationatCalf_Foot"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_brucellousis_vaccination_value"
+                        android:layout_width="0sp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.25"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/ic_checked"
+                       />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_brucellousis_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/brucellousis_vaccination_period"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="Brucellousis Vaccination Period"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/brucellousis_vaccination_period_value"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="1245789009"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="@string/Deworming_done"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_deworming_value"
+                        android:layout_width="0sp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.25"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/ic_close"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_deworming_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="@string/DewormingPeriod"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                        android:id="@+id/deworming_value_period"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:text="1245789009"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

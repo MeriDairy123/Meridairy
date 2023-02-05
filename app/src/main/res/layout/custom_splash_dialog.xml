@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/border_shape_rectangle_green"
+    android:orientation="vertical">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/splash_dialog_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="5dp"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/_5sdp"
+
+        android:text="@string/you_are_not_connected_to_internet"
+        android:textColor="@color/color_darkGray"
+        android:textSize="@dimen/_15sdp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/colorWhite">
+
+        <Button
+
+            android:id="@+id/splash_btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_alignParentLeft="true"
+
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="30dp"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_shape_green"
+            android:text="yes"
+            android:textColor="@color/colorWhite" />
+
+
+        <Button
+
+            android:id="@+id/splash_btn_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_shape_global"
+            android:text="no"
+            android:textColor="@color/colorWhite" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorWhite" />
+</LinearLayout>

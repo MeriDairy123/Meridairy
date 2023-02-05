@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1015774512917",
+    "firebase_url": "https://meridairy-25d2d.firebaseio.com",
+    "project_id": "meridairy-25d2d",
+    "storage_bucket": "meridairy-25d2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015774512917:android:cd30dfd4a356e2b1",
+        "android_client_info": {
+          "package_name": "b2infosoft.milkapp.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015774512917-emeov2usqofqn90hcbhnjoepmic86g1k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "b2infosoft.milkapp.com",
+            "certificate_hash": "67653cba5001d983c42acdedd4174c7b913ffb13"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN_ASUyjoCYdPQ-0WChTdXFwTXOqcpkXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

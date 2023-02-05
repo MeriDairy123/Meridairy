@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <EditText
+                    android:id="@+id/etProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/Product_Name"
+                    android:inputType="textCapWords"
+                    android:text=""
+                    android:textSize="@dimen/_16sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_bottom_light_gray" />
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <EditText
+                    android:id="@+id/etRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/Rate"
+                    android:inputType="numberDecimal"
+                    android:text=""
+                    android:textSize="@dimen/_16sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_bottom_light_gray" />
+
+            <Button
+                android:id="@+id/btnAddProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_password"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/btn_shape_global"
+                android:text="@string/Add_Product"
+                android:textAlignment="center"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/textbox_rectangle_background_shape"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:background="@drawable/search_icon" />
+
+            <EditText
+                android:id="@+id/et_Search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="@string/Search_Here"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:text="@string/Item"
+
+                android:textColor="@color/colorWhite" />
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="@string/Amount"
+
+                android:textColor="@color/colorWhite" />
+
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pullToRefresh"
+            android:padding="@dimen/_2sdp"
+            android:background="@color/color_darkGray"
+            android:layout_margin="@dimen/_5sdp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_user_productList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <!-- </ScrollView>-->
+</LinearLayout>

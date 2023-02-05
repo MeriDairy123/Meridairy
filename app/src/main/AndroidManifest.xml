@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="b2infosoft.milkapp.com">
+
+    <queries>
+        <package android:name="com.whatsapp.w4b" />
+    </queries>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.MANAGE_INTERNAL_STORAGE" />
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <queries>
+        <!-- Explicit apps you know in advance about: -->
+        <package android:name="com.whatsapp" />
+        <package android:name="com.b2infosof.meridairysms" />
+    </queries>
+
+    <application
+        android:name=".useful.MyApp"
+        android:allowBackup="true"
+        android:exported="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.WhatsappSettingSale"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".activity.PdfActivtiy"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".activity.WhatsappSetting"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value=""/>
+        </activity>
+
+        <receiver
+            android:name=".useful.ConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".Notification.MyFirebaseMsgService"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT"
+                    android:stopWithTask="false" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".BluetoothPrinter.SerialService"
+            tools:ignore="Instantiatable" />
+
+        <receiver
+            android:name=".useful.SMSReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_location_key1" />
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.WEB_SEARCH" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.ActivitySelectUserType"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginViaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Dairy.MainActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.TermsConditionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QRCodeScanner.QrScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.LoginWithPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.PinCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Dairy.Help_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Dairy.DairyUserProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Dairy.Customer.AllCustomerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BuyPlan.SMSPlan_activity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Payment_Status_activity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.Banner_activity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Advertisement.UploadAdsActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AnimalTheme" />
+        <activity
+            android:name=".Advertisement.ImagePickerAcitvity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ShareAds_Animal.SearchPlaceActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AnimalTheme" />
+        <activity
+            android:name=".ShareAds_Animal.Animal_AdsActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AnimalTheme" />
+        <activity
+            android:name=".ShareAds_Animal.VideoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AnimalTheme" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Dairy.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Dairy.Notification_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerTheme" />
+        <activity
+            android:name=".customer_app.customer_actvities.CustomerRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".customer_app.BuyerCustomer.CustomerBuyerDairyListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".customer_app.BuyerCustomer.CustomerBuyerMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".customer_app.customer_actvities.AddCustomerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Notification.SellerNotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DeliveryBoy.DeliveryBoyMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DeliveryBoyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".DeliveryBoy.MapMarkerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DeliveryBoyTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".customer_app.customer_actvities.CustomerDeshBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".customer_app.customer_actvities.SellerProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".customer_app.customer_actvities.EditSellerProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerTheme" />
+        <activity
+            android:name=".customer_app.customer_actvities.CustomerTransactionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer_app.customer_actvities.CustomerTransactionDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer_app.customer_actvities.MilkEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer_app.customer_actvities.MilkEntryDateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer_app.customer_actvities.ProductListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer_app.customer_actvities.BuySaleProductDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer_app.customer_actvities.CustomerDairyListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer_app.customer_actvities.CustomerUserGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".customer_app.customer_actvities.CustomerDairyListWithBoxActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

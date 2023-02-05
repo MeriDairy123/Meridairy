@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingBottom="20dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@color/color_bg"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_userNamePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:hint="@string/Phone_Number"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:letterSpacing="0.9"
+                    android:maxLength="10"
+                    android:minHeight="40dp"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/layout_otp"
+            layout="@layout/layout_register_otp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/layout_details"
+            layout="@layout/layout_register_details"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontButton
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_password"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_shape_global"
+            android:fontFamily="@font/roboto_regular"
+            android:foreground="@drawable/ripple"
+            android:text="@string/LOGIN"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvResendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_shape_green"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/resendOtp"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutBtn"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+
+            android:weightSum="1">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:id="@+id/tvLoginwithPassword"
+                android:minHeight="30dp"
+                android:background="@drawable/btn_shape_green"
+                android:clickable="false"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="5dp"
+                android:text="@string/LoginWithPpassword"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="9sp"
+                android:textStyle="normal" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvQrCodeLogin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:minHeight="30dp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/roboto_regular"
+
+
+                android:background="@drawable/btn_shape_orange"
+                android:clickable="false"
+                android:drawableRight="@drawable/ic_qr_code"
+                android:gravity="center"
+
+                android:padding="5dp"
+                android:text="@string/login_using_qr_code"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="9sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

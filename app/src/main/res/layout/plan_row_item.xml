@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:elevation="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:padding="5dp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/checkBox"
+            android:inputType="text"
+            android:text="MyPlan"
+
+            android:textColor="@color/color_darkGray"
+            android:textSize="@dimen/_10dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:layout_below="@id/title"
+        android:background="@color/color_list_gray" />
+
+</LinearLayout>

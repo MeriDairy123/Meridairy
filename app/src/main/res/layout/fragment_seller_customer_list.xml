@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    android:background="@color/color_bg"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/layout_toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/textbox_rectangle_background_shape"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/search_icon" />
+
+        <EditText
+            android:id="@+id/et_Seller_Search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/Search_Here"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/customer_list_header_row_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_sellerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

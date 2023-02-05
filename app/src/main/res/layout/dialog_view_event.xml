@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/layout_border"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_darkGray"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:padding="5dp"
+
+            android:singleLine="true"
+            android:text="@string/ViewEventDetais"
+            android:textColor="@color/colorWhite"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/imgClosed"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_failure" />
+
+    </RelativeLayout>
+
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tv_emty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:minHeight="150dp"
+        android:text="@string/NoEventAvailable"
+        android:textColor="@color/colorDarkOrange"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:elevation="3dp"
+        android:padding="5dp" />
+
+</LinearLayout>

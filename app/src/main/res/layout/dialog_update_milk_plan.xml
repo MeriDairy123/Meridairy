@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CustomerTheme"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/layout_border"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/CustomerTheme"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/UPDATE"
+            android:textColor="@color/colorWhite"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/imgClosed"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_failure" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+
+            android:text="MyPlan"
+            android:textSize="@dimen/_15sdp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBlack" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvShift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp"
+
+            android:text="Shift:Morning"
+            android:textAllCaps="true"
+            android:textColor="@color/dark_gray"
+            android:textSize="12sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="true"
+            android:text="@string/PlanStatus"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:tooltipText="@string/UPDATE"
+            android:weightSum="1">
+
+            <RadioButton
+                android:id="@+id/rdbEnable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="@color/colorBlack"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/On"
+                android:textAllCaps="true"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rdbDisable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:buttonTint="@color/colorPrimary"
+
+                android:textAllCaps="true"
+                android:textColor="@color/colorBlack"
+
+                android:text="@string/off"
+                android:textSize="12sp" />
+        </RadioGroup>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:theme="@style/CustomerTheme"
+            android:textColorHint="@color/colorGray"
+            android:hint="@string/Rs_Per_ltr">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediMilkPrice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColorHint="@color/colorGray"
+
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:enabled="false"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/colorGray"
+            android:theme="@style/CustomerTheme"
+            android:hint="@string/Weight">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediMilkWeight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorGray"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+
+
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_shape_global"
+            android:text="@string/Submit"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+</LinearLayout>

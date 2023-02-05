@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/color_darkGray"
+    android:elevation="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:padding="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:visibility="gone"/>
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="2sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/tvPrice"
+            android:layout_toRightOf="@id/imgProduct"
+            
+            android:maxLength="30"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="@string/Item"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            
+            android:padding="5dp"
+            android:text="@string/Price"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvProductWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvItem"
+            android:layout_marginLeft="2sp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imgProduct"
+            
+            android:maxLength="30"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="@string/Weight"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvProductQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProductWeight"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/imgProduct"
+            
+            android:maxLength="30"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="Qty 0"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/imgMoreDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPrice"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2sp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="2sp"
+            app:srcCompat="@drawable/ic_three_dot"
+
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.005sp"
+        android:background="@color/color_list_gray"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+            android:id="@+id/tvItem"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/Fat"
+            android:textAlignment="center" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/Rate"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/colorAccent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRateList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

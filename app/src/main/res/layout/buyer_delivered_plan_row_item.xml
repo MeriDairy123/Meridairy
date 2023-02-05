@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    android:elevation="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_7sdp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:inputType="text"
+            android:text="@string/MyPlan"
+            android:textStyle="bold"
+            android:textColor="@color/color_blue"
+            android:textSize="@dimen/_13sdp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/tvTitle"
+            android:fontFamily="@font/roboto_regular"
+            android:inputType="text"
+            android:text="Weight: 20"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/color_darkGray"
+            android:textSize="@dimen/_11sdp" />
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/roboto_regular"
+            android:inputType="text"
+            android:text="Price:300"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/_11sdp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@id/title"
+        android:background="@color/colorLightGray" />
+
+</LinearLayout>

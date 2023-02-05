@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_1sdp"
+    android:background="@color/color_payt_bg">
+
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite"
+        android:elevation="5dp">
+
+
+        <LinearLayout
+            android:id="@+id/LLHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <ImageView
+                android:id="@+id/prof_img"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="start|center_vertical"
+                android:background="@drawable/ic_user_id"
+                android:backgroundTint="@color/colorWhite"
+                android:padding="2dp"
+                android:visibility="gone" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tv_NavUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:gravity="top"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/Meri_Dairy"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:fontName="Roboto_Bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_header_container"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_payt_bg"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/drawerList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvAppVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@color/colorDarkOrange"
+                android:gravity="center"
+                android:minWidth="@dimen/_100sdp"
+                android:padding="5dp"
+                android:text="APP Version 4.5"
+                android:textColor="@color/color_light_white"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

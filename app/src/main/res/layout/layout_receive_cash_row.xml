@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:orientation="horizontal">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+        android:id="@+id/tvID"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginRight="2dp"
+        android:layout_weight="0.5"
+        android:gravity="center_vertical"
+        android:text="101"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="@string/Meri_Dairy"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+        android:id="@+id/tvTotalWeight"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginLeft="3dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="24"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="1780"
+        android:textAlignment="center"
+
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+    <ImageView
+        android:id="@+id/imgMoreDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:layout_marginRight="2dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="end|center_vertical"
+        app:srcCompat="@drawable/ic_three_dot"
+        />
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+        android:id="@+id/tvPay"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="4dp"
+        android:layout_weight="0.51"
+        android:visibility="gone"
+        android:background="@color/colorBtnRed"
+        android:gravity="center_vertical"
+        android:text="@string/Pay"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite" />
+
+</LinearLayout>

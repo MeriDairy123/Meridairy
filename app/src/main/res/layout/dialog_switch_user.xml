@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_270sdp"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/Meri_Dairy"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_16sdp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:id="@+id/tvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableRight="@drawable/ic_login_dairy"
+        android:gravity="center"
+        android:inputType="text"
+        android:padding="@dimen/_5sdp"
+        android:singleLine="true"
+        android:text="@string/LOGIN"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/color_bottom_light_gray"
+        android:textSize="@dimen/_15sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/color_bottom_light_gray" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:id="@+id/tvDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@android:color/transparent"
+
+        android:drawableRight="@drawable/ic_delete"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/Delete"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_15sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:background="@color/color_bottom_light_gray" />
+</LinearLayout>

@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/change_language"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinLang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:dropDownSelector="@color/color_blue"
+                    android:entries="@array/language"
+                    android:minHeight="45dp"
+                    android:textColor="@color/colorWhite" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_light_white" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:drawableRight="@drawable/ic_printer_recipt"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="@string/bluetooth_printer"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.01dp"
+                        android:background="@color/color_bottom_light_gray" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swichPrint_Reciept"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="start"
+                        android:minHeight="40dp"
+                        android:padding="5dp"
+                        android:text="@string/print_reciept"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        android:theme="@style/MySwitch" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.01dp"
+                        android:background="@color/color_bottom_light_gray" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swichPrintinAll_lang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="start"
+                        android:minHeight="40dp"
+                        android:padding="5dp"
+                        android:text="@string/PrintMulTilanguage"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        android:theme="@style/MySwitch" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.01dp"
+                        android:background="@color/color_light_white" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_gravity="start"
+                        android:drawablePadding="@dimen/_10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="start"
+                        android:drawableRight="@drawable/ic_settings"
+                        android:minHeight="@dimen/_40sdp"
+                        android:text="@string/machine_setting"
+                        android:textAlignment="textStart"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.01dp"
+                        android:background="@color/color_bottom_light_gray" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchMachine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="start"
+                        android:minHeight="40dp"
+                        android:padding="5dp"
+                        android:text="@string/automatic"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        android:theme="@style/MySwitch" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.01dp"
+                        android:background="@color/color_bottom_light_gray" />
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/lvChangeMachine"
+                       android:paddingVertical="@dimen/_10dp"
+                       android:layout_marginEnd="@dimen/_10dp"
+                       android:layout_marginStart="@dimen/_10dp"
+                       android:minHeight="@dimen/_40sdp"
+                       android:weightSum="1"
+                       android:orientation="horizontal">
+                       <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="0.5"
+                           android:layout_gravity="center_vertical"
+                           android:gravity="start"
+
+                           android:text="@string/change_machine"
+                           android:textAlignment="textStart"
+                           android:textColor="@color/colorWhite"
+                           android:textSize="13sp" />
+                       <b2infosoft.milkapp.com.useful.CustomFontTextView
+                           android:id="@+id/tvMachineName"
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="0.5"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginStart="@dimen/_10dp"
+                           android:gravity="end"
+                           android:text=""
+                           android:textStyle="bold"
+                           android:textAlignment="textEnd"
+                           android:textColor="@color/colorWhite"
+                           android:textSize="13sp" />
+                   </LinearLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tvLabelPrintTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical|start"
+                        android:minHeight="40dp"
+                        android:padding="5dp"
+                        android:text="@string/print_reciept_title_font_size"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imgMinus"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center_vertical"
+                            app:srcCompat="@drawable/ic_minus" />
+
+                        <b2infosoft.milkapp.com.useful.CustomFontTextView
+                            android:id="@+id/tvValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:minWidth="@dimen/_20sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:singleLine="true"
+                            android:text="20"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/imgAdd1"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center_vertical"
+                            app:srcCompat="@drawable/ic_plus" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewPrintLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.01dp"
+                        android:layout_below="@+id/tvLabelPrintTitle"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/color_bottom_light_gray" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tvLabelPrintBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/viewPrintLine"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical|start"
+                        android:minHeight="40dp"
+                        android:padding="5dp"
+
+                        android:text="@string/print_receipt_message_font_size"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/viewPrintLine"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imgMinus2"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center_vertical"
+                            app:srcCompat="@drawable/ic_minus" />
+
+                        <b2infosoft.milkapp.com.useful.CustomFontTextView
+                            android:id="@+id/tvValue2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:minWidth="@dimen/_20sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:singleLine="true"
+                            android:text="18"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/imgAdd2"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center_vertical"
+                            app:srcCompat="@drawable/ic_plus" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_light_white" />
+
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvMessageSettig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@drawable/ic_settings"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+
+                    android:text="@string/message_setting"
+
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="7dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:weightSum="10"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/greatting_text"
+                        android:textColorHint="#CBCED8"
+                        android:textSize="14sp"
+                        android:hint="Enter you message"
+                        android:textColor="@color/white"
+                        android:layout_weight="7.5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <Button
+                        android:padding="5dp"
+                        android:layout_weight="2.5"
+                        android:id="@+id/btnSaveStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/btn_shape_global"
+                        android:text="Save Status"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13sp"
+                       />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+                <RelativeLayout
+                    android:id="@+id/layout_SimSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="5dp"
+                    android:orientation="horizontal">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tv_sim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/ic_sim"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/colorWhite"
+
+                        android:gravity="center"
+                        android:text="@string/sim"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tv_web"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_sim"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:buttonTint="@color/colorWhite"
+                        android:drawableLeft="@drawable/ic_web"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/colorWhite"
+
+                        android:gravity="center"
+                        android:text="@string/web"
+                        android:textColor="@color/colorWhite"
+
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tv_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+
+                        android:text="@string/off"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_sms_status"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical|right"
+                        android:background="@color/colorWhite"
+                        android:padding="2dp"
+                        app:srcCompat="@drawable/ic_right_tick" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchWhatsAppMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="start"
+                    android:minHeight="40dp"
+                    android:padding="5dp"
+                    android:text="@string/whatsApp_message"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_light_white" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvMilkBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:minHeight="50dp"
+                    android:text="@string/screen"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgBuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+
+                    android:weightSum="1">
+
+                    <RadioButton
+                        android:id="@+id/rdBuyGeneral"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:checked="true"
+                        android:text="@string/general"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/rdBuyCustom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/advance"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_light_white" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvMilkSale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+
+                    android:text="@string/screen"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgSale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+
+                    android:weightSum="1">
+
+                    <RadioButton
+                        android:id="@+id/rdSaleGeneral"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:checked="true"
+                        android:text="@string/general"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdSaleCustom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/advance"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_light_white" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchAutoFat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="@string/Fat_SNF"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:theme="@style/MySwitch" />
+
+                <LinearLayout
+                    android:id="@+id/layoutCowBuff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="5dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:weightSum="1">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:hint="@string/Cow"
+                            app:hintTextColor="@color/colorGray">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ediFatCow"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:autofillHints=""
+                                android:inputType="numberDecimal"
+                                android:maxLength="4"
+                                android:padding="12dp"
+                                android:text=""
+                                android:textSize="12sp"
+                                app:hintTextColor="@color/colorGray" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_weight="0.5"
+                            android:hint="@string/Buff"
+                            app:hintTextColor="@color/colorGray">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ediFatBuffalo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:autofillHints=""
+                                android:inputType="numberDecimal"
+                                android:maxLength="4"
+                                android:padding="12dp"
+                                android:text=""
+                                android:textSize="12sp"
+                                app:hintTextColor="@color/colorGray" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <b2infosoft.milkapp.com.useful.CustomFontButton
+                        android:id="@+id/btnUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_shape_global"
+                        android:text="@string/UPDATE" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_light_white" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:text="@string/other"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichSendTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="@string/WeeklyTotal"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichSellerBhugtan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="@string/SELLER_BHUGTAN"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichRate_kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+
+                    android:padding="15dp"
+                    android:text="@string/Rate_Per_KG"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichfat_kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="@string/Fat_Rat"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichSNF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="@string/SNF"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichBonus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="@string/Bonus"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

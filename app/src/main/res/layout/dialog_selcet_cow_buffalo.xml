@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_gravity="center"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="45dp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/select"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_19sdp" />
+
+        <ImageView
+            android:id="@+id/imgClosed"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+
+            android:padding="2dp"
+
+            app:srcCompat="@drawable/ic_failure" />
+    </RelativeLayout>
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tv_Cow"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@drawable/ic_cow"
+
+        android:drawableRight="@drawable/ic_rignt_arrow"
+        android:drawablePadding="20dp"
+        android:gravity="left|center_vertical"
+        android:paddingRight="5dp"
+        android:text="@string/Cow"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_21sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/color_list_gray" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tv_Buffalo"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@drawable/ic_buffalo"
+        android:drawableRight="@drawable/ic_rignt_arrow"
+
+        android:drawablePadding="20dp"
+        android:gravity="left|center_vertical"
+        android:text="@string/Buff"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_21sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/color_bg_dialoglight" />
+</LinearLayout>

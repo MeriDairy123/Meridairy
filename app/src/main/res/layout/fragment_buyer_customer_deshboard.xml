@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutmilkStatus"
+
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/layout_toolbar"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@color/colorWhite" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_60sdp"
+                    android:orientation="vertical">
+
+                    <com.applandeo.materialcalendarview.CalendarView
+                        android:id="@+id/calendarView"
+                        style="@style/AppTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:eventsEnabled="true"
+                        app:headerColor="@color/color_darkGray"
+                        app:todayLabelColor="@color/colorDarkOrange"
+                        app:type="classic" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:id="@+id/layoutmilkStatus"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_40sdp"
+            android:alpha="0.3"
+            android:background="@drawable/layout_border"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutStatus"
+        android:background="@color/transparent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_dot_green"
+
+            android:text="Delivery"
+            android:textColor="@color/color_Green" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_dot_blue"
+            android:text="Upcoming"
+            android:textColor="#3498DB" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_dot_red"
+            android:text="@string/Vacation"
+            android:textColor="@color/colorRed" />
+
+    </LinearLayout>
+
+    <b2infosoft.milkapp.com.useful.CustomFontButton
+        android:id="@+id/btnVacation"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_gravity="right"
+        android:layout_below="@+id/layoutStatus"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_shape_global"
+        android:foreground="@drawable/ripple"
+        android:inputType="text"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/Vacation"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_12sdp"
+        android:tooltipText="@string/Vacation"
+        app:rippleColor="@color/colorWhite" />
+    </RelativeLayout>
+</RelativeLayout>

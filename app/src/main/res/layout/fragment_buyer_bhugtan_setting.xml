@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+
+                    <RadioGroup
+                        android:id="@+id/rgSellerList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_smallList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:checked="true"
+                            android:text="10 Days Listing"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_midList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="15 Days Listing"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_largeList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="1 Month Listing"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_15sdp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/color_light_white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tvMilkBuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:text="Font Size"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <RadioGroup
+                        android:id="@+id/rgFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rdLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Large"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rdSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="Small"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_light_white" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:text="@string/other"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchShoFat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="Show  Fat"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchShowSNF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="Show Snf"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_clr_kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="Show Clr"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_Rat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="Show Rate"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

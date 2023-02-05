@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom2"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/textbox_rectangle_background_shape"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actv_CustomerID"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/transparent"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/ID"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp" />
+
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/user_id_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/textbox_rectangle_backgroundsolid_shape">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvFathername"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+
+                    android:backgroundTint="@android:color/transparent"
+
+                    android:gravity="center"
+                    android:hint="@string/User_all_info"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+         <include
+             layout="@layout/layout_date_from_to"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:minHeight="35dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:text="@string/Date"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvVouchType"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.8"
+
+
+
+                android:text="@string/paymentType"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvVoucherNo"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.7"
+                android:gravity="center"
+
+                android:text="@string/vNo"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvDebit"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+
+
+                android:text="@string/DEBIT"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvCredit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:text="@string/Cradit"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:background="@color/color_bg"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+         android:layout_above="@+id/bootomLayout"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:background="@color/colorSubheader"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvTotalCredit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+
+
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvPaidAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+
+
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvRemaningAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+
+
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bootomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_bg"
+        android:layout_marginBottom="10dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnViewEntry"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_shape_orange"
+            android:gravity="center"
+            android:text="@string/viewEntry"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnPaynow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:background="@drawable/btn_shape_green"
+            android:gravity="center"
+            android:text="@string/Pay"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnCashReceive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_redcolor_shape"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="@string/recieve"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

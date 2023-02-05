@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:navigationIcon="@drawable/back_arrow"
+            app:titleTextColor="@color/colorWhite">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@android:drawable/editbox_background"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawableRight="@drawable/ic_arrow_drop_down"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/colorRed"
+
+
+                android:gravity="center_vertical"
+                android:hint="@string/Please_Select_State"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorRed"
+                android:textColorHint="@color/colorBlack"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/pullToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/colorWhite"
+                android:padding="@dimen/_5sdp" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/dark_gray"
+            android:fontFamily="@string/Poppins_Regular"
+            android:gravity="start|center_vertical"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/AnimalForSale"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:minHeight="@dimen/_45sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvAnimalList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btn_shape_global"
+            android:drawableRight="@drawable/ic_list_icon"
+            android:drawableTint="@color/colorWhite"
+            
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/AnimalList"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_15sdp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvAddAnimal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btn_shape_green"
+            android:drawableRight="@drawable/ic_add"
+            android:drawableTint="@color/colorWhite"
+            
+            android:gravity="center"
+            android:padding="@dimen/_7sdp"
+            android:text="@string/AddAnimal"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_15sdp"
+
+
+            />
+    </LinearLayout>
+</RelativeLayout>

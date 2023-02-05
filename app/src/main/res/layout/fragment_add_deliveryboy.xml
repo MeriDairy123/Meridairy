@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+
+            android:padding="5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:minHeight="40dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+
+                    
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:hint="@string/Mobileno">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediMobileno"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+
+                android:hint="@string/Father_Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediFatherName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:minHeight="@dimen/_40sdp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+
+                    
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/ediAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_bottom_line"
+
+                android:drawableRight="@drawable/ic_location"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/colorWhite"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_vertical"
+
+                android:hint="@string/Address"
+                android:imeOptions="actionDone"
+                android:minHeight="40dp"
+                android:padding="10dp"
+                 
+                />
+
+            <b2infosoft.milkapp.com.useful.CustomFontButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/colorBtnRed"
+                
+                android:text="@string/Submit"
+                android:textColor="@color/colorWhite"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

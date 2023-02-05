@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/colorWhite"
+    android:padding="10dp"
+    android:layout_gravity="bottom"
+    android:minHeight="200dp"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/imgClosed"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_close"
+       />
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:text="@string/Customer"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp" />
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCustomerName"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:text="@string/SelectPrinter"
+        android:gravity="start"
+
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textColor="@color/colorBlack" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAddress"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:text="@string/SelectPrinter"
+        android:textColor="@color/colorLightGray"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:lineSpacingExtra="1dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="12sp" />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/btnStart"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:rotation="90"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_road_navigation"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="end"/>
+
+
+</LinearLayout>

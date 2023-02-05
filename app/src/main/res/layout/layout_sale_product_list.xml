@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvProductName"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="4"
+            android:gravity="start|center_vertical"
+
+            android:text="@string/Product_Name"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvQuantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:gravity="start|center_vertical"
+            android:text="@string/Quantity"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="2dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="Total Price    "
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/color_bottom_light_gray" />
+</LinearLayout>

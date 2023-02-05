@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<b2infosoft.milkapp.com.useful.CustomFontTextView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start|center"
+    android:padding="5dp"
+    android:text="@string/Select"
+    android:textColor="@color/colorBlack"
+    android:textSize="13sp" />
+

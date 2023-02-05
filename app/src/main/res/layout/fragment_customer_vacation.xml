@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".customer_app.BuyerCustomer.CustomerBuyerMainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/back_arrow"
+        android:textStyle="bold"
+        app:titleTextColor="@color/colorWhite"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/mCalendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:eventsEnabled="false"
+        app:headerColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:selectionColor="@color/colorRed"
+        app:selectionLabelColor="@color/colorWhite"
+        app:todayLabelColor="@color/colorDarkOrange"
+        app:type="many_days_picker" />
+
+
+    <RelativeLayout
+        android:id="@+id/layoutShift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/mCalendarView">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+       
+            android:id="@+id/tvShift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:inputType="text"
+            android:padding="5dp"
+            android:textAllCaps="true"
+            android:text="@string/Shift"
+            android:layout_marginBottom="5dp"
+             android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/checkBoxMorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:text="@string/MORNING"
+            android:layout_below="@+id/tvShift" />
+
+        <CheckBox
+            android:id="@+id/checkBoxEvening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Evening"
+            android:textAllCaps="true"
+            android:layout_marginLeft="55dp"
+
+            android:layout_toRightOf="@+id/checkBoxMorning"
+            android:layout_below="@+id/tvShift" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_30sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/mCalendarView">
+        <Button
+            android:id="@+id/btnVacation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+
+            android:background="@color/colorBtnRed"
+            android:inputType="text"
+            android:padding="5dp"
+            android:text="@string/AddVacation"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

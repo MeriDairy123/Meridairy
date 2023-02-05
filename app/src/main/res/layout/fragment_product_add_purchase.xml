@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_100sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvAutoCustID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/textbox_rectangle_background_shape"
+                    android:digits="0123456789"
+                    android:drawableRight="@drawable/user_id_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    
+                    android:gravity="center"
+                    android:hint="@string/ID"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:minHeight="@dimen/_30sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/_10sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvCfathername"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/textbox_rectangle_backgroundsolid_shape"
+                    android:focusable="false"
+                    
+                    android:gravity="center"
+                    android:hint="@string/User_all_info"
+                    android:imeOptions="actionNext"
+
+                    android:minHeight="@dimen/_40sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/layout_border_white"
+                    android:textColorHint="@color/colorLightGray"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/ediInvoiceNos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+
+                        android:hint="@string/invoiceNo"
+                        android:inputType="number"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_border_white"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:drawableTint="@color/colorWhite"
+                    android:focusable="false"
+                    
+                    android:gravity="center"
+                    android:hint="@string/Select_Date"
+                    android:imeOptions="actionNext"
+                    android:minHeight="@dimen/_40sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/_10sdp" />
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_border_white"
+                    android:minHeight="@dimen/_40sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinGroup"
+                        style="@style/AppTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:dropDownSelector="@color/colorPrimary"
+                        android:entries="@array/select"
+                        android:minHeight="@dimen/_30sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutSpinGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:minHeight="@dimen/_35sdp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/layout_border_white"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinBrand"
+                        style="@style/AppTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+
+                        android:dropDownSelector="@color/colorPrimary"
+                        android:entries="@array/select"
+                        android:minHeight="@dimen/_30sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/layout_border_white"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinProduct"
+                        style="@style/AppTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:dropDownSelector="@color/colorPrimary"
+                        android:entries="@array/select"
+                        android:minHeight="@dimen/_30sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:minHeight="@dimen/_35sdp"
+                android:orientation="vertical"
+
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinProductss"
+                    style="@style/AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/select"
+                    android:minHeight="@dimen/_30sdp" />
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:textColorHint="@color/colorLightGray"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/ediQtys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/Quantity"
+                    android:inputType="number"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorGray"
+                    android:background="@drawable/layout_border_white"
+                    android:minWidth="@dimen/_150sdp">
+
+                    <EditText
+                        android:id="@+id/ediInvoiceNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/invoiceNo"
+                        android:inputType="text"
+                        android:imeOptions="actionNext"
+                        android:nextFocusRight="@id/ediQty"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/layout_border_white"
+                    android:minWidth="@dimen/_150sdp"
+                    android:textColorHint="@color/colorGray">
+
+                    <EditText
+                        android:id="@+id/ediQty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+
+                        android:hint="@string/Quantity"
+                        android:inputType="number"
+                        android:nextFocusDown="@id/ediWeight"
+                        android:imeOptions="actionNext"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_150sdp"
+                    android:textColorHint="@color/colorLightGray">
+
+                    <EditText
+                        android:id="@+id/ediWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/Weight"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/colorWhite"
+                    android:minWidth="@dimen/_150sdp"
+                    android:textColorHint="@color/colorGray">
+
+                    <EditText
+                        android:id="@+id/ediTotalWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:hint="@string/Total_Weight"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:textColorHint="@color/colorLightGray">
+
+                <EditText
+                    android:id="@+id/ediPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+
+                    android:hint="@string/Price"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_150sdp"
+                    android:textColorHint="@color/colorLightGray">
+
+                    <EditText
+                        android:id="@+id/ediTax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+
+                        android:hint="@string/tax"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/chkboxTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="@string/includingTax"
+                    android:textSize="@dimen/_8sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_150sdp"
+                    android:textColorHint="@color/colorLightGray">
+
+                    <EditText
+                        android:id="@+id/ediDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+
+                        android:hint="@string/discount"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/chkboxDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="@string/includingDiscountWith"
+                    android:textSize="@dimen/_8sdp" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:textColorHint="@color/colorLightGray">
+
+                <EditText
+                    android:id="@+id/ediCashDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/cashDiscount"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:textColorHint="@color/colorLightGray">
+
+                <EditText
+                    android:id="@+id/ediOtherCharges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/otherCharges"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:textColorHint="@color/colorLightGray">
+
+                <EditText
+                    android:id="@+id/ediDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/Description"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:nestedScrollingEnabled="true"
+                    android:padding="@dimen/_5sdp"
+                    android:scrollbars="vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/colorGray"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layoutTax"
+                    android:weightSum="1"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:minHeight="@dimen/_50sdp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvSGST"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvDiscount"
+                        android:padding="@dimen/_5sdp"
+                        android:background="@drawable/edit_text_bottom_line"
+                        android:text="@string/sgst"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/tvCGST"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.33"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvSGST"
+                        android:padding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="@string/cgst"
+
+                        android:background="@drawable/edit_text_bottom_line"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/tvIGST"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.33"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCGST"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/igst"
+                        android:gravity="right"
+                        android:background="@drawable/edit_text_bottom_line"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/edit_text_bottom_line"
+                    android:text="@string/discount"
+                    android:layout_below="@+id/layoutTax"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp" />
+                <TextView
+                    android:id="@+id/tvSubTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDiscount"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/subTotal"
+                    android:background="@drawable/edit_text_bottom_line"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvInvoiceAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSubTotal"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/invoiceAmount"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_20sdp"
+                android:textSize="@dimen/_10sdp"
+                android:background="@drawable/btn_shape_global"
+                android:text="@string/Submit"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

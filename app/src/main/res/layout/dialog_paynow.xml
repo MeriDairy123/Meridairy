@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_270sdp"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <EditText
+            android:id="@+id/edtAmtType"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/Amount_Type"
+            android:inputType="textCapWords"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/color_bottom_dark_gray"
+            android:textSize="@dimen/_16sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/color_bottom_light_gray" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/Amount"
+            android:inputType="number"
+            android:singleLine="true"
+
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/color_bottom_light_gray"
+            android:textSize="@dimen/_16sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/color_bottom_light_gray" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_40sdp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontButton
+            android:id="@+id/btnPayAmt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:background="@drawable/btn_shape_global"
+            android:text="@string/Pay"
+            android:textColor="@color/colorWhite" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

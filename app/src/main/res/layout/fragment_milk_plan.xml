@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnUpdate"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layoutPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@string/Roboto_Regular"
+                    android:text="@string/ChooseMilkPlan"
+                    android:textColor="@color/colorBtnRed"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@string/Roboto_Regular"
+                    android:text="@string/ChooseShift"
+                    android:textColor="@color/color_blue"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <CheckBox
+                        android:id="@+id/chkboxMorning"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+
+                        android:text="@string/MORNING"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <CheckBox
+                        android:id="@+id/chkboxEvening"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:text="@string/Evening"
+
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <b2infosoft.milkapp.com.useful.CustomFontButton
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorBtnRed"
+        android:inputType="text"
+        android:minWidth="@dimen/_100sdp"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/Add_Milk_Plan"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone" />
+</RelativeLayout>

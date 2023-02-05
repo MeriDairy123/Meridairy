@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <b2infosoft.milkapp.com.useful.TouchImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/app_icon" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:text="@string/Price"
+                android:textColor="@color/colorPrimary" />
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="0.001dp"
+               android:id="@+id/recyclerView"/>
+
+            <TextView
+                android:id="@+id/tvSalePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/salePrice" />
+
+            <TextView
+                android:id="@+id/tvGroupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/group" />
+
+            <TextView
+                android:id="@+id/tvBrandName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/brand" />
+
+            <TextView
+                android:id="@+id/tvUnitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/unit" />
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/Weight" />
+
+            <TextView
+                android:id="@+id/tvTax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/tax" />
+
+            <TextView
+                android:id="@+id/tvLowStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/lowStockQuantity" />
+
+            <TextView
+                android:id="@+id/tvOpeningQty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/openingQuantity" />
+
+            <TextView
+                android:id="@+id/tvOpeningRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/openingRate" />
+
+            <TextView
+                android:id="@+id/tvOpeningAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/OpeningAmount" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="@string/Description" />
+
+        </LinearLayout>
+
+</LinearLayout>
+

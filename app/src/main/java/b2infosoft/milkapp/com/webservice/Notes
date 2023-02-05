@@ -1,0 +1,110 @@
+Step 1 - When we need to open the db file we need to turn of the app inspector first if it is open.
+Step 2 - Save entry in sale milk fragment and indirect to local sms message.
+Step 3 - Open app inspector data is open.
+
+
+token - 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
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+        NetworkTask caller = new NetworkTask(NetworkTask.POST_TASK, mContext, "Please wait...", true) {
+            @Override
+            public void handleResponse(String response) {
+                try {
+                    System.out.println("=buyerMilkCustomer+buyer=>>>" + response);
+                    buyerMilkCustomerList = new ArrayList<>();
+                    JSONObject jsonObject = new JSONObject(response);
+                    progressBar.setVisibility(View.VISIBLE);
+                    if (jsonObject.getString("status").equalsIgnoreCase("success")) {
+                        JSONArray mainJsonArray = jsonObject.getJSONArray("data");
+                        if (mainJsonArray.length() > 0) {
+                            databaseHandler.deleteBuyerCustomer();
+                        }
+
+                        for (int i = 0; i < mainJsonArray.length(); i++) {
+                            JSONObject obj = mainJsonArray.getJSONObject(i);
+
+                            buyerMilkCustomerList.add(new BuyerMilkCustomerListPojo(obj.getString("id"),
+                                    obj.getString("user_group_id"), obj.getString("categorychart_id"),
+                                    obj.getString("unic_customer_for_mobile"), obj.getString("unic_customer"),
+                                    obj.getString("is_active"), obj.getString("name"), obj.getString("father_name"),
+                                    obj.getString("phone_number"), obj.getString("adhar"), obj.getString("village"),
+                                    obj.getString("address"), obj.getString("morning_milk"), obj.getString("evening_milk"),
+                                    obj.getString("price_per_ltr"), obj.getString("entry_type"), obj.getString("entry_price"),
+                                    obj.getString("acno"), obj.getString("ifsc_code"), obj.getString("bank_name"),
+                                    obj.getString("firebase_tocan")));
+
+                            databaseHandler.addBuyerCustomer(obj.getString("id"),
+                                    obj.getString("user_group_id"), obj.getString("categorychart_id"),
+                                    obj.getString("unic_customer_for_mobile"), obj.getString("unic_customer"),
+                                    obj.getString("is_active"), obj.getString("name"), obj.getString("father_name"),
+                                    obj.getString("phone_number"), obj.getString("adhar"), obj.getString("village"),
+                                    obj.getString("address"), obj.getString("morning_milk"), obj.getString("evening_milk"),
+                                    obj.getString("price_per_ltr"), obj.getString("entry_type"), obj.getString("entry_price"),
+                                    obj.getString("acno"), obj.getString("ifsc_code"), obj.getString("bank_name"),
+                                    obj.getString("firebase_tocan"));
+
+                        }
+                        setBuyerCustomerList();
+
+                    } else {
+                        setBuyerCustomerList();
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        RequestBody body = new FormEncodingBuilder()
+                .addEncoded("dairy_id", dairyID)
+                .build();
+        caller.addRequestBody(body);
+
+        caller.execute(getBuyerMilkListAPI);
+    }

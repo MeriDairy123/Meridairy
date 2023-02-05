@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <ImageView
+
+        android:id="@+id/imgSign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tvTimeDate" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvTimeDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll2"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textColor="@color/colorRed" />
+
+
+    <RelativeLayout
+        android:id="@+id/ll2"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontButton
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:background="@drawable/btn_shape_global"
+            android:text="Back"
+            android:textColor="@color/colorWhite" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal" />
+</RelativeLayout>

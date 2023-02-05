@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvItem"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="FAT"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/textbox_rectangle_background_shape">
+
+            <EditText
+                android:id="@+id/tvPrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|center_vertical"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:inputType="numberDecimal"
+
+                android:textAlignment="center"
+                android:textColor="@color/color_bg"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btn_Update"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_shape_global"
+        android:text="@string/UPDATE"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:visibility="gone" />
+</LinearLayout>

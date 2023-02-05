@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:id="@+id/tv_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/textbox_rectangle_border_white"
+        android:drawableRight="@drawable/ic_arrow_drop_down"
+        android:padding="5dp"
+        android:text="@string/lang"
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+       
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_lang"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_shape_global"
+            android:duplicateParentState="true"
+            android:foreground="@drawable/ripple"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgApp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_register_dairy"
+                android:clickable="false" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontButton
+                android:id="@+id/signupButton"
+                android:layout_width="match_parent"
+                
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/Register"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_CustomerLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_shape_orange"
+            android:duplicateParentState="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgApp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_login_customer"
+                android:clickable="false" />
+
+            <Button
+                android:id="@+id/btnCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/LOGIN_CUSTOMER"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_DairyLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/layout_shape_blue"
+            android:duplicateParentState="true"
+            android:foreground="@drawable/ripple"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgApp1"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_login_dairy"
+                android:clickable="false" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontButton
+                
+                android:id="@+id/btnDairy"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/LOGIN"
+
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_QrSacn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_shape_orange"
+            android:duplicateParentState="true"
+            android:foreground="@drawable/ripple"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/ic_qr_code"
+                android:clickable="false" />
+
+            <Button
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/login_using_qr_code"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvlegalPolicies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/legalPolicies"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

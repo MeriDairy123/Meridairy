@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_3sdp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:padding="5dp"
+            android:background="@drawable/textbox_rectangle_background_shape"
+            app:srcCompat="@drawable/ic_shopping" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvOrderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="2dp"
+            android:inputType="text"
+            android:singleLine="true"
+
+            android:paddingLeft="5dp"
+            android:text="#01258456AXP"
+            android:textColor="@color/colorDarkOrange"
+            android:textSize="@dimen/_8sdp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_below="@+id/tvOrderId"
+            android:layout_toRightOf="@id/image"
+            android:textStyle="bold"
+            android:maxLength="30"
+            android:padding="2dp"
+
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12sdp" />
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvCustomerMobileNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_below="@+id/tvCustomerName"
+            android:layout_toRightOf="@id/image"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="0123456789"
+
+            android:textSize="11sp" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvOrderDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCustomerMobileNo"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@id/image"
+            android:maxLines="2"
+            android:paddingLeft="5dp"
+            android:text="10-Mar-20119"
+
+            android:textSize="10sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvOrderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvOrderDate"
+            android:layout_toRightOf="@+id/image"
+            android:layout_marginLeft="5dp"
+
+            android:textStyle="bold"
+            android:paddingLeft="5dp"
+            android:text="20154"
+            android:textColor="@color/color_Green"
+            android:textSize="10sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvOrderDate"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="2dp"
+
+            android:background="@drawable/btn_shape_orange"
+            android:padding="@dimen/_3sdp"
+            android:text="Pending"
+
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp" />
+        <ImageView
+            android:id="@+id/imgNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:tint="@color/colorWhite"
+
+            app:srcCompat="@drawable/ic_rignt_arrow" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.02dp"
+        android:background="@color/color_list_gray" />
+
+</LinearLayout>

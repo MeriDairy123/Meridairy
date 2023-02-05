@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/layoutSpin"
+            android:background="@drawable/textbox_rectangle_background_shape"
+            android:orientation="horizontal">
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spinUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                app:hintText="@string/select" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_date_from_to"/>
+
+        <ImageView
+            android:id="@+id/imgPrintRecp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ic_print"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:minHeight="35dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:text="@string/Date"
+               android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+               
+
+                android:text="@string/TITLE"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvVouchType"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+               
+
+
+                android:text="@string/paymentType"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvVoucherNo"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+               
+                android:text="@string/voucher"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvDebit"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+               
+
+                android:text="@string/DEBIT"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvCredit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+               
+                android:gravity="center_vertical"
+                android:text="@string/Cradit"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:layout_alignParentBottom="true"
+
+        android:background="@color/colorSubheader"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvTotalCredit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+           
+
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvPaidAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+           
+
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvRemaningAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</RelativeLayout>

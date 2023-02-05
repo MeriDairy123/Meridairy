@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/textbox_rectangle_background_shape"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/search_icon" />
+
+        <EditText
+            android:id="@+id/et_Search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/Search_Here"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recyclerView"/>
+</LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ediQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/TITLE"
+                    android:maxLines="1"
+                    android:maxLength="140"
+
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvQuestionWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:text="0/128" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_border"
+                android:breakStrategy="balanced"
+                android:gravity="start"
+                android:hint="@string/message"
+                android:inputType="textMultiLine"
+                 android:maxLength="500"
+                android:minHeight="200dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="always"
+                android:padding="5dp"
+                android:textColor="@color/colorBlack"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/colorGray" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvDescWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="0/500" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_shape_global"
+                android:elevation="4dp"
+
+                android:inputType="text"
+                android:textStyle="bold"
+                android:paddingLeft="70dp"
+                android:paddingRight="70dp"
+                android:text="Submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

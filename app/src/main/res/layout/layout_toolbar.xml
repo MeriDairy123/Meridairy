@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/toolbar"
+    android:layout_width="fill_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/colorPrimary"
+    android:ellipsize="marquee"
+    android:fadingEdge="horizontal"
+    android:marqueeRepeatLimit="marquee_forever"
+    android:scrollHorizontally="true"
+    app:navigationIcon="@drawable/ic_nav_drawer"
+    app:titleTextColor="@color/colorWhite">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:textSize="19sp"
+        android:singleLine="true"
+        android:textColor="@color/colorWhite" />
+
+    <ImageView
+        android:id="@id/imgDot"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/ic_three_dot"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@id/imgLogout"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/ic_logout_customer"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgSession"
+        android:layout_width="25.0dip"
+        android:layout_height="25.0dip"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/sun_icon"
+        android:tint="@color/colorWhite"
+        android:visibility="gone" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/toolbar_Shift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="10.0dip"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:minWidth="40.0dip"
+        android:padding="5.0dip"
+        android:text="AM"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/toolbar_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10.0dip"
+        android:background="@drawable/border_bottom_textview"
+        android:padding="2dp"
+        android:text="10-Jan-2023"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvUpdateApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="10.0dip"
+        android:background="@drawable/btn_shape_global"
+        android:padding="5.0dip"
+        android:text="@string/InstallMeriDairy"
+        android:textColor="@color/colorWhite"
+        android:textSize="12.0sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgPrint"
+        android:layout_width="25.0dip"
+        android:layout_height="25.0dip"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/ic_print"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layoutNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_notifications"
+            android:tint="@color/colorWhite" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvNotificationCount"
+            android:layout_width="15.0dip"
+            android:layout_height="15.0dip"
+            android:layout_gravity="end"
+            android:layout_marginLeft="-10.0dip"
+            android:layout_marginBottom="25.0dip"
+            android:background="@drawable/circle_shape"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:padding="@dimen/_1sdp"
+            android:text="0"
+            android:textColor="@color/colorWhite"
+            android:textSize="6.0sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgWhatsApp"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/ic_whatsup_logo"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgHelp"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/ic_youtube"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgAdd"
+        android:layout_width="25.0dip"
+        android:layout_height="25.0dip"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/ic_add"
+        android:visibility="gone" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/btn_shape_global"
+        android:drawableRight="@drawable/ic_add"
+        android:drawablePadding="5.0dip"
+        android:gravity="center"
+        android:padding="5.0dip"
+        android:text="@string/Add_Product"
+        android:textColor="@color/colorWhite"
+        android:textSize="10.0sp"
+        android:visibility="gone" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/btn_shape_global"
+        android:drawablePadding="5.0dip"
+        android:gravity="center"
+        android:minWidth="80.0dip"
+        android:minHeight="40.0dip"
+        android:padding="5.0dip"
+        android:text="@string/Save"
+        android:textColor="@color/colorWhite"
+        android:textSize="10.0sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layoutHeaderCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="10.0dip"
+        android:orientation="horizontal"
+        android:paddingTop="5.0dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgCart"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_cart"
+            android:tint="@color/colorWhite" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvCart"
+            android:layout_width="15.0dip"
+            android:layout_height="15.0dip"
+            android:layout_gravity="end"
+            android:layout_marginLeft="-5.0dip"
+            android:layout_marginBottom="30.0dip"
+            android:background="@drawable/circle_shape"
+            android:gravity="center"
+            android:padding="1.0sp"
+            android:text="0"
+            android:textColor="@color/colorWhite"
+            android:textSize="7.0sp" />
+    </LinearLayout>
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvAddVacation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:background="@drawable/btn_shape_global"
+        android:drawableRight="@drawable/ic_add"
+        android:drawablePadding="5.0dip"
+        android:gravity="center"
+        android:padding="5.0dip"
+        android:text="@string/AddVacation"
+        android:textColor="@color/colorWhite"
+        android:textSize="8.0sp"
+        android:visibility="gone" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:background="@drawable/layout_border_white"
+        android:drawableRight="@drawable/ic_three_dot"
+        android:drawablePadding="5.0dip"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="5.0dip"
+        android:scrollHorizontally="true"
+        android:text="@string/change_language"
+        android:textColor="@color/colorWhite"
+        android:textSize="11.0sp"
+        android:visibility="gone" />
+</androidx.appcompat.widget.Toolbar>

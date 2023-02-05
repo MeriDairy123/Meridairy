@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     android:background="@drawable/splash"
+    tools:context="b2infosoft.milkapp.com.activity.RegisterActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:background="@color/color_bg"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_200sdp">
+
+
+            <LinearLayout
+                android:id="@+id/layout_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Password_will_besendto_your_mobile_number"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/et_PhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:layout_marginTop="25dp">
+
+                    <EditText
+                        android:id="@+id/etPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="40dp"
+                        android:letterSpacing="0.5"
+                        android:hint="@string/Phone_Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textSize="@dimen/_13sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/et_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:layout_marginTop="15dp">
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="40dp"
+                        android:hint="@string/Name"
+                        android:padding="5dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapWords"
+                        android:singleLine="true"
+                        android:text=""
+                        android:letterSpacing="0.5"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout></LinearLayout>
+
+            <include
+                android:id="@+id/layout_otp"
+                layout="@layout/layout_register_otp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                />
+
+            <include
+                android:id="@+id/layout_details"
+                layout="@layout/layout_register_details"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:layout_marginBottom="20dp"
+
+                 />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_password"
+                android:layout_gravity="center"
+                android:layout_margin="25dp"
+                android:background="@drawable/btn_shape_global"
+                android:foreground="@drawable/ripple"
+                android:text="@string/Next"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

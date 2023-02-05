@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <attr name="theme_color" format="reference" />
+    <attr name="button_color" format="reference" />
+    <attr name="text_color" format="color" />
+    <attr name="header_text_color" format="color" />
+
+    <declare-styleable name="CustomFontTextView">
+        <attr name="fontName" />
+    </declare-styleable>
+
+    <attr name="fontName" format="enum">
+        <enum name="Poppins_Regular" value="1" />
+        <enum name="Roboto_Regular" value="2" />
+        <enum name="Roboto_Bold" value="3" />
+        <enum name="Open_Sans_Regular" value="4" />
+
+    </attr>
+
+</resources>

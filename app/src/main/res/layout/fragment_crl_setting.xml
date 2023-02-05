@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="120dp"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvDevideFac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+
+
+            android:textColorHint="@color/colorLightGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <EditText
+                android:id="@+id/ediDevideFac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/devideFactor"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:minHeight="45dp"
+                android:singleLine="true"
+                android:text="0.0"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvMultiplyFac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+
+            android:textColorHint="@color/colorLightGray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDevideFac">
+
+            <EditText
+                android:id="@+id/ediMultiplyFac"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/multiplyFactor"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:minHeight="45dp"
+                android:singleLine="true"
+                android:text="0.0"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvAddFac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:minHeight="45dp"
+            android:textColorHint="@color/colorLightGray"
+            app:layout_constraintTop_toBottomOf="@+id/tvMultiplyFac">
+
+            <EditText
+                android:id="@+id/ediAddFac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addFactor"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+
+                android:singleLine="true"
+                android:text="0.0"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_shape_global"
+            android:foreground="@drawable/ripple"
+            android:inputType="text"
+            android:text="@string/Edit"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddFac" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="101dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorWhite"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:padding="10dp"
+            android:minHeight="50dp"
+            android:text="@string/clrFormulaDescription"
+
+            android:textColor="@color/color_pink"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintTop_toBottomOf="@+id/btnSubmit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

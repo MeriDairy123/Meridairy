@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom2"
+        android:orientation="vertical">
+        <include
+            layout="@layout/layout_toolbar"
+            />
+
+     <include
+         layout="@layout/layout_date_from_to"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvEntryDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/Date"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvSession"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/Session"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvTotalMilk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/Total_Weight"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvTotalFat2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/Average_Fat"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.07"
+                android:text="@string/Total_Amount"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/milk_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/bottom2"
+        layout="@layout/layout_milkentry_bottom_total_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal" />
+
+
+</RelativeLayout>
+

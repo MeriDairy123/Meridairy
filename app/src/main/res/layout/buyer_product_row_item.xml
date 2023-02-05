@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginBottom="0.5dp"
+    android:padding="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_shopping" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvName"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_toRightOf="@+id/imageView"
+        android:text="@string/app_name"
+        android:textColor="@color/colorBlack"
+
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_toRightOf="@+id/imageView"
+        android:singleLine="true"
+        android:text="\u20B9 50"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/_11sdp"
+        android:visibility="gone" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWeight"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_toRightOf="@+id/imageView"
+        android:singleLine="true"
+        android:text="\u20B9 50"
+        android:textColor="@color/color_list_gray"
+        android:textSize="@dimen/_11sdp" />
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgMinus"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_minus" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:gravity="center"
+            android:minWidth="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13sdp" />
+
+        <ImageView
+            android:id="@+id/imgAdd"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_plus" />
+    </LinearLayout>
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvoutOfStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:background="@drawable/layout_border"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Out of Stock"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/_8sdp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/color_darkGray" />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="5dp"
+    android:background="@color/colorSubheader"
+    android:orientation="horizontal">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tvTotalWeight"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:backgroundTint="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="11sp" />
+
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tvTotalFat"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="1"
+        android:backgroundTint="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="11sp" />
+
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tv_TotalBonus"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="1"
+        android:backgroundTint="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="11sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tvTotalAmt"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="1"
+        android:backgroundTint="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="11sp" />
+
+</LinearLayout>

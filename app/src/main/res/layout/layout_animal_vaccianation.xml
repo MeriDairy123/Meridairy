@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_light_white"
+    android:orientation="vertical">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Vaccination"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+
+        android:text="@string/FMD_Vaccination_done"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_fmd_vaccination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn_FMD_vaccination_yes"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+
+
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/yes"
+            android:textColor="@color/colorPrimary"
+
+            />
+
+
+        <RadioButton
+            android:id="@+id/radio_btn_FMD_vaccination_no"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/no"
+            android:textColor="@color/colorPrimary"
+
+            />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvfmd_vaccination_period"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:hint="@string/how_many_month_before_fmd_vaccination_done"
+        android:minHeight="35dp"
+        android:visibility="gone"
+
+        >
+
+        <EditText
+            android:id="@+id/et_fmd_vaccination_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_gray"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+
+        android:text="@string/H_S_Vaccination_done"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_hs_vaccination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn_HS_vaccination_yes"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/yes"
+            android:textColor="@color/colorPrimary"
+
+            />
+
+
+        <RadioButton
+            android:id="@+id/radio_btn_HS_vaccination_no"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/no"
+            android:textColor="@color/colorPrimary"
+
+            />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvhs_vaccination_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:hint="@string/how_manyBefore_H_S_Vaccination_done"
+        android:minHeight="35dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_hs_vaccination_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_gray"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+
+        android:text="@string/BlackQuarter_VaccinationDone"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_black_quarter_vaccination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn_quarter_vaccination_yes"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/yes"
+            android:textColor="@color/colorPrimary"
+
+            />
+
+
+        <RadioButton
+            android:id="@+id/radio_btn_quarter_vaccination_no"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/no"
+            android:textColor="@color/colorPrimary"
+
+            />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvquarter_vaccination_period"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:hint="@string/how_manyMonth_black_quarter_vaccination_period"
+        android:minHeight="35dp"
+        android:visibility="gone"
+
+        >
+
+        <EditText
+            android:id="@+id/et_quarter_vaccination_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:inputType="number"
+
+            android:maxLength="2"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_gray"
+
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+
+        android:text="@string/Brucellousis_VaccinationatCalf_Foot"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_brucellousis_vaccination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn_brucellousis_vaccination_yes"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/yes"
+            android:textColor="@color/colorPrimary" />
+
+
+        <RadioButton
+            android:id="@+id/radio_btn_brucellousis_vaccination_no"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/no"
+            android:textColor="@color/colorPrimary"
+
+            />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvbrucellousis_vaccination_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:hint="@string/how_many_month_before_brucellousis_vaccination_done"
+        android:minHeight="35dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_brucellousis_vaccination_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:inputType="number"
+
+            android:maxLength="2"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Deworming"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="5dp"
+
+        android:text="@string/Deworming_done"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_deworming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_btn_deworming_yes"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/yes"
+            android:textColor="@color/colorPrimary"
+
+            />
+
+
+        <RadioButton
+            android:id="@+id/radio_btn_deworming_no"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:buttonTint="@color/colorPrimary"
+
+            android:text="@string/no"
+            android:textColor="@color/colorPrimary" />
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvdeworming_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:hint="@string/how_many_month_before_deworming_vaccination_done"
+        android:minHeight="35dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_deworming_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

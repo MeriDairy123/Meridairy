@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tvTotalMilk"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/transparent"
+        android:singleLine="true"
+        android:text="Total Milk-100Ltr."
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/color_bottom_light_gray" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tvSaleMilk"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/transparent"
+        android:singleLine="true"
+        android:text="Sale Milk-30Ltr."
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/color_bottom_light_gray" />
+
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tvRemainMilk"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/transparent"
+        android:singleLine="true"
+        android:text="Remain Milk-70Ltr."
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_bottom_light_gray" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+  <include layout="@layout/layout_toolbar"
+      android:id="@+id/toolbar"/>
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:orientation="vertical"
+      android:background="@color/dark_gray"
+      android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/animal_image"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:backgroundTint="@color/colorWhite"
+
+
+        android:layout_gravity="center_horizontal"
+        android:tint="@color/colorWhite"
+        android:background="@drawable/imagecircle_background" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvAnimalName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_15sdp"
+        android:textAllCaps="true"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/roboto_bold" />
+  </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/animal_recycle_subcategories"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView
+>
+
+
+</LinearLayout>

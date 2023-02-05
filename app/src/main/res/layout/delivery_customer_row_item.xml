@@ -1,0 +1,98 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customer_row"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_shape"
+            android:backgroundTint="@color/dark_gray"
+            app:srcCompat="@drawable/ic_user_profile_dairy"
+            android:textAlignment="center" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+         
+            android:id="@+id/tv_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/imgDirection"
+            android:layout_toRightOf="@id/imgProfile"
+            android:maxLength="30"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="This order title"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+            android:id="@+id/tv_Mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_userName"
+            
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toLeftOf="@id/tvStatus"
+            android:layout_toRightOf="@id/imgProfile"
+            android:drawablePadding="5dp"
+            android:gravity="start"
+            android:maxLines="2"
+            android:paddingLeft="5dp"
+            android:text="1234567"
+            android:textColor="@color/colorGray"
+            android:textSize="12sp" />
+        <ImageView
+            android:id="@+id/imgDirection"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:rotation="90"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_road_navigation"
+            />
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_userName"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/ic_failure"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="2"
+             android:padding="5dp"
+            android:text="delivered"
+            android:textColor="@color/colorGray"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLightGray" />
+</androidx.cardview.widget.CardView>

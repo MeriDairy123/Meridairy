@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/textbox_rectangle_background_shape"
+        android:minHeight="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/search_icon" />
+
+        <EditText
+            android:id="@+id/et_Search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="@string/Search_Here"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/textbox_rectangle_background_shape"
+        android:minHeight="40dp"
+        android:orientation="horizontal">
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/Date"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:text="@string/Name"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/Weight"
+
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/Amount"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvStatus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:text="@string/Action"
+
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInvoiceList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

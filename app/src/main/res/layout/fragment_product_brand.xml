@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/viewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.01sp"
+
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_gradent_blue"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvSrNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_weight="0.4"
+                
+                android:gravity="center_vertical"
+                android:text="@string/Sr"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                
+                android:gravity="center"
+                android:text="@string/Name"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvCategory"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="@string/Category"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvAction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.6"
+                
+                android:gravity="center"
+                android:text="@string/Action"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/pullToRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+
+            android:minHeight="@dimen/_100sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_border_white"
+            android:minHeight="40dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvItemCode"
+            android:background="@drawable/layout_border_white"
+            android:minHeight="45dp"
+
+           android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <EditText
+                android:id="@+id/ediItemCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@android:color/transparent"
+
+                android:textColorHint="@color/colorLightGray"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="10"
+
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/layout_border_white"
+            android:minHeight="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <EditText
+                android:id="@+id/ediName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/Name"
+                android:textColorHint="@color/colorLightGray"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/et_password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/btn_shape_global"
+            android:foreground="@drawable/ripple"
+            android:inputType="text"
+            android:text="@string/Submit"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

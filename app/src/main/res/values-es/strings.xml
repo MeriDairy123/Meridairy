@@ -1,0 +1,786 @@
+<resources>
+    <string name="app_name">मेरी डेयरी</string>
+    <string name="poweredByB2infosoft">Powered By B2infosoft</string>
+    <string name="app_id">ca-app-pub-6381924771123547~5294964685</string>
+    <string name="customer_app_id">ca-app-pub-6381924771123547/3107391837</string>
+    <string name="banner_unit_id">ca-app-pub-6381924771123547/1244039030</string>
+    <string name="interstitialAd_unit_id">ca-app-pub-6381924771123547/4811847941</string>
+    <string name="rewarded_video">ca-app-pub-6381924771123547/3659560131</string>
+    <string name="google_location_key1" templateMergeStrategy="preserve" translatable="false">AIzaSyDKZk2naZ8z8iEahpq_GhwwzX-l5yDwjoc</string>
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCDmoTEzCprjE5xK5SHKtlZ_LOZRMUIz6A</string>-->
+    <string name="notification_channel_id">default</string>
+    //testing Id
+    <!-- <string name="banner_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+    // Font family
+
+    <!--Custom Fonts-->
+
+    <string name="Arial">Arial</string>
+    <string name="Roboto_Regular">Roboto-Regular</string>
+    <string name="Roboto_Bold">Roboto-Bold</string>
+
+    // language
+    <string name="change_language">Cambiar idioma</string>
+    <string name="lang">El idioma</string>
+    <string name="select">Seleccione</string>
+    <string name="english">English</string>
+    <string name="spanish">Española</string>
+    <string name="hindi">हिंदी</string>
+    <string name="gujrati">ગુજરાતી</string>
+    <string name="marathi">मराठी</string>
+    <string name="punjabi">ਪੰਜਾਬੀ</string>
+    <string name="telugu">తెలుగు</string>
+    <string name="tamil">தமிழ்</string>
+    <string name="kannad">ಕನ್ನಡ</string>
+
+
+    <string-array name="language">
+        <item>@string/english</item>
+        <item>@string/spanish</item>
+        <item>@string/hindi</item>
+        <item>@string/gujrati</item>
+        <item>@string/marathi</item>
+        <item>@string/punjabi</item>
+        <item>@string/telugu</item>
+        <item>@string/tamil</item>
+        <item>@string/kannad</item>
+    </string-array>
+    <string-array name="anim_cat">
+        <item>@string/select</item>
+        <item>@string/Buff</item>
+        <item>@string/Cow</item>
+
+    </string-array>
+
+
+
+
+    <!-- Strings related to DashBoard -->
+    <!-- Language name : Spanish  -->
+    <string name="dairy_Address">Dirección de productos lácteos</string>
+    <string name="mobile_number">Número de teléfono móvil</string>
+
+    <string name="WhatsAppSmssettings">Configuración de WhatsApp/Sms</string>
+    <string name="AreYouUsingWhatsappBusiness">¿Estás usando Whatsapp Business?</string>
+
+    <string name="Deshbord">Tablero</string>
+    <string name="Add_Milk_Entry">Agregar entrada de leche</string>
+    <string name="View_Entry_By_Date">Ver entrada por fecha</string>
+    <string name="Customer">Cliente</string>
+    <string name="Customers">Clientes</string>
+    <string name="Payment_Register">Registro de pago</string>
+    <string name="Products">Productos</string>
+    <string name="transactions">Actas</string>
+    <string name="Sale_Product">Producto en venta</string>
+    <string name="MILK_Sale">Venta de leche</string>
+    <string name="CreateAdvertise">Crear anuncio</string>
+    <string name="Setting">Ajuste</string>
+    <string name="SNF_FAT_Chart">SNF FAT Chart</string>
+
+    // Navigation menu
+     <string-array name="nav_drawer_array">
+        <item>@string/Deshbord</item>
+        <item>@string/Profile</item>
+        <item>@string/CreateAdvertise</item>
+        <item>@string/navUpgradePrimium</item>
+        <item>@string/myRequest</item>
+        <item>@string/DeliveryBoy</item>
+        <item>@string/View_All_Entry</item>
+        <item>@string/MILK_HISTORY</item>
+        <item>@string/Buyer</item>
+        <item>@string/Order</item>
+        <item>@string/Product</item>
+        <item>@string/product_SaleAndBuy</item>
+        <!--<item>@string/Setting</item>-->
+        <item>@string/Transaction</item>
+        <item>@string/LEGALPOLICIES</item>
+        <item>@string/share</item>
+        <item>@string/Logout</item>
+    </string-array>
+    <string-array name="nav_array_product">
+        <item>@string/Add_Product</item>
+        <item>@string/Selling_History</item>
+    </string-array>
+
+    <string-array name="setting_update">
+        <item>@string/Update_Rate</item>
+        <item>@string/Print_And_Send_Message</item>
+    </string-array>
+
+
+    // SMS
+
+    <string name="send_sms_off">Send SMS Off</string>
+    <string name="sms_from_sim">SMS Send From SIM</string>
+    <string name="sms_from_api">SMS Send From API</string>
+
+
+    <string-array name="sms_sendtype">
+
+        <item>@string/send_sms_off</item>
+        <item>@string/sms_from_sim</item>
+        <item>@string/sms_from_api</item>
+
+    </string-array>
+
+
+
+    <!-- Strings related to login -->
+    <string name="logout_from_another_device">Cerrar sesión desde otro dispositivo</string>
+    <string name="error_field_required">este campo es requerido</string>
+    <string name="invalid_login_title">Sesión expirada</string>
+    <string name="invalid_login_message">Su cuenta es iniciar sesión en otro móvil. Vuelve a iniciar sesión.</string>
+    <string name="drawer_open">abierta</string>
+    <string name="drawer_close">cerca</string>
+
+    <string name="whatsapp_support">Soporte de Whatsapp</string>
+    <string name="Select_Date">Seleccione fecha</string>
+    <string name="MORNING">Mañana</string>
+    <string name="EVENING">Noche</string>
+    <string name="ADD_ENTRY">Añadir entrada</string>
+    <string name="SALE_MILK">Venta de leche</string>
+    <string name="App_activation">ACTIVACIÓN DE LA APLICACIÓN</string>
+    <string name="YourAccountisActivated">Tu cuenta está activada</string>
+    <string name="Please_enter_activation_key">Por favor, introduzca la clave de activación</string>
+    <string name="Enter_6_digit_key">Ingrese la clave de 6 dígitos</string>
+    <string name="Activate">Activar</string>
+    <string name="ActivateRequestTxt">अगर आपके पास TECLA DE ACTIVACIÓN नहीं है तो +919772196777 या 9772196666 पर सम्पर्क करे या WhatsApp करे l</string>
+    <string name="Buyer">Compradora</string>
+    <string name="Seller">Vendedora</string>
+    <string name="ADD_Customer">Agregar cliente</string>
+    <string name="Edit_Customer">Editar cliente</string>
+    <string name="UPDATE">Actualizar</string>
+    <string name="Please_Enter_Customer_Name">Por favor, introduzca el nombre del cliente</string>
+    <string name="Please_Enter_Father_Name">Por favor, introduzca el nombre del padre</string>
+    <string name="please_fill_correct_mobile_number">Por favor complete el número de teléfono móvil correcto</string>
+    <string name="PleaseSelectCustomerType">Por favor seleccione el tipo de cliente</string>
+    <string name="Customer_Added_Successfully">Cliente agregada con éxito</string>
+    <string name="Please_Enter_Milk_Rate">Por favor, introduzca la tasa de leche</string>
+    <string name="Rate_Updated_Successfully">Tasa actualizada con éxito</string>
+    <string name="Phone_Number">Número de teléfono</string>
+    <string name="Customer_ID">Identificación del cliente</string>
+    <string name="Name">Nombre</string>
+    <string name="Father_Name">Nombre del Padre</string>
+    <string name="Address">Habla a</string>
+    <string name="Adhar_Number">Adhar Number</string>
+    <string name="Save">Salvar</string>
+    <string name="Edit_Rate">Editar tasa</string>
+    <string name="Rate_Per_KG">Tarifa por kilogramo</string>
+    <string name="Save_Rate">Ahorre tarifa</string>
+    <string name="MILK_ENTRY">Entrada de leche</string>
+    <string name="Please_Update_Milk_Rate_Type">Actualice el tipo de tasa de leche.</string>
+    <string name="Fixed_Price">Precio fijo</string>
+    <string name="Rate_Not_Found">Tarifa no encontrada</string>
+    <string name="Please_Add_Complete_Entry">Por favor agregue la entrada completa</string>
+    <string name="Please_Update_SNF_Fat">Actualice SNF o Fat</string>
+    <string name="Offline_Entry_Successfully_Uploaded_to_Server">Entrada sin conexión cargada correctamente al servido</string>
+    <string name="Entry_Uploading_Failed_Please_Try_again">Error al cargar la entrada. Vuelve a intentarlo.</string>
+    <string name="Entry_Update_Successfully">Actualización de entrada exitosa.</string>
+    <string name="Entry_Updating_Failed">Error al actualizar la entrada.</string>
+    <string name="Entry_Added_Successfully">Entrada agregada con éxito.</string>
+    <string name="Entry_Adding_Failed">Error al agregar entrada.</string>
+    <string name="Please_Add_Customer">Por favor, agregue cliente.</string>
+    <string name="Average_Fat">Grasa promedio</string>
+    <string name="Total_Weight">Peso total</string>
+    <string name="Total_Amount">Cantidad total</string>
+    <string name="ID">CARNÉ DE IDENTIDAD</string>
+    <string name="User_all_info">Usuario toda la información</string>
+    <string name="Weight">Peso</string>
+    <string name="Rs_Per_ltr">Rs./Ltr.</string>
+    <string name="Fat">Gorda</string>
+    <string name="Total_Rs">Rs totales.</string>
+    <string name="Week_Total_Rs">Semana.</string>
+    <string name="SNF">SNF</string>
+    <string name="SNF_CLR">SNF/CLR</string>
+    <string name="Cow">Vaca</string>
+    <string name="Buff">Búfala</string>
+    <string name="Sr">Sr</string>
+    <string name="Fat_SNF">Grasa / SNF</string>
+    <string name="Rate">Velocidad</string>
+    <string name="Amount">Cantidad</string>
+    <string name="Are_You_Sure_Want_To_Delete_Entry">¿Seguro que quieres eliminar?</string>
+    <string name="Entry_Deleted_Successfully">Entrada eliminada correctamente</string>
+    <string name="Entry_Deleting_Failed">Error al eliminar la entrada</string>
+    <string name="Edit">Editar</string>
+    <string name="Delete">Eliminar</string>
+    <string name="Add_Product">Añadir Producto</string>
+    <string name="Product_Added_Successfully">Producto agregado exitosamente</string>
+    <string name="Product_Adding_Failed">Error al agregar producto</string>
+    <string name="Product_Updated_Successfully">Producto actualizado con éxito</string>
+    <string name="Product_Updating_failed">Actualización del producto fallida</string>
+    <string name="Products_List_is_Empty_Please_add_Any_Products">La lista de productos está vacía. Agregue cualquier producto</string>
+    <string name="Product_Name">nombre del producto</string>
+    <string name="Item">Articulo</string>
+    <string name="Product_Deleted_Successfully">Producto eliminado exitosamente</string>
+    <string name="Product_Deleting_Failed">Error al eliminar el producto</string>
+    <string name="Search_Here">Busca aquí</string>
+    <string name="USER_LIST">Lista de usuarios</string>
+    <string name="Customer_Deleted_Successfully">Cliente eliminado exitosamente</string>
+    <string name="Customer_Deleting_Failed">Error al eliminar clientes</string>
+    <string name="Chat">Charla</string>
+    <string name="Printing_Please_Wait">Impresión, por favor espere ...</string>
+    <string name="SELLER_BHUGTAN">Vendedor-Bhugtan</string>
+    <string name="Please_Select_User_to_print_PDF_and_Send_Message">Seleccione Usuario para imprimir PDF y Enviar mensaje.</string>
+    <string name="Please_Select_User_to_print_PDF">Seleccione usuario para imprimir PDF</string>
+    <string name="Please_Enter_Start_Date_and_End_Date">Por favor, introduzca la fecha de inicio y la fecha de finalización.</string>
+    <string name="Sending_SMS_Fail">Envío de SMS fallidos</string>
+    <string name="Meri_Dairy">Meri Dairy</string>
+    <string name="Date">Fecha</string>
+    <string name="Session">Sesión</string>
+    <string name="Bonus">Prima</string>
+    <!--  <string name="Average_Rate">AVG RATE</string>-->
+    <string name="TOTAL_BONUS">Bonificación total</string>
+    <string name="Rs">Rs.</string>
+    <string name="Meri_Dairy_Download_App_Now">Descargar la aplicación Meri Dairy ahora:</string>
+    <string name="OPen_PDF">PDF descargado en su almacenamiento, debe verlo en la carpeta MeriDairy.</string>
+    <string name="Submit">Enviar</string>
+    <string name="Select">Seleccione</string>
+    <string name="Print_And_Send_Message">Imprimir y enviar mensaje</string>
+    <string name="Print">Impresión</string>
+    <string name="Send_Message">Enviar mensaje</string>
+    <string name="Start_Date">Fecha de inicio</string>
+    <string name="End_Date">Fecha final</string>
+    <string name="BUYER_BHUGTAN">Compradora-Bhugtan</string>
+    <string name="Evening_Total">Tarde total</string>
+    <string name="Morning_Total">Total de la mañana</string>
+    <string name="Ltr">Ltr</string>
+    <string name="Create_New_Password">Crear nueva contraseña</string>
+    <string name="Your_new_password_successfully_Created">Su nueva contraseña se creó correctamente</string>
+    <string name="Please_enter_your_correct_OTP">Por favor ingrese su OTP correcta</string>
+    <string name="Your_password_can_matches_please_enter_correct_password"> Su contraseña no puede coincidir, ingrese la contraseña correcta</string>
+    <string name="Please_enter_new_password_to_your_account">Por favor ingrese una nueva contraseña a su cuenta</string>
+    <string name="Enter_OTP">Ingrese OTP</string>
+    <string name="Enter_new_password">Ingrese nueva clave</string>
+    <string name="Confirm_Password">Confirmar contraseña</string>
+    <string name="Your_Old_Password_is_Not_Matching">Su contraseña anterior no coincide</string>
+    <string name="Field_Can_be_empty">El campo no puede estar vacía</string>
+    <string name="Old_Password">Contraseña anterior</string>
+    <string name="New_Password">Nueva contraseña</string>
+    <string name="CHAT_LIST">Lista de chat</string>
+    <string name="Customer_Profile">Perfil de cliente</string>
+    <string name="SALE_MILK_ENTRY">Venta de leche de entrada</string>
+    <string name="Total_Remaining">Total restante</string>
+    <string name="Total_Sell">Venta total</string>
+    <string name="STATUS">Estado</string>
+    <string name="ERASE_MILK_HISTORY">Borrar la historia de la leche</string>
+    <string name="Please_select_start_date_first">Por favor seleccione la fecha de inicio primero</string>
+    <string name="OK">Okay</string>
+    <string name="Cancel">Cancelar</string>
+    <string name="PIN_Changed_Successfully">PIN cambiado correctamente</string>
+    <string name="PIN_Must_be_4_Digit">El PIN debe tener 4 dígitos</string>
+    <string name="Your_Current_PIN_is_not_match">Su PIN actual no coincide</string>
+    <string name="PIN_Saved_Successfully">PIN guardado correctamente</string>
+    <string name="New_PIN">PIN nuevo</string>
+    <string name="Re_enter_PIN">Vuelva a ingresar el PIN</string>
+    <string name="LoginFailed_Enter_Correct_Mobile_Password">Iniciar sesión Faild! Ingrese el número de teléfono móvil y la contraseña correctos</string>
+    <string name="Please_Generate_PIN_Number">Por favor, genere un número PIN</string>
+    <string name="Password">Contraseña</string>
+    <string name="LOGIN">INICIAR SESIÓN</string>
+    <string name="FORGET_PASSWORD">CONTRASEÑA OLVIDADA</string>
+    <string name="SIGNUP">REGÍSTRATE</string>
+    <string name="NEW_REGISTER">Nuevo registro para lácteos</string>
+    <string name="login_using_qr_code">Iniciar sesión con código QR</string>
+    <string name="LOGIN_CUSTOMER">Iniciar sesión Cliente</string>
+    <string name="Exyt_App">¿Estás segura de querer salir de मेरी डेयरी?</string>
+    <string name="SET_PIN">SET PIN</string>
+    <string name="CHANGE_PIN">CAMBIAR PIN</string>
+    <string name="PIN_Set_Successfull">PIN configurado correctamente</string>
+    <string name="PIN_Updated_Successfull">PIN actualizado correctamente</string>
+    <string name="Change_Password">Cambia la contraseña</string>
+    <string name="Please_Verify_OTP_and_create_new_Password">Verifique OTP y cree una nueva contraseña</string>
+    <string name="We_are_unable_to_get_your_OTP">No podemos obtener su OTP</string>
+    <string name="Please_enter_valid_mobile_number">Por favor ingrese un número de móvil válido</string>
+    <string name="OtpActTxt">Le enviaremos OTP a su teléfono móvil registrado mediante el cual podrá crear una nueva contraseña</string>
+    <string name="Countinue">Seguir</string>
+    <string name="NEW_USER">Nueva usuaria</string>
+    <string name="Please_enter_either_morning_or_evening_session_milk_weight">Ingrese el peso de la leche de la sesión de la mañana o de la tarde.</string>
+
+    <string name="Morning_Milk">Leche de la mañana</string>
+    <string name="Evening_Milk">Leche de la tarde</string>
+    <string name="Next">Próxima</string>
+    <string name="PIN_CODE">Código PIN</string>
+    <string name="Update_Rate">Frecuencia de actualización</string>
+    <string name="Rate_Updating_Failed">Actualización de tasa fallida</string>
+    <string name="Please_Enter_Bonus_Amount">Por favor ingrese el monto de la bonificación.</string>
+    <string name="Please_Enter_Amount">Por favor, introduzca la cantidad.</string>
+    <string name="Your_Bonus_is_Updated_Success">Su bono es el éxito actualizado.</string>
+    <string name="Updating_Failed">Actualización fallida.</string>
+    <string name="Milk_Buy_Rate">Tasa de compra de leche</string>
+    <string name="Rate_by_FAT_Only">Calificar solo por FAT</string>
+    <string name="Rate_by_SNF_FAT">Calificar por SNF / FAT</string>
+    <string name="UPDATE_SNF_CHART">Actualización de la TABLA DE SNF</string>
+    <string name="Update_Bonus">Bono de actualización</string>
+    <string name="Bonus_per_ltr">Bonus por ltr</string>
+    <string name="Milk_Sale_Rate">Tasa de venta de leche</string>
+    <string name="RECEIVE_CASH">Recibir efectivo</string>
+    <string name="Pay">Pagar</string>
+    <string name="Are_You_Sure_Want_To_Exit_From_Registration">¿Estás segura de querer salir del registro?</string>
+    <string name="Center_Name">Nombre del centro</string>
+    <string name="Please_Enter_Collection_Center_Name">Ingrese el nombre del centro de recolección</string>
+    <string name="Please_Enter_Dairy_Name">Ingrese el nombre de la lechería</string>
+    <string name="Please_Enter_Correct_Phone_Number">Ingrese el número de teléfono correcto</string>
+    <string name="Please_Enter_Owner_Name">Ingrese el nombre del propietario</string>
+    <string name="Please_Select_State">Seleccione estado</string>
+    <string name="Please_Select_City">Ciudad selecta</string>
+    <string name="Please_Enter_Street_Address">Ingrese la dirección de la calle</string>
+    <string name="Registration_Successfull">Registro exitoso</string>
+    <string name="Take_Photo">Tomar foto</string>
+    <string name="SALE_PRODUCT">Producto en venta</string>
+    <string name="Please_Select_your_item">Por favor seleccione su artículo</string>
+    <string name="Product_Selling_Fail">Fallo de venta del producto</string>
+    <string name="Sale">Rebaja</string>
+    <string name="Please_Edit_Sale_Milk_Weight_It_not_to_be_0">Por favor, edite el peso de la leche de venta. No es para ser 0.</string>
+    <string name="Updating_Success">Actualización exitosa</string>
+    <string name="Cancel_Success">Cancelar éxito</string>
+    <string name="Cancel_Failed">Cancelar fallida</string>
+    <string name="Milk_Removed_Successfull">Leche Extraída Exitosa</string>
+    <string name="Milk_Sale_Successfull">Venta de leche exitosa</string>
+    <string name="Milk_Saling_failed">Saling de leche falló</string>
+    <string name="MILK_RATE">Tasa de leche</string>
+    <string name="Customer_Name">Nombre del cliente</string>
+    <string name="MILK_BUYER_LIST">Lista de compradores de leche</string>
+    <string name="Edit_Milk">Editar leche</string>
+    <string name="Edit_Profile">Editar perfil</string>
+    <string name="Please_Do_Signature_And_Then_Click_Save">Firma y luego haz clic en Guardar</string>
+    <string name="Signature_Uploaded_Succesfully">Firma subida correctamente</string>
+    <string name="Enter_Your_Signature">Ingrese su firma</string>
+    <string name="Clear">Clara</string>
+
+
+    <string name="Incomplete_Entry">Entrada incompleta</string>
+    <string name="TRANSACTION_HISTORY">Historial de transacciones</string>
+    <string name="TOTAL">TOTAL</string>
+    <string name="WeeklyTotal">Total Semanal</string>
+    <string name="Quantity">Cantidad</string>
+    <string name="You_have_no_entry_to_Print">No tienes entrada para imprimir</string>
+    <string name="Fat_Rat">Tasa de grasa</string>
+
+
+    <string name="Please_Select_Customer">  Por favor seleccione cliente</string>
+    <string name="rupees">rupias</string>
+
+    <string name="Are_you_want_to_work_offline"> ¿Quieres trabajar sin conexión?</string>
+    <string name="Please_Do_Amount_Type_And_Amount_to_pay_amount">Indique el tipo de monto y el monto a pagar</string>
+
+
+    <string name="CASH_RECEIVE">Recibir efectivo</string>
+    <string name="you_are_not_connected_to_internet">No estas conectada a internet  </string>
+
+    you are not connected to internet
+    <string name="Evening">Noche</string>
+    <string name="Mobileno">Número de teléfono móvil</string>
+    <string name="viewEntry">Ver entrada</string>
+
+    <string name="Printing">Impresión</string>
+    <string name="Please_Wait">Por favor espera...</string>
+
+    <string name="View_All_Entry">Ver todas las entradas</string>
+    <string name="Selling_History">Historia de venta</string>
+    <string name="Total_Selling_Price">Precio de venta total</string>
+    <string name="MILK_HISTORY">Historia de la leche</string>
+    <string name="Please_select_end_date_first">Seleccione primero la fecha de finalización</string>
+    <string name="Date_range_should_be_1_to_10_days">El intervalo de fechas debe ser de 1 a 10 días.</string>
+    <string name="Please_Select_Date">Por favor seleccione fecha</string>
+    <string name="No_Data_of_Morning_List_to_Print">No hay datos de la lista de la mañana para imprimir</string>
+    <string name="No_Data_of_Evening_List_to_Print">No hay datos de la lista vespertina para imprimir</string>
+
+    <string name="Amount_Paying_Fail"> Importe de pago fallido</string>
+    <string name="Total_Credit"> Crédito total</string>
+    <string name="Total_Debit"> Débito total</string>
+    <string name="Remaining">Restante</string>
+    <string name="Please_Enter_All_Field">Por favor, introduzca todos los campos</string>
+    <string name="TITLE">Título</string>
+    <string name="Cradit">Título</string>
+    <string name="DEBIT">Débito</string>
+    <string name="SNF_FAT_CHART"> SNF FAT Gráfico de</string>
+
+    <string name="DAIRY_LIST">Lista de lácteos</string>
+    <string name="Profile">Perfil</string>
+    <string name="Transaction">Transacción</string>
+    <string name="Product">Producto</string>
+    <string name="Please_Contact_Your_Dairy_Owner">Por favor, póngase en contacto con su dueña de productos lácteos</string>
+    <string name="Login_Success">Login Success</string>
+    <string name="You_Are_Not_a_Customer_please_Login_as_Dairy_Owne">Usted no es un cliente, inicie sesión como propietario de productos lácteos</string>
+    <string name="No_Data_Found">Datos no encontrados</string>
+    <string name="SELLER_PROFILE">Perfil del vendedor</string>
+    <string name="BUYER_PROFILE">Perfil del comprador</string>
+
+    <string name="BUFFALO_SNF">Buffalo SNF</string>
+    <string name="SALE_ITEM">Artículo de venta</string>
+
+    <string name="Time">Hora</string>
+    <string name="COW_SNF">SNF de vaca</string>
+    <string name="Enter_your_passcode">Introduzca su código de acceso</string>
+    <string name="Logout">Cerrar sesión</string>
+    <string name="print_sms_setting">Configuración de impresión y mensaje</string>
+    <string name="print_sms">Imprimir y mensaje</string>
+
+
+    <string name="PRINT_MORNING_PDF">Imprimir mañana PDF</string>
+    <string name="PRINT_EVENING_PDF">Imprimir Tarde PDF</string>
+    <string name="SELLER_LIST">Lista de vendedores</string>
+    <string name="BUYER_LIST">Lista de compradores</string>
+    <string name="Amount_Type">Tipo de cantidad</string>
+    <string name="Message_Sent_Successfully">Mensaje enviado con éxito</string>
+    <string name="Please_wait_Updating_Your_SNF_Chart">Por favor espere ... Actualizando su tabla SNF</string>
+    <string name="PAID_AMOUNT">Monto de pago</string>
+    <string name="REMAIN_AMOUNT">Cantidad restante</string>
+    <string name="MORE_DETAILS">Más detalles</string>
+    <string name="For_Complaint">Para queja +919772196666</string>
+    <string name="For_Support">Para soporte +919772196777</string>
+    <string name="No_inetnetConnection">No tiene conexión a Internet. Conéctese a Internet.</string>
+    <string name="Save_Data_Offline">En línea</string>
+    <string name="OfflineDataAlert">Está almacenando datos fuera de línea, el mensaje no se puede enviar durante el modo fuera de línea.</string>
+    <string name="You_are_storing_Online_Mode">Estás almacenando el modo en línea.</string>
+    <string name="NoInternetForSwitch">No tiene conexión a Internet, modo de almacenamiento de datos sin conexión.</string>
+
+    <string name="offline">Desconectada</string>
+    <string name="entry">Entrada</string>
+
+    <string name="yes">si</string>
+    <string name="no">No</string>
+    <string name="dialog_sms_title">Enviar mensaje</string>
+    <string name="dialog_sms_text">¿Desea enviar un mensaje al cliente usando el móvil?</string>
+    <!-- <string name="dialog_sms_note">Note: This SMS will be chargeable if you have not message pack in mobile.</string>-->
+    <string name="dialog_sms_note">Nota: el costo de SMS será aplicable desde su carrera.</string>
+
+    <string name="Choose_from">Escoge de</string>
+    <string name="Shift">Cambio</string>
+    <string name="InstallMeriDairy">Instalar Meri Dairy</string>
+    <string name="CLR">CLR</string>
+    <string name="Plan">Plan</string>
+    <string name="validity">Validez</string>
+    <string name="Rupee_symbol">\ u20B9</string>
+    <string name="Downloaded_PDF">Descargar PDF</string>
+    <string name="print_reciept">Imprima el recibo</string>
+    <string name="bluetooth_connection">Conexión Bluetooth</string>
+    <string name="connect">conectar</string>
+    <string name="SelectPrinter">Seleccionar impresora</string>
+    <string name="bluetooth_printer">Impresora Bluetooth</string>
+    <string name="are_you_sure_wantot_print_reciept">¿Estás segura de que quieres imprimir el recibo?</string>
+    <string name="message_setting">Configuración de mensaje</string>
+    <string name="sim">SIM</string>
+    <string name="web">WEB</string>
+    <string name="alwyason">Siempre enviar</string>
+
+    <string name="off">APAGADA</string>
+    <string name="sms_setting">Configuración de SMS</string>
+    <string name="ask_every_time">Preguntar cada vez</string>
+    <string name="Printer_Not_Connect">Impresora no conectada</string>
+    <string name="Please_Select_SIMorWeb">Por favor seleccione SIM o Web</string>
+    <string name="Daily_Message_Limit_Reached">Se ha completado el límite de envío de su mensaje diario.</string>
+    <string name="Fromdate">Partir de la fecha</string>
+    <string name="Todate">Hasta la fecha</string>
+    <string name="Please_Select_AlwyasOrAsk">Seleccione Alwyas On o pregunte cada vez</string>
+    <string name="Either_there_was_network_issue_orsomeerror_occurred">O hubo un problema de red o se produjo un error al enviar la solicitud, intente nuevamente ...</string>
+    <string name="PleaseON_Bluetooth_of_device">Por favor, EN Bluetooth del dispositivo</string>
+    <string name="Password_will_besendto_your_mobile_number">La contraseña se enviará a su número de teléfono móvil.</string>
+    <string name="Please_Wait_for_otp30">Por favor espere 60 segundos para OTP.</string>
+    <string name="Are_You_Sure_Want_To_Exit_From_Login">¿Estás segura de que quieres salir del inicio de sesión?</string>
+    <string name="Dairy">Lechería</string>
+
+    <string name="Are_You_Sure_Want_Send_SMS">¿Estás segura de que quieres enviar un mensaje?</string>
+    <string name="download_chart">Descargar SNF Chart</string>
+    <string name="CustomerhelpMessage">Para el registro del cliente Póngase en contacto con su propietario de productos lácteos. \ N \ n \ n कस्टमर रजिस्ट्रेशन के लिए अपने डेयरी मालिक से संपर्क करे. \ NLínea de ayuda \ n <b> 9772196777 </b> \ n धन्यवाद </string>
+    <string name="webSMSPlanExpireMessage">Su plan de mensajes ha caducado, utilice la SIM para enviar el mensaje o comuníquese con nuestra línea de ayuda número 9772196777. Gracias.</string>
+    <string name="FORGOT_PIN">Olvidé mi PIN</string>
+    <string name="Are_You_Sure_Want_To_Logout">¿Estás segura de que quieres cerrar sesión?</string>
+    <string name="addNewAccount">Agregar nueva cuenta</string>
+    <string name="loginAccountList">Lista de cuentas</string>
+    <string name="user_already_login_in_this_app_message">Este usuario ya ha iniciado sesión en este software, inicie sesión en la pantalla Dairy Profile desde la lista de cuentas de usuario de inicio de sesión. Gracias .</string>
+    <string name="help">Ayuda</string>
+    <string name="play">Jugar</string>
+    <string name="how_to_use_Meridairy">¿Cómo usar Meri lácteos?</string>
+    <string name="Loginon_multiple_evices">Inicie sesión en múltiples dispositivos móviles mediante el escaneo de código QR</string>
+    <string name="MeriDairy_Introduction">Meri Dairy Introducción</string>
+    <string name="How_to_sale_milk_to_customeronMeri_Dairyapp">¿Cómo vender leche a la cliente en la aplicación Meri Dairy?</string>
+    <string name="Howto_updateSNFandFATrate_in_MeriDairyapp">¿Cómo actualizar la tasa de SNF y FAT en Meri Dairy?</string>
+    <string name="How_to_editCustomer">¿Cómo editar Cliente?</string>
+    <string name="Howto_add_a_payment_with_signatureMERIDAIRY">¿Cómo agregar un pago con firma MERI DAIRY?</string>
+    <string name="MERIDAIRY_milk_sowtware_mini_printer_printreciept_by_phone">Imprimir recibo de la impresora bluetooth por móvil</string>
+    <string name="notification">Notificación</string>
+    <string name="milk_sowtware_COMPUTER_KEYBOARD">¿Cómo ingresar la leche con el teclado de la computadora?</string>
+    <string name="LoginWithPpassword">Iniciar sesión con contraseña</string>
+    <string name="login_with_passHelpMessage">Para iniciar sesión con contraseña, utilice la contraseña anterior enviada a su número de teléfono móvil. De lo contrario, regrese desde aquí e inicie sesión con la página del número móvil.</string>
+    <string name="Purchase">Compra</string>
+    <string name="Months">Meses</string>
+    <string name="Year">Año</string>
+    <string name="PricingTable">Plan de precios</string>
+    <string name="Do_You_Want_duplicate_Entry">¿Quieres duplicar entradas?</string>
+    <string name="PaymentSuccessful">Pago exitosa</string>
+    <string name="OrderId">Solicitar ID</string>
+    <string name="Done">Hecho</string>
+    <string name="PaymentFailed">Pago fallido</string>
+    <string name="YoucanSkip">Omitir</string>
+    <string name="dayleft">Días restantes</string>
+    <string name="ExpiryDate">Fecha de caducidad</string>
+    <string name="messageBuy">Comprar mensaje</string>
+    <string name="pleaseUpdateApp">Por favor, actualice la aplicación a la nueva versión y continúe.</string>
+    <string name="newUpdateAvailable">Nueva actualización disponible</string>
+    <string name="legalPolicies"><u>Políticas legales</u></string>
+    <string name="Shopping">Compras</string>
+    <string name="Add">Añadir</string>
+    <string name="rsSymbol">\ u20B9</string>
+    <string name="MyCart">Mi carrito</string>
+    <string name="MyOrder">Mi pedido</string>
+    <string name="resendOtp">Reenviar OTP</string>
+    <string name="PlanList">Lista de planes de membresía</string>
+
+    <string name="ViewCart">Ver carrito</string>
+    <string name="navUpgradePrimium">Upgrade Premium (nuevo)</string>
+    <string name="LEGALPOLICIES">Políticas legales</string>
+    <string name="navMyOrder">Mi pedido</string>
+    <string name="AboutUs">Sobre nosotras</string>
+    <string name="PrivacyPolicy">Política de privacidad</string>
+    <string name="TermsandConditions">Términos y Condiciones</string>
+    <string name="RefundCancellationPolicy">Política de reembolso y cancelación</string>
+    <string name="ContactUs">Contacta con nosotras</string>
+    <string name="TryAgain">Inténtalo de nuevo</string>
+    <string name="Skip"> [CDATA [Saltar anuncio >>></string>
+    <string name="LoginWithOTP">Inicie sesión con OTP</string>
+    <string name="UpdateApp">Actualizar aplicación</string>
+    <string name="SNF_FAT_Chart_Table">Ver tabla de tabla SNF FAT</string>
+    <string name="computerLogin">Inicio de sesión en computadora</string>
+    <string name="Description">Descripción</string>
+    <string name="SelectPicture">Seleccionar imagen</string>
+    <string name="AddPhoto">¡Añadir foto!</string>
+    <string name="ChoosefromGallery">Elegir de la galería</string>
+    <string name="Price">Precio</string>
+    <string name="PleaseUploadImageFile">Por favor, cargue el archivo de imagen</string>
+
+    <string name="Success">Éxito</string>
+    <string name="failed">Fallida</string>
+    <string name="MyAdvertisement">Mi anuncio</string>
+    <string name="text_upload_images">Subir imágenes</string>
+
+    <string name="upload_videos">Subir videos</string>
+    <string name="Male">Masculina</string>
+    <string name="Female">Hembra</string>
+    <string name="LactationNo">Lactancia No.</string>
+    <string name="LastCalvingOccured">Último parto ocurrido</string>
+    <string name="MilkingStatus">Estado de ordeño</string>
+    <string name="InMilk">En leche</string>
+    <string name="Dry">Seca</string>
+    <string name="PeakMilkYield">Rendimiento máximo de leche</string>
+    <string name="Gender_of_calf_at_foot">Sexo de ternero a pie</string>
+    <string name="Inter_CalvingPeriod">Periodo de parto</string>
+    <string name="less_than_oneYear">Menos de 1 año</string>
+    <string name="one_onepointFive">1-1.5 años</string>
+    <string name="onePointFive_to_two">1.5-2 años</string>
+    <string name="more_than_twoYear">Mas de 2 años</string>
+    <string name="H_S_Vaccination_done">H.S. Vacunación realizada?</string>
+    <string name="AnimalList">Lista de animales</string>
+    <string name="Are_you_sure_to_delete_the_animal">¿Estás segura de que quieres eliminar el animal?</string>
+    <string name="FMD_Vaccination_period">Período de vacunación contra la fiebre aftosa?</string>
+    <string name="BlackQuarter_VaccinationDone">Vacunación del Black Quarter?</string>
+    <string name="Brucellousis_VaccinationatCalf_Foot">Vacunación de Brucellousis en el pie de ternero?</string>
+    <string name="Deworming">Desparasitación</string>
+    <string name="Deworming_done">Desparasitación hecha?</string>
+    <string name="FMD_Vaccination_done">Vacunación contra la fiebre aftosa?</string>
+    <string name="Vaccination">Vacunación</string>
+    <string name="Preganancy_Day">Dia del embarazo</string>
+    <string name="Preganancy_Month">Mes de embarazo</string>
+    <string name="Is_pregnant">¿Esta embarazada?</string>
+    <string name="Gender">Género</string>
+    <string name="Age">Age</string>
+    <string name="Tag_No">Etiqueta No. (si está etiquetada)</string>
+    <string name="Register">Registrarse</string>
+    <string name="video_play">Video Play</string>
+    <string name="go_to_settings">Ir a la configuración</string>
+    <string name="dialog_permission_title">Permitir permiso</string>
+    <string name="dialog_permission_message">Esta aplicación necesita permiso para usar esta función. Puede otorgarlos en la configuración de la aplicación.</string>
+    <string name="AnimalForSale">Animal para la venta</string>
+    <string name="Choose_Breed">Elige raza</string>
+    <string name="rearing">Crianza</string>
+    <string name="sold">Vendida</string>
+    <string name="died">Murió</string>
+    <string name="CalfStatus">Estado de la pantorrilla</string>
+    <string name="how_many_month_before_fmd_vaccination_done">¿Cuántos meses antes se realizó la vacuna contra la fiebre aftosa?</string>
+    <string name="how_manyBefore_H_S_Vaccination_done">¿Cuántos meses antes se realizó la vacuna HS?</string>
+    <string name="how_manyMonth_black_quarter_vaccination_period">¿Cuántos meses antes se realizó la vacunación HS Black Quarter?</string>
+    <string name="how_many_month_before_brucellousis_vaccination_done">¿Cuántos meses antes se realizó la vacuna de HS Brucellousis?</string>
+    <string name="how_many_month_before_deworming_vaccination_done">¿Cuántos meses antes se realizó la vacuna antiparasitaria HS?</string>
+    <string name="Selling_Price">Precio de venta</string>
+    <string name="Castration">Castración</string>
+    <string name="SelectVideoFromGallery">Seleccionar video de la galería</string>
+    <string name="RecordVideoFromCamera">Grabar video de la cámara</string>
+    <string name="PleaseEnterName">Por favor, introduzca el nombre</string>
+    <string name="YearIsRequired">¡Se requiere año!</string>
+    <string name="MaximumPhotosUpload">\ "Se pueden cargar un máximo de 5 fotos</string>
+    <string name="Please_select_deworming_status">Por favor seleccione el estado de desparasitación</string>
+    <string name="AddAnimal">Añadir animal</string>
+    <string name="DewormingPeriod">Periodo de desparasitación</string>
+    <string name="Breed">Raza</string>
+    <string name="Category">Categoría</string>
+    <string name="Milk_Buy">Compra de leche</string>
+    <string name="classifieds">Clasificados</string>
+    <string name="strType">TIPO</string>
+    <string name="Please_enable_Bluetooth_device">Por favor encienda Bluetooth</string>
+    <string name="SelectRateType">Seleccione el tipo de tarifa</string>
+    <string name="PrintMulTilanguage">Imprimir en todos los idiomas</string>
+    <string name="Current_Location">Ubicación actual</string>
+    <string name="Use_GPS">Usar GPS</string>
+    <string name="MapRoute">Mapa de ruta</string>
+    <string name="navigation_drawer_open">Abierta</string>
+    <string name="navigation_drawer_close">Cerca</string>
+    <string name="upload">Subir</string>
+    <string name="Vacation">Vacaciones</string>
+    <string name="ViewInvoice">Mirar la factura</string>
+    <string name="Home">Hogar</string>
+    <string name="titleProfile">Perfil</string>
+    <string name="ViewEventDetais">Ver detalles del evento</string>
+    <string name="NoEventAvailable">No hay evento disponible!</string>
+    <string name="BuyMilkProduct">BuyMilkProduct</string>
+    <string name="AddVacation">Agregar vacaciones</string>
+    <string name="UpdateVacation">Actualizar vacaciones</string>
+    <string name="DairyOwnerDetails">Detalles del propietario de lácteos</string>
+    <string name="ChooseShift">Elegir turno</string>
+    <string name="ChooseMilkPlan">Elija un plan de leche</string>
+    <string name="MyPlan">Mi plan</string>
+    <string name="note_dairy_details">Nota: si conoce a algún propietario de productos lácteos que le venda leche o de dónde compra leche, puede completar los detalles de él.</string>
+    <string name="CowMilkPlan">Plan de leche de vaca</string>
+    <string name="BuffaloMilkPlan">Plan de leche de búfalo</string>
+    <string name="Add_Milk_Plan">Agregar plan de leche</string>
+    <string name="PlanStatus">Estado del plan</string>
+    <string name="Enable">Habilitar</string>
+    <string name="Disable">Inhabilitar</string>
+    <string name="On">En</string>
+    <string name="product_OutOf_Stock">Producto agotado</string>
+    <string name="updatePlan">plan de actualización</string>
+    <string name="TrackingOrder">Orden de seguimiento</string>
+    <string name="order_Details">Detalles del pedido</string>
+    <string name="printInvoice">Imprimir factura</string>
+    <string name="cancelReason">Cancelar motivo</string>
+    <string name="product_item_details">Detalles del artículo del producto</string>
+    <string name="shipped">Enviada</string>
+    <string name="recieved">Recibida</string>
+    <string name="delivered">Entregada</string>
+    <string name="cancelled">Cancelada</string>
+    <string name="reason">Razón</string>
+    <string name="are_you_sure_want_cancel_entry">¿Estás segura de que deseas cancelar esta entrada?</string>
+    <string name="pending">Pendiente</string>
+    <string name="Click_on_Login_and_scan_your_QR_code">1. Vaya al sitio web meridairy.in\n2. Haga clic en el botón Dairy Login en la esquina lateral derecha \ n3. Escanee su código QR</string>
+    <string name="Update_Entry">Actualizar entrada</string>
+    <string name="Employee">Empleada</string>
+    <string name="DeliveryBoy">Muchacho de entrega</string>
+    <string name="all">Todos</string>
+    <string name="This_is_Vacation">Esto es vacaciones</string>
+    <string name="milk_Vacation">Vacaciones de leche</string>
+    <string name="Milk">Leche</string>
+    <string name="Order">Orden</string>
+    <string name="TrackingId">ID de rastreo</string>
+    <string name="shippingId">id de envío</string>
+    <string name="Action">Acción</string>
+    <string name="Accept">Aceptar</string>
+    <string name="invoice">Factura</string>
+    <string name="bulkMilkHistory">Historia de la leche a granel</string>
+    <string name="myRequest">Mi petición</string>
+    <string name="gst">GST</string>
+    <string name="invoiceValue">Valor de la factura</string>
+    <string name="devideFactor">Valor de la factura</string>
+    <string name="multiplyFactor">Factor multiplicador</string>
+    <string name="addFactor">Añadir factor</string>
+    <string name="clrSetting">Configuración CLR</string>
+    <string name="Rate_by_CLR">Tarifa solo por CLR</string>
+    <string name="clrChart">Gráfico CLR</string>
+    <string name="chart">Gráfico</string>
+    <string name="selectChartCategory">Seleccionar categoría de gráfico</string>
+    <string name="generalChart">Carta general</string>
+    <string name="downloadsampleExcel">Descargar muestra de Excel</string>
+    <string name="list">Lista</string>
+    <string name="group">Grupo</string>
+    <string name="brand">Marca</string>
+    <string name="strReturn">Return</string>
+    <string name="product_SaleAndBuy">Venta y compra de productos</string>
+    <string name="tax">Impuesto</string>
+    <string name="lowStockQuantity">Cantidad de stock baja</string>
+    <string name="openingQuantity">Cantidad de apertura</string>
+    <string name="openingRate">Tasa de apertura</string>
+    <string name="OpeningAmount">Monto de apertura</string>
+    <string name="unit">Unidad</string>
+    <string name="includingTax">Incluyendo impuesto</string>
+    <string name="salePrice">Precio de venta</string>
+    <string name="invoiceNo">Factura no</string>
+    <string name="includingDiscountWith">Incluye descuento con%</string>
+    <string name="discount">Descuento</string>
+    <string name="cashDiscount">Descuento de efectivo</string>
+    <string name="otherCharges">Otros cargos</string>
+    <string name="subTotal">Subtotal</string>
+    <string name="invoiceAmount">Monto de la factura</string>
+    <string name="sgst">SGST</string>
+    <string name="cgst">CGST</string>
+    <string name="igst">IGST</string>
+    <string name="referenceNo">Numero de referencia</string>
+    <string name="bankName">Nombre del banco</string>
+    <string name="accountNo">Cuenta no</string>
+    <string name="chequeNo">Marque No</string>
+    <string name="paymentType">Tipo de pago</string>
+    <string name="cash">Efectivo</string>
+    <string name="bank">Banco</string>
+    <string name="cheque">Cheque</string>
+    <string name="voucher">Vale</string>
+    <string name="recieve">Recibir</string>
+    <string name="my">Mi</string>
+    <string name="expenses">Gastos</string>
+    <string name="code">Código</string>
+    <string name="taxable">Imponible</string>
+    <string name="membership">Afiliación</string>
+    <string name="message">Mensaje</string>
+    <string name="day">Día</string>
+    <string name="IFSC_Code">Código IFSC</string>
+    <string name="village">Pueblo</string>
+    <string name="credit">Crédito</string>
+    <string name="debit">Débito</string>
+    <string name="general">General</string>
+    <string name="plantMilkCollection">Colección de leche vegetal</string>
+    <string name="balance">Equilibrar</string>
+    <string name="other">other</string>
+    <string name="adavance"> Avanzar</string>
+    <string name="screen">Pantalla</string>
+    <string name="automatic">Automático</string>
+    <string name="start"> comienzo</string>
+    <string name="history">History</string>
+    <string name="payment">Payment</string>
+    <string name="byDate">By Date</string>
+    <string name="milk">Milk</string>
+    <string name="bulk">Bulk</string>
+    <string name="switchInCustomerApp">Cambiar en la aplicación del cliente</string>
+    <string name="switchIn">Switch In</string>
+    <string name="switchInDairy">Switch in Dairy App</string>
+    <string name="addNewMessage">Add New Message</string>
+    <string name="Send">Send</string>
+    <string name="UploadingOnline">Uploading Online,Please wait...</string>
+    <string name="syncMilkData">Sync Milk Data</string>
+    <string name="installSmsApp">Install SMS App</string>
+    <string name="vNo">V.No.</string>
+    <string name="strOldTransMessage">This Screen is Old  Transaction, Please use new Payment Register Screen for new Transaction</string>
+    <string name="New">New</string>
+    <string name="strSaleProductScreenMsg">This is an old Product Selling page. Please Use New Product Buy and Sell page from Side Menu</string>
+    <string name="khata">"Khata "</string>
+    <string name="milkBill">Milk Bill</string>
+    <string name="to">a</string>
+    <string name="from">de</string>
+    <string name="phone">teléfono</string>
+    <string name="app">Aplicación</string>
+    <string name="step">Paso</string>
+    <string name="refresh">Actualizar</string>
+    <string name="lastRefreshOn">Actualización anterior</string>
+    <string name="clrFormulaDescription">"Note: For example according all india Dairy Standard\n1. Divide Factor=4.0,\n2. Multiply Factor=0.20,\n3. Add Factor=0.66  "</string>
+    <string name="print_reciept_title_font_size">Print reciept title font size</string>
+    <string name="print_receipt_message_font_size">Print receipt message font size</string>
+    <string name="share">Share App</string>
+    <string name="lacto_scale">Lacto Scale</string>
+    <string name="eko_milk">EKO Milk</string>
+    <string name="emt_serial">EMT Serial</string>
+    <string name="emt_parallel">EMT  Parllel</string>
+    <string name="eko_pro">EKO Pro</string>
+    <string name="lacten">Lacten</string>
+    <string name="master_classic">Master Classic</string>
+    <string name="machine_set_up">Machine Set Up</string>
+    <string name="select_machine">Select Machine</string>
+    <string name="change_machine">Máquina de cambio</string>
+    <string name="machine_setting">Machine Settings</string>
+    <string name="whatsApp_message">WhatsApp Message</string>
+
+    <string name="under_text"><u>Underline me</u></string>
+</resources>

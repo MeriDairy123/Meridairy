@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp">
+        <LinearLayout
+            android:id="@+id/bottom_wrapper"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/colorSubheader"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutEdit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_icon"
+                    android:foregroundGravity="center_horizontal" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                    android:id="@+id/tvEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/Edit"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutCancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:background="@color/colorRed"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/close_icon"
+                    android:foregroundGravity="center_horizontal" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                    android:id="@+id/tvCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/Cancel"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+
+
+            android:orientation="horizontal">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="DATE"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvMorning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="MORNING"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvEvening"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Evening"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:text="AMOUNT"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </com.daimajia.swipe.SwipeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/colorWhite" />
+</LinearLayout>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+    <TextView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_110sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginRight="@dimen/_80sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:text="मेरी डेयरी"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_24sdp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btnSeller"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:background="@drawable/btn_shape_global"
+            android:text="@string/SELLER_PROFILE"
+            android:textAlignment="center"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="normal" />
+
+
+        <Button
+
+            android:id="@+id/btnBuyer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/btnSeller"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:background="@drawable/btn_shape_green"
+            android:text="@string/BUYER_PROFILE"
+            android:textAlignment="center"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+</RelativeLayout>
+

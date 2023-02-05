@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_toolbar"
+
+        />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@string/OtpActTxt"
+        android:textColor="@color/colorWhite" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_userNamePhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/image1"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_30sdp">
+
+        <EditText
+            android:id="@+id/etuserNamePhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="@string/Phone_Number"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="10"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_16sdp" />
+    </com.google.android.material.textfield.TextInputLayout>>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@+id/et_userNamePhone"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@color/color_bottom_light_gray" />
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/et_password"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/btn_shape_global"
+        android:text="@string/Countinue"
+        android:textAlignment="center"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="normal" />
+</LinearLayout>

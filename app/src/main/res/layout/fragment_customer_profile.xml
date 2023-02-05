@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_payt_bg"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        app:navigationIcon="@drawable/ic_nav_drawer"
+        app:titleTextColor="@color/colorWhite">
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/btn_shape_global"
+            android:textColor="@color/colorWhite"
+            android:text="@string/Logout"
+            android:layout_gravity="end"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+             android:textStyle="normal"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imgEditProf"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorBtnRed"
+                android:background="@drawable/dashboard_circle_shap"
+                android:padding="5dp"
+                android:src="@drawable/edit_icon" />
+
+            <ImageView
+                android:id="@+id/imgQRCode"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/qr_code" />
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_shape_global"
+                android:inputType="text"
+                android:layout_gravity="right"
+                android:padding="5dp"
+                android:textColor="@color/colorWhite"
+                android:visibility="gone"
+                android:id="@+id/tvLogoutfromOther"
+                android:text="@string/logout_from_another_device"
+                />
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDairyApp"
+                android:layout_gravity="right"
+                 android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/color_BlueSkyDark"
+                android:background="@drawable/btn_shape_blue"
+                android:foreground="@drawable/ripple"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="@string/switchInDairy"
+                android:textColor="@color/colorWhite"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="3dp"
+
+                android:padding="5dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

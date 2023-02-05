@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="35dp"
+    android:layout_below="@id/monthLayout"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginRight="2dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/ID"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                       
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="@string/Name"
+
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                       
+        android:id="@+id/tvTotalWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginLeft="3dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/Total_Weight"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                       
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="@string/Total_Amount"
+
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                       
+        android:id="@+id/tvSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.8"
+        android:text="@string/Select"
+
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp" />
+</LinearLayout>

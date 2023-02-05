@@ -1,0 +1,203 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorWhite</item>
+
+        <item name="android:textColorHint">@color/colorAppTexview</item>
+        <item name="android:windowBackground">@color/color_bg</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
+        <item name="android:editTextStyle">@style/Widget.AppCompat.EditText</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+        <item name="switchStyle">@style/MySwitch</item>
+        <item name="android:windowNoTitle">true</item>
+
+
+
+    </style>-->
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:textColorHint">@color/colorAppTexview</item>
+        <item name="android:windowBackground">@color/color_bg</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
+        <item name="android:editTextStyle">@style/Widget.AppCompat.EditText</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+        <item name="switchStyle">@style/MySwitch</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:textColorHintInverse">@color/colorGray</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ThemeInputtextLayout" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorWhite</item>
+        <!-- Secondary brand color. -->
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorSecondaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnSecondary">@color/colorAccent</item>
+        <!-- Status bar color. -->
+        <item name="android:typeface">normal</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="WindowAnimationStyle">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="DrawerStyle">
+        <item name="android:textSize">11sp</item>
+
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <style name="MyDialogThemeDark" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/color_darkGray</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorWhite</item>
+        <item name="actionMenuTextColor">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="MyAlertDialog" parent="android:Theme.Translucent.NoTitleBar">
+        <!-- Used for the title and text -->
+        <item name="android:typeface">serif</item>
+        <item name="android:textColorPrimary">#000</item>
+        <item name="android:layout_gravity">center</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">#000</item>
+
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/colorWhite</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">#ffffff</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/color_bottom_dark_gray</item>
+        <item name="android:textColor">#ffffff</item>
+
+    </style>
+
+    <!--use for SwitchCompat-->
+    <style name="MySwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/color_list_gray</item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#B5B2B8</item>
+    </style>
+
+    <style name="PopupMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="entry_menu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    //spiner
+
+    <style name="AnimalTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlActivated">@color/color_pink</item>
+        <item name="colorControlHighlight">@color/color_pink</item>
+        <item name="android:editTextStyle">@style/Widget.AppCompat.EditText</item>
+        <item name="android:textColorHint">@color/color_darkGray</item>
+        <item name="android:windowBackground">@color/color_payt_bg</item>
+
+        <item name="android:textColorSecondary">@color/colorWhite</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
+    </style>
+
+    <style name="CustomerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/color_blue_dark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:editTextStyle">@style/Widget.AppCompat.EditText</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
+
+    </style>
+
+    <style name="DeliveryBoyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorThemeRed</item>
+        <item name="editTextColor">@color/colorBlack</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorGray</item>
+        <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:editTextStyle">@style/Widget.AppCompat.EditText</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationStyle</item>
+    </style>
+
+    <style name="DialogAnimation" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowEnterAnimation">@animator/slide_up</item>
+        <item name="android:windowExitAnimation">@animator/slide_down</item>
+    </style>
+
+
+
+    <style name="CustomOutlineBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorGray</item>
+        <item name="borderWidth">.5dp</item>
+        <item name="android:textColorHint">@color/colorGray</item>
+        <item name="hintTextColor">@color/white</item>
+    </style>
+
+
+
+
+</resources>

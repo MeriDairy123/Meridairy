@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvlable_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/Please_Wait_for_otp30"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+        android:id="@+id/tvTimeCounter"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/circle_shape"
+        android:backgroundTint="@color/colorBtnRed"
+
+        android:gravity="center"
+        android:text="60"
+        android:textColor="@color/colorWhite"
+        android:textSize="11sp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Wave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="40dp"
+        app:SpinKit_Color="@color/colorPrimary" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="25dp">
+
+        <EditText
+            android:id="@+id/et_Otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:hint="@string/Enter_OTP"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:padding="5dp"
+            android:text=""
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>>
+
+
+</LinearLayout>

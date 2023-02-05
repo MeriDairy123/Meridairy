@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_45sdp"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+            
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:text="ID"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="1.6"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_10sdp"
+                android:singleLine="true"
+                android:text="@string/Name"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/txtMobileNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="1.5"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="@string/Mobileno"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="5sp"
+                android:gravity="right|center_vertical">
+
+                <CheckBox
+                    android:id="@+id/chkStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:text=""
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/colorWhite" />
+
+</LinearLayout>

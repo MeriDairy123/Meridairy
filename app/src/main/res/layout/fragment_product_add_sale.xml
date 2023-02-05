@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_100sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+
+
+
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:minHeight="@dimen/_40sdp"
+                    android:background="@drawable/layout_border_white"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:drawableTint="@color/colorWhite"
+                    android:focusable="false"
+                    
+                    android:gravity="center"
+                    android:hint="@string/Select_Date"
+                    android:imeOptions="actionNext"
+
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/_8sdp" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_border_white"
+                android:minHeight="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spinUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownSelector="@color/colorPrimary"
+                    android:entries="@array/select"
+                    android:accessibilityPaneTitle="@string/USER_LIST"
+                    android:minHeight="@dimen/_30sdp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Add_Product"
+                android:id="@+id/tvAddProd"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:drawableRight="@drawable/ic_add"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_9sdp"
+                android:drawablePadding="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/btn_shape_green"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/bg_gradent_blue"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:elevation="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvSrNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_weight="0.3"
+                    
+                    android:gravity="center_vertical"
+                    android:text="@string/Sr"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_9sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    
+                    android:gravity="center"
+                    android:text="@string/Name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_9sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.9"
+                    
+                    android:gravity="center"
+
+
+                    android:text="@string/Quantity"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_9sdp" />
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.7"
+                    
+                    android:gravity="center"
+
+
+                    android:text="@string/tax"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_9sdp" />
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                    android:layout_width="0dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    
+                    android:gravity="center"
+
+
+                    android:text="@string/Amount"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_9sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvAction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    
+                    android:gravity="center"
+                    android:text="@string/Action"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_9sdp" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+
+                android:id="@+id/recyclerViewProduct"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/layout_border_white"
+                    android:textColorHint="@color/colorGray">
+
+                    <EditText
+                        android:id="@+id/ediCashDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/cashDiscount"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/_8sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+
+                    android:background="@drawable/layout_border_white"
+                    android:textColorHint="@color/colorGray">
+
+                    <EditText
+                        android:id="@+id/ediOtherCharges"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/otherCharges"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/_8sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:minHeight="@dimen/_35sdp"
+                android:orientation="vertical"
+
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinProductss"
+                    style="@style/AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/select"
+                    android:minHeight="@dimen/_30sdp" />
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:textColorHint="@color/colorLightGray"
+                >
+
+                <EditText
+                    android:id="@+id/ediCashAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/cash"
+                    android:inputType="number"
+                    android:padding="@dimen/_5sdp"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="@dimen/_8sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/layout_border_white"
+                android:textColorHint="@color/colorGray">
+
+                <EditText
+                    android:id="@+id/ediDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/Description"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:nestedScrollingEnabled="true"
+                    android:padding="@dimen/_5sdp"
+                    android:scrollbars="vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/_8sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/colorGray"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layoutTax"
+                    android:weightSum="1"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:minHeight="@dimen/_50sdp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvSGST"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvDiscount"
+                        android:padding="@dimen/_5sdp"
+                        android:background="@drawable/edit_text_bottom_line"
+                        android:text="@string/sgst"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/tvCGST"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.33"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvSGST"
+                        android:padding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:text="@string/cgst"
+
+                        android:background="@drawable/edit_text_bottom_line"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/tvIGST"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.33"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCGST"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/igst"
+                        android:gravity="right"
+                        android:background="@drawable/edit_text_bottom_line"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/edit_text_bottom_line"
+                    android:text="@string/discount"
+                    android:layout_below="@+id/layoutTax"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp" />
+                <TextView
+                    android:id="@+id/tvSubTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDiscount"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/subTotal"
+                    android:background="@drawable/edit_text_bottom_line"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvInvoiceAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSubTotal"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/invoiceAmount"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp" />
+                <TextView
+                    android:id="@+id/tvBalanceAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvInvoiceAmount"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/invoiceAmount"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_37sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_20sdp"
+                android:textSize="@dimen/_10sdp"
+                android:background="@drawable/btn_shape_global"
+                android:text="@string/Submit"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

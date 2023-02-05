@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/Add"
+        app:navigationIcon="@drawable/back_arrow"
+        android:background="@color/colorPrimary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="0.5"
+                    android:background="@drawable/layout_border_white"
+                    android:minHeight="45dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spinGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:entries="@array/select"
+                        android:accessibilityPaneTitle="@string/group"
+                        android:minHeight="35dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_below="@+id/toolbar"
+
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/layout_border_white"
+                    android:orientation="vertical">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spinItem"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/select"
+                        android:accessibilityPaneTitle="@string/Item"
+
+                        android:minHeight="35dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutSpinGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="10dp"
+
+                android:minHeight="35dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/layout_border_white"
+                    android:orientation="vertical">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spinBrand"
+                        style="@style/AppTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/select"
+                        android:accessibilityPaneTitle="@string/brand"
+
+
+
+                        android:minHeight="35dp" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/layout_border_white"
+                    android:orientation="vertical">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/spinProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/select"
+                        android:accessibilityPaneTitle="@string/Product"
+                        android:minHeight="35dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorGray"
+                    android:background="@drawable/layout_border_white"
+                    android:minWidth="150dp">
+
+                    <EditText
+                        android:id="@+id/ediQty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/Quantity"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:imeOptions="actionNext"
+                        android:nextFocusRight="@id/ediQty"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="13sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_border_white"
+                    android:minWidth="150dp"
+                    android:textColorHint="@color/colorGray">
+
+                    <EditText
+
+                        android:id="@+id/ediPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+
+                        android:hint="@string/Price"
+                        android:inputType="numberDecimal"
+                        android:nextFocusDown="@id/ediWeight"
+                        android:imeOptions="actionNext"
+                        android:padding="5dp"
+                        android:singleLine="true"
+
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="13sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/layoutWeight"
+                android:background="@drawable/layout_border_white"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="150dp"
+                    android:textColorHint="@color/colorLightGray">
+
+                    <EditText
+                        android:id="@+id/ediWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/Weight"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="13sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorWhite"
+                    android:minWidth="150dp"
+                    android:textColorHint="@color/colorGray">
+
+                    <EditText
+                        android:id="@+id/ediTotalWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:hint="@string/Total_Weight"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="13sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_border_white"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="150dp"
+                    android:textColorHint="@color/colorLightGray">
+
+                    <EditText
+                        android:id="@+id/ediTax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+
+                        android:hint="@string/tax"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="13sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/chkboxTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/includingTax"
+                    android:textSize="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_border_white"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="150dp"
+                    android:textColorHint="@color/colorLightGray">
+
+                    <EditText
+                        android:id="@+id/ediDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@android:color/transparent"
+
+                        android:hint="@string/discount"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorLightGray"
+                        android:textSize="13sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/chkboxDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/includingDiscountWith"
+                    android:textSize="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:minHeight="50dp"
+                android:background="@color/colorWhite"
+                android:weightSum="1">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:textColorHint="@color/colorPrimary">
+
+                <EditText
+                    android:id="@+id/ediTaxable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+
+                    android:hint="@string/taxable"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorLightGray"
+                    android:textSize="13sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/colorPrimary">
+
+                <EditText
+                    android:id="@+id/ediProdTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/Total_Amount"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+
+                    android:textSize="13sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/btnProductSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="80dp"
+                android:textSize="13sp"
+                android:background="@drawable/btn_shape_global"
+                android:text="@string/Submit"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

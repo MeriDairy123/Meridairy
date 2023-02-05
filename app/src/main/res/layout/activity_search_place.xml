@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:theme="@style/CustomerTheme"
+    android:orientation="vertical"
+    tools:context="b2infosoft.milkapp.com.ShareAds_Animal.SearchPlaceActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardElevation="@dimen/_5sdp">
+
+        <RelativeLayout
+
+            android:id="@+id/RelativeHeaderbar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_43sdp"
+            android:background="@color/colorWhite">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/back_arrow"
+                android:tint="@color/colorBlack"
+                android:gravity="center" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_toRightOf="@id/backArrow"
+                android:layout_toLeftOf="@+id/iconSearch"
+                android:cursorVisible="true"
+                android:theme="@style/CustomerTheme"
+
+                android:ems="10"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/color_darkGray"
+                android:gravity="center_vertical"
+                android:drawableTint="@color/color_darkGray"
+                android:hint="@string/Search_Here"
+                android:textSize="@dimen/_14sdp">
+
+                <requestFocus />
+            </AutoCompleteTextView>
+
+            <ImageView
+                android:id="@+id/iconSearch"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+
+                android:layout_gravity="center|end"
+                android:tint="@color/colorBtnRed"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/search_icon" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:background="@color/colorWhite"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#d3d3d3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40sdp"
+                    android:id="@+id/tvCurrentLocation"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/colorWhite"
+                    android:hint="@string/Current_Location"
+                    android:textColorHint="@color/color_light_white"
+                    android:background="@drawable/layout_shape_blue"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorWhite"
+                    android:paddingLeft="@dimen/_10sdp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutUseGPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.01dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:background="@drawable/layout_shadow"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:tint="@color/colorWhite"
+                        android:background="@drawable/ic_location" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/colorWhite"
+
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:textStyle="bold"
+                        android:gravity="center_vertical"
+                        android:text="@string/Use_GPS" />
+                </LinearLayout>
+            </LinearLayout>
+            <fragment
+                android:id="@+id/map"
+                android:layout_below="@+id/toolbar"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_350sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                tools:context=".DeliveryBoy.DeliveryBoyMainActivity"/>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eae2e2">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text="@string/Item"
+            android:gravity="start"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/Quantity"
+
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvTotalAmt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/Total_Amount"
+
+            android:textAlignment="textEnd"
+
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_reportList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_below="@id/layout" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontButton
+
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/recycler_reportList"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/btn_shape_global"
+        android:text="@string/SALE_ITEM"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+</RelativeLayout>

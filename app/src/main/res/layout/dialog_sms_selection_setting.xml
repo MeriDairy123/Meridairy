@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+<LinearLayout
+    android:gravity="end"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/smsClose"
+        android:layout_margin="@dimen/_10dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_failure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="@string/sms_setting"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_21sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/color_bottom_light_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+            android:id="@+id/tv_sim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_sim"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:gravity="center"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/sim"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15sdp" />
+
+        <CheckBox
+            android:id="@+id/checkboxSim"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+            android:id="@+id/tv_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sim"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:buttonTint="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_web"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:gravity="center"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/web"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15sdp" />
+
+        <CheckBox
+            android:id="@+id/checkboxWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+
+
+            android:layout_below="@+id/checkboxSim"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:backgroundTint="@color/colorPrimary"
+
+            android:buttonTint="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/color_bottom_light_gray" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_20sdp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+            android:id="@+id/tv_alwyas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/alwyason"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_15sdp" />
+
+        <CheckBox
+            android:id="@+id/checkboxAlways"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentRight="true"
+            android:buttonTint="@color/colorBlack"
+            android:drawableTint="@color/colorBlack" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+            android:id="@+id/tv_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_alwyas"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/ask_every_time"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_15sdp" />
+
+        <CheckBox
+            android:id="@+id/checkboxAsk"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/checkboxAlways"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:buttonTint="@color/colorBlack"
+            android:drawableTint="@color/colorBlack" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+            android:id="@+id/tv_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ask"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/off"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_15sdp" />
+
+        <CheckBox
+            android:id="@+id/checkboxOff"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/checkboxAsk"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:buttonTint="@color/colorBlack"
+            android:drawableTint="@color/colorBlack" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+    <b2infosoft.milkapp.com.useful.CustomFontButton
+        android:id="@+id/btnSave"
+        android:layout_width="0sp"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/btn_shape_green"
+        android:minWidth="@dimen/_75sdp"
+        android:minHeight="@dimen/_35sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:padding="5dp"
+        android:text="@string/Save"
+        android:textColor="@color/colorWhite" />
+ <b2infosoft.milkapp.com.useful.CustomFontButton
+        android:id="@+id/btnCancel"
+        android:layout_width="0sp"
+     android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/btn_shape_red"
+     android:layout_marginRight="@dimen/_10sdp"
+     android:layout_marginLeft="@dimen/_10sdp"
+        android:minWidth="@dimen/_75sdp"
+        android:minHeight="@dimen/_35sdp"
+        android:padding="5dp"
+        android:text="@string/Cancel"
+        android:textColor="@color/colorWhite" />
+
+
+    </LinearLayout>
+</LinearLayout>

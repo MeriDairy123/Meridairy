@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_150sdp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp"
+    android:background="@color/color_light_white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/animal_image"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_gravity="center"
+        android:background="@drawable/imagecircle_background"
+        android:padding="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:tint="@color/color_light_white" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/animal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_3sdp"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_regular" />
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="35dp"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:id="@+id/tvSr"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="Sr."
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:id="@+id/tvSellerId"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/ID"
+
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:id="@+id/tvSellerName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="start|center_vertical"
+        android:text="@string/Name"
+
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:id="@+id/tvFatherName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center_vertical"
+        android:layout_weight="1.1"
+        android:gravity="start|center_vertical"
+        android:text="@string/Father_Name"
+
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+        android:id="@+id/tvSellerAmount"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginRight="3dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/Amount"
+
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp" />
+</LinearLayout>
+

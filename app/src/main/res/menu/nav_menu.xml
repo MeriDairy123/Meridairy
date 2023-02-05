@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_15"
+        android:menuCategory="secondary"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_whatsapp_support"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/whatsapp"
+            android:title="@string/whatsapp_support" />
+    </group>
+    <group
+        android:id="@+id/group_dashboard"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_dashboard"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_menu_dashboard"
+            android:title="@string/Deshbord" />
+    </group>
+    <group
+        android:id="@+id/group_addCustomer"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_addCustomer"
+            android:checkable="false"
+            android:checked="false"
+            android:title="@string/ADD_Customer" />
+    </group>
+
+    <group
+        android:id="@+id/group_Customers"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_viewCustomer"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_menu_customer"
+            android:title="@string/Customers" />
+    </group>
+    <group
+        android:id="@+id/group_myProfile"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_dairy_owner_profile"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_user_profile_dairy"
+            android:title="@string/Profile" />
+    </group>
+    <group
+        android:id="@+id/group_Upgrade"
+
+        android:visible="true">
+        <item
+            android:id="@+id/menu_UpgradeAcc"
+            android:checkable="false"
+            android:checked="false"
+
+            android:icon="@drawable/ic_upgrade_account"
+            android:title="@string/navUpgradePrimium" />
+    </group> <group
+        android:id="@+id/group_Ads"
+
+        android:visible="true">
+        <item
+            android:id="@+id/menu_CreateAds"
+            android:checkable="false"
+            android:checked="false"
+
+            android:icon="@drawable/ic_advertising"
+            android:title="@string/CreateAdvertise" />
+    </group>
+    <group
+        android:id="@+id/group_MyOrder"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_my_order"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_shopping"
+            android:title="@string/navMyOrder" />
+    </group>
+
+
+    <group
+        android:id="@+id/group_addEntry"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_addEntry"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/left_add_entry"
+            android:title="@string/Add_Milk_Entry" />
+    </group>
+    <group
+        android:id="@+id/group_View_Entry_By_Date"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_viewEntry"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_view_entry"
+            android:title="@string/View_Entry_By_Date">
+
+        </item>
+    </group>
+    <group
+        android:id="@+id/group_receive"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_receive_cash"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/tranasctions_icon"
+            android:title="@string/RECEIVE_CASH">
+
+        </item>
+    </group>
+    <group
+        android:id="@+id/group_seller_bhugtan"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_bhugtan"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_seller"
+            android:title="@string/SELLER_BHUGTAN" />
+    </group>
+
+    <group
+        android:id="@+id/group_buyer_bhugtan"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_buyer_bhugtan"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_buyer"
+            android:title="@string/BUYER_BHUGTAN" />
+    </group>
+
+    <group
+        android:id="@+id/group_milk_history"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_milk_history"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_milk_history"
+            android:title="@string/MILK_HISTORY">
+
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/group_ViewEntryTwoDate"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_ViewEntryTwoDate"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/left_customer_entry"
+            android:title="@string/View_All_Entry" />
+
+
+    </group>
+
+    <group
+        android:id="@+id/group_trans_history"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_trans_history"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/pay_now"
+            android:title="@string/TRANSACTION_HISTORY" />
+
+    </group>
+
+    <group
+        android:id="@+id/group_Erase"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_Erase"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_erase_milk_history"
+            android:title="@string/ERASE_MILK_HISTORY" />
+    </group>
+
+    <group
+        android:id="@+id/group_product"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_Product"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/left_products"
+            android:title="@string/Product" />
+
+        <item
+            android:id="@+id/menu_sale_products"
+            android:checkable="false"
+            android:checked="false"
+            android:title="@string/Sale_Product" />
+        <item
+            android:id="@+id/menu_AddProduct"
+            android:checkable="false"
+            android:checked="false"
+            android:title="@string/Add_Product" />
+        <item
+            android:id="@+id/menu_view_sell_product"
+            android:checkable="false"
+            android:checked="false"
+            android:title="@string/Selling_History">
+
+        </item>
+
+    </group>
+
+    <group
+        android:id="@+id/group_Setting"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_Setting"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/Setting" />
+        <item
+            android:id="@+id/menu_Rate"
+            android:checkable="false"
+            android:checked="false"
+            android:title="@string/Update_Rate" />
+
+        <item
+            android:id="@+id/menu_UpdateSetting"
+            android:checkable="false"
+            android:checked="false"
+            android:title="@string/print_sms"
+            android:visible="false" />
+    </group>
+    <group
+        android:id="@+id/group_ChangePwd"
+        android:visible="false">
+        <item
+            android:id="@+id/menu_ChangePwd"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_key_change_password"
+            android:title="@string/Change_Password">
+
+        </item>
+    </group>
+    <group
+        android:id="@+id/group_12"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_SNF"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_snf_chart"
+            android:title="@string/SNF_FAT_Chart" />
+    </group>
+    <group
+        android:id="@+id/group_legal_Policies"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_legal_Policies"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_document"
+            android:title="@string/LEGALPOLICIES" />
+
+    </group>
+    <group
+        android:id="@+id/group_logout"
+        android:visible="true">
+        <item
+            android:id="@+id/menu_Logout"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@drawable/ic_logout_customer"
+            android:title="@string/Logout" />
+
+    </group>
+
+</menu>
+
+

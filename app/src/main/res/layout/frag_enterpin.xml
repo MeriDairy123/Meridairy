@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_enterurpin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:visibility="gone"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/etenterpin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:hint="Current PIN"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:text=""
+                android:textAlignment="textStart"
+                android:textSize="@dimen/_16sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_bottom_light_gray"
+            android:visibility="gone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_newpin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/etnewpin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:hint="@string/New_PIN"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:text=""
+                android:gravity="start"
+                android:textSize="@dimen/_16sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_bottom_light_gray" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_reenterpin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/etreenterpin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:hint="@string/Re_enter_PIN"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:text=""
+                android:gravity="start"
+                android:textSize="@dimen/_16sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_bottom_light_gray" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontButton
+
+            android:id="@+id/btnsubPin"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/btn_shape_global"
+            android:text="@string/Submit"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_15sdp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontButton
+
+            android:id="@+id/btnforgotPin"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/btn_shape_global"
+            android:text="@string/FORGOT_PIN"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_15sdp" />
+
+    </LinearLayout>
+</LinearLayout>

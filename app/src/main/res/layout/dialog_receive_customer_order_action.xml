@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CustomerTheme"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/Cancel"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_19sdp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+
+        <RelativeLayout
+            android:id="@+id/layoutImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <ImageView
+                android:id="@+id/imgUploadOrder"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_2sdp"
+                app:srcCompat="@drawable/ic_upload_photo" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvUploadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/imgProduct"
+                android:layout_alignRight="@+id/imgProduct"
+                android:layout_alignBottom="@+id/imgProduct"
+                android:background="@color/dark_gray"
+
+                android:padding="@dimen/_2sdp"
+                android:text="@string/upload"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="@string/TrackingId"
+            android:textColorHint="@color/colorGray"
+            app:hintTextColor="@color/colorGray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ediTrackID"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:imeOptions="actionNext"
+
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_13sdp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/ediComment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@android:drawable/editbox_background"
+            android:gravity="start"
+            android:hint="@string/Description"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="3"
+            android:minHeight="@dimen/_70sdp"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray"
+            android:textSize="@dimen/_13sdp" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/btn_shape_global"
+            android:text="@string/Submit"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+</LinearLayout>

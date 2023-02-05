@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/layoutSpinChart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/_20sdp"
+
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:minHeight="@dimen/_40sdp"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinChartCat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:entries="@array/select"
+            android:minHeight="@dimen/_30sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.02dp"
+            android:background="@color/colorWhite" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutSpinChart"
+        android:layout_margin="@dimen/_10sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerView"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/btn_CowSNF"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center"
+            android:background="@color/colorCandyApple"
+            android:drawableRight="@drawable/arrow_right"
+            android:drawableTint="@color/colorWhite"
+            android:fontFamily="@string/Roboto_Regular"
+
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/COW_SNF"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/btn_BuffeloSNF"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_below="@+id/et_password"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/color_Green"
+            android:drawableRight="@drawable/arrow_right"
+            android:drawableTint="@color/colorWhite"
+            android:fontFamily="@string/Roboto_Regular"
+
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/BUFFALO_SNF"
+            android:textColor="@color/colorWhite" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/btn_ViewTable"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@color/colorPrimary"
+            android:drawableRight="@drawable/arrow_right"
+            android:drawableTint="@color/colorWhite"
+            android:fontFamily="@string/Roboto_Regular"
+
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/SNF_FAT_Chart_Table"
+            android:textColor="@color/colorWhite" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/btn_Refresh"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_below="@+id/et_password"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@color/color_bg_light"
+            android:drawableRight="@drawable/ic_download"
+            android:drawableTint="@color/colorWhite"
+            android:fontFamily="@string/Roboto_Regular"
+
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/download_chart"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/tvtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/Enter_Your_Signature"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack" />
+
+    <com.github.gcacace.signaturepad.views.SignaturePad 
+        android:id="@+id/signature_pad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvtxt"
+        app:penColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:layout_alignBaseline="@+id/btnSave"
+        android:layout_alignBottom="@+id/btnSave"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_shape_global"
+        android:text="@string/Clear" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_shape_green"
+        android:text="@string/Save" />
+</RelativeLayout>

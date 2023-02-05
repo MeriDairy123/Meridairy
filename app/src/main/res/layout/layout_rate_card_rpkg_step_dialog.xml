@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:padding="8dp"
+            android:text="@string/from"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/etFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:gravity="left"
+            android:hint="0.0"
+            android:inputType="phone"
+            android:padding="8dp"
+            android:textColor="@color/colorBlack" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.001dp"
+        android:layout_margin="0dp"
+        android:background="@color/colorLightGray"
+      />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:padding="8dp"
+            android:text="@string/to"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/etTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:gravity="left"
+            android:hint="0.0"
+            android:inputType="phone"
+            android:padding="8dp"
+            android:textColor="@color/colorBlack" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.001dp"
+        android:layout_margin="0dp"
+        android:background="@color/colorLightGray" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:padding="8dp"
+            android:text="@string/Rate"
+            android:textColor="@color/colorBlack" />
+
+        <EditText
+            android:id="@+id/etRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:gravity="left"
+            android:hint="0.0"
+            android:inputType="phone"
+            android:padding="8dp"
+            android:textColor="@color/colorBlack" />
+    </LinearLayout>
+</LinearLayout>

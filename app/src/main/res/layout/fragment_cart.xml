@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_light_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutProductAmt"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_light_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/viewMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/color_light_white"
+            android:orientation="vertical">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+           app:fontName="Open_Sans_Regular"
+                android:id="@+id/tvEmptyMessage"
+                android:layout_width="match_parent"
+                
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:drawable/edit_text"
+                android:drawableTop="@drawable/ic_cart"
+                android:drawablePadding="@dimen/_30sdp"
+                android:drawableTint="@color/colorDarkOrange"
+                
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Cart is Empty"
+                android:textColor="@color/color_blue"
+                android:textSize="@dimen/_17sdp"
+
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutProductAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                   app:fontName="Open_Sans_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:singleLine="true"
+                    android:text="@string/invoiceValue"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_9sdp" />
+
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                   app:fontName="Open_Sans_Regular"
+                    android:id="@+id/tvBasicPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:text="100"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_8sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                   app:fontName="Open_Sans_Regular"
+                    android:id="@+id/tvLabelGst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    
+                    android:singleLine="true"
+                    android:text="@string/gst"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_darkGray"
+
+                    android:textSize="@dimen/_9sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                   app:fontName="Open_Sans_Regular"
+                    android:id="@+id/tvVat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/tvLabelGst"
+                    android:text=" 12 %"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="gone" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                   app:fontName="Open_Sans_Regular"
+                    android:id="@+id/tvGstAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5sdp"
+
+                    android:text="12.00"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_8sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    app:fontName="Roboto_Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    
+                    android:singleLine="true"
+                    android:text="@string/Total_Amount"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_darkGray"
+                    android:textSize="@dimen/_10sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+        app:fontName="Open_Sans_Regular"
+                    android:id="@+id/tvrelabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_toLeftOf="@+id/tvGrossTotalAmount"
+
+                    android:text="@string/rsSymbol"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/_15sdp" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    app:fontName="Roboto_Bold"
+                    android:id="@+id/tvGrossTotalAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5sdp"
+
+                    android:gravity="center"
+                    android:text="112.00"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <b2infosoft.milkapp.com.useful.CustomFontButton
+
+            android:id="@+id/btnPayNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/btn_shape_global"
+            app:fontName="Roboto_Bold"
+            android:gravity="center"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/Pay"
+
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_9sdp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+

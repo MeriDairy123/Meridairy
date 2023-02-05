@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/opt1"
+        android:icon="@drawable/ic_baseline_print_m1"
+        android:title="@string/Print" />
+    <item
+        android:id="@+id/opt3"
+        android:icon="@drawable/ic_baseline_send_m1"
+        android:title="@string/message" />
+    <item
+        android:id="@+id/opt5"
+        android:icon="@drawable/ic_whatsup_logo"
+        android:title="WhatsApp" />
+</menu>

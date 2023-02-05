@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/layoutBottom"
+      android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:titleTextColor="@color/colorWhite">
+
+
+
+      <ImageView
+          android:id="@+id/imgDot"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="end"
+          android:layout_marginRight="15dp"
+          android:background="@drawable/ic_three_dot" />
+
+      <ImageView
+          android:id="@+id/imgLogout"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_gravity="end"
+          android:layout_marginRight="15dp"
+          android:background="@drawable/ic_logout_customer"
+          />
+      <LinearLayout
+          android:id="@+id/layoutNotification"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:visibility="gone"
+          android:layout_gravity="end"
+          android:layout_marginRight="15dp"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgNotification"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_notifications"
+            android:tint="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tvNotificationCount"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="end"
+            android:layout_marginLeft="-13dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/circle_shape"
+            android:backgroundTint="@color/colorRed"
+            android:drawableTint="@color/colorWhite"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:padding="1dp"
+            android:text="0"
+            android:textColor="@color/colorWhite"
+            android:textSize="5sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+      </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/colorWhite" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <View
+            android:id="@+id/spin1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/colorWhite" />
+
+        <LinearLayout
+            android:id="@+id/layoutSeller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/sp_DairyList"
+            style="@android:style/Widget.DeviceDefault.Spinner"
+            android:layout_width="0dp"
+            android:layout_weight=".25"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:popupBackground="@color/colorPrimary"
+            android:spinnerMode="dropdown"/>
+
+        <include
+            android:layout_weight=".62"
+            layout="@layout/layout_date_from_to"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/spin2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/colorWhite" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerDairyList1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+      </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+  </LinearLayout>
+
+  <RelativeLayout
+      android:id="@+id/layoutBottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:layout_alignParentBottom="true">
+
+
+  </RelativeLayout>
+</RelativeLayout>

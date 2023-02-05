@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_200sdp"
+            android:orientation="vertical">
+            
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/layoutAnimalDetails"
+
+           android:orientation="vertical">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:orientation="horizontal"
+               android:weightSum="1">
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.5"
+                   android:imeOptions="actionNext"
+                   android:background="@android:drawable/edit_text"
+                   android:hint="@string/Tag_No"
+                   android:minHeight="@dimen/_35sdp"
+                   >
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/et_tagNo"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                    
+                       android:inputType="number"
+                       android:background="@android:color/transparent"
+
+                       android:singleLine="true"
+                       android:imeOptions="actionNext"
+                       android:textColor="@color/black"
+                       android:textColorHint="@color/dark_gray"
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.5"
+                   android:imeOptions="actionNext"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                   android:background="@android:drawable/edit_text"
+                   android:hint="@string/Name"
+                   android:minHeight="@dimen/_35sdp">
+
+                   <EditText
+                       android:id="@+id/et_nickName"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@android:color/transparent"
+                    
+                       android:imeOptions="actionNext"
+                       android:inputType="text"
+                       android:singleLine="true"
+                       android:textColor="@color/black"
+                       android:textColorHint="@color/dark_gray" />
+               </com.google.android.material.textfield.TextInputLayout>
+           </LinearLayout>
+
+           <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+
+               android:layout_marginTop="@dimen/_5sdp"
+               android:text="@string/Age"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_12sdp" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:orientation="horizontal"
+               android:weightSum="1">
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0sp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.5"
+                   android:background="@android:drawable/edit_text"
+                   android:hint="@string/Year"
+                   android:imeOptions="actionNext"
+                   android:minHeight="@dimen/_35sdp">
+
+                   <EditText
+                       android:id="@+id/et_years"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="@android:color/transparent"
+                       android:inputType="number"
+                       android:maxLength="2"
+                       android:imeOptions="actionNext"
+
+                       android:singleLine="true"
+                       android:textColor="@color/black"
+                       android:textColorHint="@color/dark_gray" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.5"
+                   android:layout_marginLeft="@dimen/_5sdp"
+                   android:background="@android:drawable/edit_text"
+                   android:hint="@string/Months"
+                   android:minHeight="@dimen/_35sdp">
+
+                   <EditText
+                       android:id="@+id/et_months"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@android:color/transparent"
+                       android:imeOptions="actionNext"
+                       android:inputType="number"
+                       android:maxLength="2"
+                       android:singleLine="true"
+                       android:textColor="@color/black"
+                       android:textColorHint="@color/dark_gray"
+
+                       />
+               </com.google.android.material.textfield.TextInputLayout>
+           </LinearLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@android:drawable/edit_text"
+               android:hint="@string/Selling_Price"
+               android:minHeight="@dimen/_35sdp">
+
+               <EditText
+                   android:id="@+id/et_selling_price"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.5"
+                   android:background="@android:color/transparent"
+                    android:maxLength="8"
+                   android:inputType="number"
+                   android:textColor="@color/black"
+                   android:textColorHint="@color/dark_gray"
+
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+           <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+               android:id="@+id/tvlocation"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:minHeight="@dimen/_40sdp"
+               android:padding="@dimen/_5sdp"
+               android:background="@android:drawable/edit_text"
+               android:drawableRight="@drawable/ic_location"
+               android:drawableTint="@color/colorPrimary"
+               android:drawablePadding="@dimen/_5sdp"
+               android:gravity="start|center_vertical"
+               android:textColor="@color/black"
+               android:textColorHint="@color/dark_gray"/>
+
+
+           <Spinner
+               android:id="@+id/spinState"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:background="@android:drawable/edit_text"
+               android:entries="@array/select"
+            
+               android:imeOptions="actionNext"/>
+            <Spinner
+               android:id="@+id/spinCity"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:background="@android:drawable/edit_text"
+            
+               android:imeOptions="actionNext"/>
+
+           <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_10sdp"
+            
+               android:text="@string/Gender"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_12sdp" />
+
+           <RadioGroup
+               android:id="@+id/radio_group_gender"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:orientation="horizontal">
+
+               <RadioButton
+                   android:id="@+id/radio_btn_male"
+                   android:layout_width="0sp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10sp"
+                   android:layout_marginRight="10sp"
+                   android:layout_weight="0.5"
+                   android:buttonTint="@color/colorPrimary"
+                
+                   android:text="@string/Male"
+                   android:textColor="@color/colorPrimary" />
+
+
+               <RadioButton
+                   android:id="@+id/radio_btn_female"
+                   android:layout_width="0sp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10sp"
+                   android:layout_marginRight="10sp"
+                   android:layout_weight="0.5"
+                   android:buttonTint="@color/colorPrimary"
+                
+                   android:text="@string/Female"
+                   android:textColor="@color/colorPrimary"
+
+                   />
+           </RadioGroup>
+
+           <LinearLayout
+               android:id="@+id/layout_castration"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                
+                   android:text="@string/Castration"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_12sdp" />
+
+               <RadioGroup
+                   android:id="@+id/radio_group_castration"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:orientation="horizontal">
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_castration_yes"
+                       android:layout_width="0sp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:layout_weight="0.5"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/yes"
+                       android:textColor="@color/colorPrimary" />
+
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_castration_no"
+                       android:layout_width="0sp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:layout_weight="0.5"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/no"
+                       android:textColor="@color/colorPrimary"
+
+                       />
+               </RadioGroup>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/layout_visbility_female"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:orientation="vertical"
+
+               android:weightSum="1">
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/_5sdp"
+                   android:layout_weight="0.5"
+                   android:background="@android:drawable/edit_text"
+                   android:hint="@string/LactationNo"
+                   android:minHeight="@dimen/_35sdp">
+
+                   <EditText
+                       android:id="@+id/et_lactation"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@android:color/transparent"
+                       android:inputType="number"
+                       android:maxLength="2"
+                       android:singleLine="true"
+                       android:textColor="@color/black"
+                       android:textColorHint="@color/dark_gray" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="@dimen/_5sdp"
+                   android:layout_weight="0.5"
+                   android:background="@android:drawable/edit_text"
+                   android:hint="@string/LastCalvingOccured"
+                   android:minHeight="@dimen/_35sdp">
+
+                   <EditText
+                       android:id="@+id/et_lastCalving"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@android:color/transparent"
+                       android:hint=""
+                       android:maxLength="2"
+                       android:inputType="number"
+                       android:textColor="@color/black"
+                       android:textColorHint="@color/dark_gray" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                   android:id="@+id/textview_milking_status"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_5sdp"
+                
+                   android:text="@string/MilkingStatus"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_12sdp" />
+
+               <RadioGroup
+                   android:id="@+id/radio_group_milk_status"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:orientation="horizontal">
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_inMilk"
+                       android:layout_width="0sp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:layout_weight="0.5"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/InMilk"
+                       android:textColor="@color/colorPrimary"
+
+                       />
+
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_dry"
+                       android:layout_width="0sp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:layout_weight="0.5"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/Dry"
+                       android:textColor="@color/colorPrimary"
+
+                       />
+               </RadioGroup>
+
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/tvPeak_milk_yield"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@android:drawable/edit_text"
+                   android:hint="@string/PeakMilkYield"
+                   android:visibility="gone"
+                   android:minHeight="@dimen/_35sdp">
+
+                   <EditText
+                       android:id="@+id/et_peak_milk_yield"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:background="@color/transparent"
+                    
+                       android:inputType="numberDecimal"
+                       android:maxLength="2"
+                       android:singleLine="true"
+                       android:textColor="@color/black"
+                       android:textColorHint="@color/dark_gray" />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <LinearLayout
+                   android:id="@+id/layout_calf_status"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:visibility="gone">
+
+                   <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                       android:id="@+id/textview_gender_calf"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                    
+                       android:text="@string/Gender_of_calf_at_foot"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp" />
+
+                   <RadioGroup
+                       android:id="@+id/radiogroup_gender_of_calf"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:orientation="horizontal">
+
+                       <RadioButton
+                           android:id="@+id/radio_btn_male_calf"
+                           android:layout_width="0sp"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="10sp"
+                           android:layout_marginRight="10sp"
+                           android:layout_weight="0.5"
+                           android:buttonTint="@color/colorPrimary"
+                        
+                           android:text="@string/Male"
+                           android:textColor="@color/colorPrimary"
+
+                           />
+
+
+                       <RadioButton
+                           android:id="@+id/radio_btn_female_calf"
+                           android:layout_width="0sp"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="10sp"
+                           android:layout_marginRight="10sp"
+                           android:layout_weight="0.5"
+                           android:buttonTint="@color/colorPrimary"
+                        
+                           android:text="@string/Female"
+                           android:textColor="@color/colorPrimary"
+
+                           />
+                   </RadioGroup>
+
+
+                   <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+
+                       android:layout_marginTop="@dimen/_5sdp"
+                    
+                       android:text="@string/CalfStatus"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_12sdp" />
+
+                   <RadioGroup
+                       android:id="@+id/radiogroup_status_calf"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:orientation="vertical">
+
+                       <RadioButton
+                           android:id="@+id/radio_btn_calf_rearing"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="10sp"
+                           android:layout_marginRight="10sp"
+                           android:buttonTint="@color/colorPrimary"
+                        
+                           android:text="@string/rearing"
+                           android:textColor="@color/colorPrimary"
+
+                           />
+
+                       <RadioButton
+                           android:id="@+id/radio_btn_calf_sold"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="10sp"
+                           android:layout_marginRight="10sp"
+                           android:buttonTint="@color/colorPrimary"
+                        
+                           android:text="@string/sold"
+                           android:textColor="@color/colorPrimary" />
+
+                       <RadioButton
+                           android:id="@+id/radio_btn_calf_died"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="10sp"
+                           android:layout_marginRight="10sp"
+                           android:buttonTint="@color/colorPrimary"
+                        
+                           android:text="@string/died"
+                           android:textColor="@color/colorPrimary"
+
+                           />
+                   </RadioGroup>
+
+               </LinearLayout>
+
+               <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+
+                   android:layout_marginTop="@dimen/_5sdp"
+                
+                   android:text="@string/Inter_CalvingPeriod"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_12sdp" />
+
+
+               <RadioGroup
+                   android:id="@+id/radio_group_inter_calving"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_5sdp">
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_lessThan_oneYear"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/less_than_oneYear"
+                       android:textColor="@color/colorPrimary"
+
+                       />
+
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_one_onepointFive"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/one_onepointFive"
+                       android:textColor="@color/colorPrimary"
+
+                       />
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_pointfive_two"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/onePointFive_to_two"
+                       android:textColor="@color/colorPrimary"
+
+                       />
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_moreThan_twoYear"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/more_than_twoYear"
+                       android:textColor="@color/colorPrimary" />
+
+               </RadioGroup>
+
+
+               <b2infosoft.milkapp.com.useful.CustomFontTextView
+        
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_5sdp"
+                
+                   android:text="@string/Is_pregnant"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/_12sdp" />
+
+               <RadioGroup
+                   android:id="@+id/radio_group_pregnanacy"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:orientation="horizontal">
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_pregnant_yes"
+                       android:layout_width="0sp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:layout_weight="0.5"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/yes"
+                       android:textColor="@color/colorPrimary"
+
+                       />
+
+
+                   <RadioButton
+                       android:id="@+id/radio_btn_pregnant_no"
+                       android:layout_width="0sp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10sp"
+                       android:layout_marginRight="10sp"
+                       android:layout_weight="0.5"
+                       android:buttonTint="@color/colorPrimary"
+                    
+                       android:text="@string/no"
+                       android:textColor="@color/colorPrimary"
+
+                       />
+               </RadioGroup>
+
+               <LinearLayout
+                   android:id="@+id/layout_visibility_pregnancy"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:orientation="horizontal"
+                   android:visibility="gone"
+                   android:weightSum="1">
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="0.5"
+                       android:imeOptions="actionNext"
+                       android:background="@android:drawable/edit_text"
+                       android:hint="@string/Preganancy_Month"
+                       android:minHeight="@dimen/_35sdp">
+
+                       <EditText
+                           android:id="@+id/et_pregnancy_month"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_weight="0.5"
+                           android:background="@android:color/transparent"
+                        
+                           android:inputType="number"
+                           android:maxLength="2"
+                           android:imeOptions="actionNext"
+                           android:singleLine="true"
+                           android:textColor="@color/black"
+                           android:textColorHint="@color/dark_gray" />
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="@dimen/_5sdp"
+                       android:layout_weight="0.5"
+                       android:background="@android:drawable/edit_text"
+                       android:hint="@string/Preganancy_Day"
+                       android:imeOptions="actionNext"
+                       android:minHeight="@dimen/_35sdp">
+
+                       <EditText
+                           android:id="@+id/et_pregnancy_day"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@android:color/transparent"
+                        
+                           android:imeOptions="actionNext"
+                           android:inputType="number"
+                           android:maxLength="2"
+                           android:singleLine="true"
+                           android:textColor="@color/black"
+                           android:textColorHint="@color/dark_gray" />
+                   </com.google.android.material.textfield.TextInputLayout>
+               </LinearLayout>
+
+
+           </LinearLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="@dimen/_5sdp"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:background="@android:drawable/edit_text"
+               android:hint="@string/Mobileno"
+               android:minHeight="@dimen/_35sdp">
+
+               <EditText
+                   android:id="@+id/et_contact"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:background="@android:color/transparent"
+                   android:inputType="phone"
+                   android:imeOptions="actionNext"
+                   android:maxLength="10"
+                   android:textColor="@color/black"
+                   android:textColorHint="@color/dark_gray" />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="@dimen/_5sdp"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:background="@android:drawable/edit_text"
+               android:hint="@string/Description"
+               android:minHeight="@dimen/_35sdp">
+
+               <EditText
+                   android:id="@+id/et_description"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@android:color/transparent"
+                   android:textColor="@color/black"
+                   android:maxLines="4"
+                   android:inputType="text"
+                   android:imeOptions="actionDone"
+                   android:textColorHint="@color/dark_gray" />
+           </com.google.android.material.textfield.TextInputLayout>
+       </LinearLayout>
+            <include
+                layout="@layout/layout_animal_upload_image_video"
+                android:id="@+id/layoutImgUpload"
+                android:visibility="gone"
+                />
+            <include
+                layout="@layout/layout_animal_vaccianation"
+                android:id="@+id/layoutAnimalVaccian"
+                android:visibility="gone"/>
+
+            <b2infosoft.milkapp.com.useful.CustomFontButton
+                android:id="@+id/btnsubmit_animal_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="30sp"
+                android:layout_marginBottom="@dimen/_300sdp"
+                android:background="@drawable/btn_shape_global"
+
+                android:text="@string/Next"
+                android:textColor="@color/colorWhite" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:background="@drawable/textbox_rectangle_background_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+
+                <RadioButton
+                    android:id="@+id/radioButtonProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    android:gravity="center_vertical"
+
+                    android:text="@string/Edit_Profile"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/layoutProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/radioType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:minHeight="@dimen/_35sdp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioSaller"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_11sdp"
+                            android:checked="true"
+                            android:text="@string/Seller" />
+
+                        <RadioButton
+                            android:id="@+id/radioBuyer"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_11sdp"
+                            android:text="@string/Buyer" />
+
+                    </RadioGroup>
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutSpinChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:minHeight="@dimen/_35sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/colorLightGray"
+                            android:text="@string/selectChartCategory"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="@color/colorLightGray" />
+
+                        <Spinner
+                            android:id="@+id/spinChartCat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:entries="@array/select"
+                            android:minHeight="@dimen/_30sdp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.02dp"
+                            android:background="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_CPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:textColorHint="@color/colorLightGray"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <EditText
+                            android:id="@+id/ediPhoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Phone_Number"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:textColorHint="@color/colorLightGray"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <EditText
+                            android:id="@+id/ediCid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Customer_ID"
+                            android:inputType="number"
+                            android:minHeight="@dimen/_30sdp"
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tvInputUnic_customer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorLightGray"
+                        android:layout_marginTop="@dimen/_15sdp"
+
+                        android:minHeight="@dimen/_30sdp"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/ediUniqCustomer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/ID"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorLightGray"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:minHeight="@dimen/_30sdp">
+
+                        <EditText
+                            android:id="@+id/ediName"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_CFatherName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textColorHint="@color/colorLightGray"
+                        android:minHeight="@dimen/_30sdp">
+
+                        <EditText
+                            android:id="@+id/ediFatherName"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Father_Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                      
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textColorHint="@color/colorLightGray"
+                        android:minHeight="@dimen/_30sdp">
+
+                        <EditText
+                            android:id="@+id/ediAccountNo"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/accountNo"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:maxLength="20"
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                      
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textColorHint="@color/colorLightGray"
+                        android:minHeight="@dimen/_30sdp">
+
+                        <EditText
+                            android:id="@+id/ediIFSC"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/IFSC_Code"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textColorHint="@color/colorLightGray"
+                        android:minHeight="@dimen/_30sdp">
+
+                        <EditText
+                            android:id="@+id/ediBankName"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/bankName"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textColorHint="@color/colorLightGray"
+                        android:minHeight="@dimen/_30sdp">
+
+                        <EditText
+                            android:id="@+id/ediVillage"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/village"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_CAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textColorHint="@color/colorLightGray"
+                        android:minHeight="@dimen/_30sdp">
+
+                        <EditText
+                            android:id="@+id/ediAddress"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Address"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_CAdharNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorLightGray"
+                        android:layout_marginTop="@dimen/_15sdp"
+
+                        android:minHeight="@dimen/_30sdp"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/ediAdharNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Adhar_Number"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:minHeight="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="@dimen/_11sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout
+                        android:id="@+id/layoutOpenBal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:minHeight="@dimen/_35sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/colorLightGray"
+                            android:text="@string/OpeningAmount"
+                            android:textSize="@dimen/_11sdp"
+                            android:textColor="@color/colorLightGray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                        <Spinner
+                            android:id="@+id/spinOpeningBal"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/select"
+                            android:minHeight="@dimen/_30sdp" />
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="wrap_content"
+                                android:textColorHint="@color/colorLightGray"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:background="@drawable/edit_text_bottom_line"
+                                android:minHeight="@dimen/_30sdp">
+
+                                <EditText
+                                    android:id="@+id/ediOpeningAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/Amount"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:background="@android:color/transparent"
+                                    android:maxLength="9"
+
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textSize="@dimen/_11sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                        <View
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="0.02dp"
+                            android:layout_marginRight="@dimen/_25sdp"
+                            android:background="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:layout_marginTop="@dimen/_25sdp"
+
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/btn_shape_global"
+                        android:foreground="@drawable/ripple"
+                        android:minHeight="@dimen/_35sdp"
+                        android:text="@string/Save"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutEditRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/textbox_rectangle_background_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone">
+
+
+                <RadioButton
+                    android:id="@+id/radioButtonRate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="@dimen/_30sdp"
+                    android:text="@string/Edit_Rate"
+                    android:textSize="@dimen/_16sdp" />
+
+
+                <LinearLayout
+                    android:id="@+id/layoutRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorLightGray"
+                        android:layout_marginTop="@dimen/_15sdp">
+
+                        <EditText
+                            android:id="@+id/ediRatePerKg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="@string/Rate_Per_KG"
+                            android:inputType="numberDecimal"
+                            android:minHeight="@dimen/_30sdp"
+                            android:text=""
+                            android:textSize="@dimen/_11sdp"
+
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btnSaveRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_password"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/btn_shape_global"
+                        android:minHeight="@dimen/_35sdp"
+                        android:text="@string/Save_Rate"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

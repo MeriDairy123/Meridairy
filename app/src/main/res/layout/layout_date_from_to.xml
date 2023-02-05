@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0.5"
+            android:id="@+id/lvStartDate"
+            android:background="@drawable/textbox_rectangle_background_shape"
+            android:orientation="horizontal">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:hint="@string/Fromdate"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite" />
+
+
+            <ImageView
+                android:id="@+id/imgStartDate"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/calendar_icon" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/lvEndDate"
+            android:layout_weight="0.5"
+            android:background="@drawable/textbox_rectangle_background_shape"
+            android:orientation="horizontal">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+
+                android:gravity="center"
+
+                android:singleLine="true"
+                android:hint="@string/Todate"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite" />
+
+
+            <ImageView
+                android:id="@+id/imgEndDate"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/calendar_icon" />
+
+        </LinearLayout>
+
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="0.4"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_shape_global"
+                android:text="@string/Submit"
+                 android:gravity="center"
+                android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+</LinearLayout>

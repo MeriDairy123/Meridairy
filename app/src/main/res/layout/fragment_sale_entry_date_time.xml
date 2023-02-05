@@ -1,0 +1,622 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swichOnOffEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:minWidth="@dimen/_150sdp"
+                android:minHeight="@dimen/_40sdp"
+                android:text="@string/Save_Data_Offline"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorWhite"
+                android:textOff="Off"
+                android:textOn="On"
+                android:textSize="@dimen/_11sdp"
+                android:theme="@style/MySwitch" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="@color/color_bottom_light_gray" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swichPrint_Reciept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:minWidth="@dimen/_150sdp"
+                android:minHeight="@dimen/_40sdp"
+                android:text="@string/print_reciept"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_11sdp"
+                android:theme="@style/MySwitch" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_bottom_light_gray" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="@color/color_bottom_light_gray" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchMachine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:minWidth="@dimen/_150sdp"
+                android:minHeight="@dimen/_40sdp"
+                android:text="@string/automatic"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp"
+                android:theme="@style/MySwitch" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:background="@color/color_bottom_light_gray" />
+            <TextView
+                android:id="@+id/tvChangeMachine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+
+                android:minWidth="@dimen/_150sdp"
+                android:minHeight="@dimen/_40sdp"
+                android:text="@string/change_machine"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/whatappEntrysale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/color_bg"
+                    android:src="@drawable/ic_whatsup_logo" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvSMSSettingSale"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.4"
+                    android:gravity="center_vertical"
+                    android:text="Whatsapp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Sms"
+                    android:textColor="@color/white" />
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_SimSetting"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tv_sim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/ic_sim"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/colorWhite"
+
+                        android:gravity="center"
+                        android:text="@string/sim"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tv_web"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_sim"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:buttonTint="@color/colorWhite"
+                        android:drawableLeft="@drawable/ic_web"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/colorWhite"
+
+                        android:gravity="center"
+                        android:text="@string/web"
+                        android:textColor="@color/colorWhite"
+
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tv_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_ask"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+
+                        android:text="@string/off"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_sms_status"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical|right"
+                        android:background="@color/colorWhite"
+                        android:padding="@dimen/_2sdp"
+                        app:srcCompat="@drawable/ic_right_tick" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/color_bottom_light_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_weight="0.45"
+                   
+
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/Select_Date"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_weight="0.55"
+                    android:drawableRight="@drawable/calendar_icon"
+                    android:drawablePadding="5dp"
+                   
+                    android:gravity="center"
+                    android:hint=""
+                    android:minHeight="40dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/color_bottom_dark_gray"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/color_bottom_light_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_Morning"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_password"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_shape_global"
+                    android:gravity="center"
+                    android:minHeight="35dp"
+                    android:text="@string/MORNING"
+                    android:textAlignment="center"
+                    android:textSize="10dp"
+                  
+                     android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_Evening"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_password"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_shape_green"
+                    android:gravity="center"
+
+
+                    android:minHeight="35dp"
+                    android:text="@string/EVENING"
+                    android:textAlignment="center"
+                    android:textSize="10dp"
+                     android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+
+                android:orientation="vertical">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                   
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+
+                    android:text="@string/Setting"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_16sdp"
+
+                    android:textStyle="bold" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="20dp"
+                   
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/SelectRateType"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_14sdp"
+
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+
+                    android:weightSum="4">
+
+                    <RadioButton
+                        android:id="@+id/radioFixRate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:minHeight="50dp"
+                        android:checked="true"
+                        android:text="@string/Fixed_Price"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioBtnFat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.7"
+                        android:text="@string/Fat"
+                        android:minHeight="50dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioBtnSNF"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:minHeight="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+
+                        android:text="@string/Fat_SNF"
+
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioBtnCLR"
+                        android:layout_width="0dp"
+                        android:minHeight="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+
+                        android:text="@string/CLR"
+
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp" />
+                </RadioGroup>
+
+
+                <LinearLayout
+                    android:id="@+id/layoutByFat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/layout_border_white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RadioGroup
+                        android:id="@+id/rgFat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+
+                        android:weightSum="1">
+
+                        <RadioButton
+                            android:id="@+id/rdFatGeneral"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:checked="true"
+                            android:text="@string/general"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10dp"/>
+
+
+
+
+                        <RadioButton
+                            android:id="@+id/rdFatCowBuffalo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.5"
+                            android:text="@string/Cow"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10dp" />
+
+                    </RadioGroup>
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/tvGeneralFat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:hint="@string/Rs_Per_ltr"
+                        android:layout_marginRight="10dp"
+                        android:minHeight="@dimen/_40sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ediFatRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:inputType="numberDecimal"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textSize="@dimen/_12sdp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/layoutCowBuff"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+
+                        android:padding="10dp"
+
+                        android:weightSum="1">
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:hint="@string/Cow"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ediFatRateCow"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:inputType="numberDecimal"
+                                android:padding="10dp"
+                                android:text=""
+                                android:textSize="@dimen/_12sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.5"
+                            android:hint="@string/Buff">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ediFatRateBuffalo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:inputType="numberDecimal"
+                                android:padding="10dp"
+                                android:text=""
+                                android:textSize="@dimen/_12sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnUpdateFatRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="120dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+
+                        android:background="@drawable/btn_shape_global"
+                        android:gravity="center"
+
+                        android:minHeight="35dp"
+                        android:padding="5dp"
+                        android:text="@string/Update_Rate"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                         android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="start"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="start"
+                android:text="@string/Update_Bonus"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp" />
+
+            <LinearLayout
+                android:id="@+id/layoutBonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="@dimen/_100sdp"
+
+                android:background="@drawable/layout_border_white"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Bonus_per_ltr"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.57"
+                    app:hintTextColor="@color/colorLightGray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ediBonus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLength="6"
+                        android:minHeight="40dp"
+                        android:padding="10dp"
+                        android:text=""
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/btnUpdateBonus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.43"
+                    android:background="@drawable/btn_shape_global"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:minHeight="35dp"
+                    android:padding="5dp"
+                    android:text="@string/Update_Bonus"
+                    android:textSize="10dp"
+                     android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

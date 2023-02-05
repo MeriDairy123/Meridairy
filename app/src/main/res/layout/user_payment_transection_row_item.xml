@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:layout_marginTop="9dp"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:text="07-01"
+            android:maxLength="5"
+            android:singleLine="true"
+            android:textSize="11sp"
+
+            android:gravity="center"
+            android:textColor="@color/colorWhite" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvVouchType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.8"
+            android:text="@string/paymentType"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:textSize="11sp"
+            android:maxLines="3"
+
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvVoucherNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.7"
+            android:text="@string/voucher"
+            android:layout_marginLeft="2dp"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvDebit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:paddingLeft="2dp"
+            android:gravity="center"
+            android:text="@string/DEBIT"
+            android:textSize="11sp"
+
+            android:textColor="@color/colorWhite" />
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvCredit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:text="@string/Cradit"
+             android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="0.2dp"
+        android:background="@color/color_bottom_light_gray" />
+</LinearLayout>

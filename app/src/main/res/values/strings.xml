@@ -1,0 +1,798 @@
+<resources>
+    <string name="app_name">मेरी डेयरी</string>
+
+    <string name="app_id">ca-app-pub-6381924771123547~5294964685</string>
+    <string name="customer_app_id">ca-app-pub-6381924771123547/3107391837</string>
+    <string name="banner_unit_id">ca-app-pub-6381924771123547/1244039030</string>
+    <string name="interstitialAd_unit_id">ca-app-pub-6381924771123547/4811847941</string>
+    <string name="rewarded_video">ca-app-pub-6381924771123547/3659560131</string>
+    <string name="poweredByB2infosoft">Powered By B2infosoft</string>
+    <string name="google_location_key1" templateMergeStrategy="preserve" translatable="false">AIzaSyDKZk2naZ8z8iEahpq_GhwwzX-l5yDwjoc</string>
+
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCDmoTEzCprjE5xK5SHKtlZ_LOZRMUIz6A</string>-->
+    <string name="firebaseDBKey">AIzaSyBqe5jBuWFK0bkfSop_cDRT-iSLWPCaBQ4</string>
+    <string name="firebaseUrl">https://meridairy-25d2d.firebaseio.com/users.json</string>
+    <string name="notification_channel_id">default</string>
+
+    <!--Custom Fonts-->
+
+    <string name="Poppins_Regular">Poppins-Regular</string>
+    <string name="Roboto_Regular">Roboto-Regular</string>
+    <string name="Roboto_Bold">Roboto-Bold</string>
+    <string name="OpenSans_Regular">OpenSans-Regular</string>
+
+    // language
+    <string name="change_language">Change Language</string>
+    <string name="lang">भाषा</string>
+    <string name="select">Select</string>
+    <string name="english">English</string>
+    <string name="spanish">española</string>
+    <string name="hindi">हिंदी</string>
+    <string name="gujrati">ગુજરાતી</string>
+    <string name="marathi">मराठी</string>
+    <string name="punjabi">ਪੰਜਾਬੀ</string>
+    <string name="telugu">తెలుగు</string>
+    <string name="tamil">தமிழ்</string>
+    <string name="kannad">ಕನ್ನಡ</string>
+
+    <string-array name="language">
+        <item>@string/english</item>
+        <item>@string/spanish</item>
+        <item>@string/hindi</item>
+        <item>@string/gujrati</item>
+        <item>@string/marathi</item>
+        <item>@string/punjabi</item>
+        <item>@string/telugu</item>
+        <item>@string/tamil</item>
+        <item>@string/kannad</item>
+    </string-array>
+    <string-array name="anim_cat">
+        <item>@string/select</item>
+        <item>@string/Buff</item>
+        <item>@string/Cow</item>
+
+    </string-array>
+
+    <!-- Strings related to DashBoard -->
+    <!-- Language name : English -->
+    <string name="WhatsAppSmssettings">WhatsApp/Sms settings</string>
+    <string name="dairy_Address">Dairy Address</string>
+    <string name="mobile_number">Mobile Number</string>
+
+    <string name="AreYouUsingWhatsappBusiness">Are You Using Whatsapp Business? </string>
+    <string name="Deshbord">Dashboard</string>
+
+    <string name="Add_Milk_Entry">Add Milk Entry</string>
+    <string name="View_Entry_By_Date">View Entry By Date</string>
+    <string name="Customer">Customer</string>
+    <string name="Customers">Customers</string>
+
+    <string name="Products">Products</string>
+    <string name="transactions">Transactions</string>
+    <string name="Sale_Product">Sell Product</string>
+    <string name="MILK_Sale">Milk Sell</string>
+    <string name="CreateAdvertise">Create Advertisement</string>
+    <string name="Setting">Setting</string>
+    <string name="SNF_FAT_Chart"> SNF FAT Chart</string>
+    // Navigation menu
+
+    <string-array name="nav_drawer_array">
+        <item>@string/Deshbord</item>
+        <item>@string/Profile</item>
+        <item>@string/CreateAdvertise</item>
+        <item>@string/navUpgradePrimium</item>
+        <item>@string/myRequest</item>
+        <item>@string/DeliveryBoy</item>
+        <item>@string/View_All_Entry</item>
+        <item>@string/MILK_HISTORY</item>
+        <item>@string/Buyer</item>
+        <item>@string/Order</item>
+        <item>@string/Product</item>
+        <item>@string/product_SaleAndBuy</item>
+        <!-- <item>@string/Setting</item>-->
+        <item>@string/Transaction</item>
+        <item>@string/LEGALPOLICIES</item>
+        <item>@string/share</item>
+        <item>@string/Logout</item>
+    </string-array>
+    <string-array name="nav_array_product">
+        <item>@string/Add_Product</item>
+        <item>@string/Selling_History</item>
+    </string-array>
+
+    <string-array name="setting_update">
+        <item>@string/Update_Rate</item>
+        <item>@string/Print_And_Send_Message</item>
+    </string-array>
+
+
+    // SMS
+
+    <string name="send_sms_off">Send SMS Off</string>
+    <string name="sms_from_sim">SMS Send From SIM</string>
+    <string name="sms_from_api">SMS Send From API</string>
+
+
+    <string-array name="sms_sendtype">
+
+        <item>@string/send_sms_off</item>
+        <item>@string/sms_from_sim</item>
+        <item>@string/sms_from_api</item>
+
+    </string-array>
+
+
+    <!-- Strings related to login -->
+    <string name="logout_from_another_device">Logout from another device</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="invalid_login_title">Session Expired</string>
+    <string name="invalid_login_message">Your account is login in another mobile. Please again login.</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
+    <string name="whatsapp_support">Whatsapp Support</string>
+    <string name="Select_Date">Select Date</string>
+    <string name="MORNING">Morning</string>
+    <string name="EVENING">Evening</string>
+    <string name="ADD_ENTRY">Add Entry</string>
+    <string name="SALE_MILK">Sell Milk</string>
+    <string name="App_activation">APP ACTIVATION</string>
+    <string name="YourAccountisActivated">Your Account is Activated</string>
+    <string name="Please_enter_activation_key">Please enter activation key</string>
+    <string name="Enter_6_digit_key">Enter 6 digit key</string>
+    <string name="Activate">Activate</string>
+    <string name="ActivateRequestTxt">अगर आपके पास ACTIVATION KEY नहीं है तो +919772196777 या 9772196666 पर सम्पर्क करे या WhatsApp करे l</string>
+    <string name="Buyer">Buyer</string>
+    <string name="Seller">Seller</string>
+    <string name="ADD_Customer">Add Customer</string>
+    <string name="Edit_Customer">Edit Customer</string>
+    <string name="UPDATE">Update</string>
+    <string name="Please_Enter_Customer_Name">Please Enter Customer Name</string>
+    <string name="Please_Enter_Father_Name">Please Enter Father Name</string>
+    <string name="please_fill_correct_mobile_number">Please fill correct mobile number</string>
+    <string name="PleaseSelectCustomerType">Please Select Customer Type</string>
+    <string name="Customer_Added_Successfully">Customer Added Successfully</string>
+    <string name="Please_Enter_Milk_Rate">Please Enter Milk Rate</string>
+    <string name="Rate_Updated_Successfully">Rate Updated Successfully</string>
+    <string name="Phone_Number">Phone Number</string>
+    <string name="Customer_ID">Customer ID</string>
+    <string name="Payment_Register">Payment Register</string>
+    <string name="Name">Name</string>
+    <string name="Father_Name">Father Name</string>
+    <string name="Address">Address</string>
+    <string name="Adhar_Number">Adhar Number</string>
+    <string name="Save">Save</string>
+    <string name="Edit_Rate">Edit Rate</string>
+    <string name="Rate_Per_KG">Rate Per KG</string>
+    <string name="Save_Rate">Save Rate</string>
+    <string name="MILK_ENTRY">Milk Entry</string>
+    <string name="Please_Update_Milk_Rate_Type">Please Update Milk Rate Type.</string>
+    <string name="Fixed_Price">Fixed Price</string>
+    <string name="Rate_Not_Found">Rate Not Found</string>
+    <string name="Please_Add_Complete_Entry">Please Add Complete Entry</string>
+    <string name="Please_Update_SNF_Fat">Please Update either SNF or Fat</string>
+    <string name="Offline_Entry_Successfully_Uploaded_to_Server">Offline Entry Successfully Uploaded to Server.</string>
+    <string name="Entry_Uploading_Failed_Please_Try_again">Entry Uploading Failed, Please Try again.</string>
+    <string name="Entry_Update_Successfully">Entry Update Successfully.</string>
+    <string name="Entry_Updating_Failed">Entry Updating Failed.</string>
+    <string name="Entry_Added_Successfully">Entry Added Successfully.</string>
+    <string name="Entry_Adding_Failed">Entry Adding Failed.</string>
+    <string name="Please_Add_Customer">Please Add Customer.</string>
+    <string name="Average_Fat">Avg. Fat</string>
+    <string name="Total_Weight">Total Weight</string>
+    <string name="Total_Amount">Total Amount</string>
+    <string name="ID">ID</string>
+    <string name="User_all_info">User all info</string>
+    <string name="Weight">Weight</string>
+    <string name="Rs_Per_ltr">Rs./Ltr.</string>
+    <string name="Fat">Fat</string>
+    <string name="Total_Rs">Total Rs.</string>
+    <string name="Week_Total_Rs">WEEK TOTAL RS.</string>
+    <string name="SNF">SNF</string>
+    <string name="SNF_CLR">SNF/CLR</string>
+    <string name="Cow">Cow</string>
+    <string name="Buff">Buffalo</string>
+    <string name="Sr">Sr</string>
+    <string name="Fat_SNF">Fat/SNF</string>
+    <string name="Rate">Rate</string>
+    <string name="Amount">Amount</string>
+    <string name="Are_You_Sure_Want_To_Delete_Entry">Are You Sure Want To Delete ?</string>
+    <string name="Entry_Deleted_Successfully">Entry Deleted Successfully</string>
+    <string name="Entry_Deleting_Failed">Entry Deleting Failed</string>
+    <string name="Edit">Edit</string>
+    <string name="Delete">Delete</string>
+    <string name="Add_Product">Add Product</string>
+    <string name="Product_Added_Successfully">Product Added Successfully</string>
+    <string name="Product_Adding_Failed">Product Adding Failed</string>
+    <string name="Product_Updated_Successfully">Product Updated Successfully</string>
+    <string name="Product_Updating_failed">Product Updating failed</string>
+    <string name="Products_List_is_Empty_Please_add_Any_Products">Products List is Empty.Please add Any Products</string>
+    <string name="Product_Name">Product Name</string>
+    <string name="Item">Item</string>
+    <string name="Product_Deleted_Successfully">Product Deleted Successfully</string>
+    <string name="Product_Deleting_Failed">Product Deleting Failed</string>
+    <string name="Search_Here">Search Here</string>
+    <string name="USER_LIST">User List</string>
+    <string name="Customer_Deleted_Successfully">Customer Deleted Successfully</string>
+    <string name="Customer_Deleting_Failed">Customer Deleting Failed</string>
+    <string name="Chat">Chat</string>
+    <string name="Printing_Please_Wait">Printing, Please Wait...</string>
+    <string name="SELLER_BHUGTAN">Seller-Bhugtan</string>
+    <string name="Please_Select_User_to_print_PDF_and_Send_Message">Please Select User to print PDF and Send Message.</string>
+    <string name="Please_Select_User_to_print_PDF">Please Select User to print PDF</string>
+    <string name="Please_Enter_Start_Date_and_End_Date">Please Enter Start Date and End Date.</string>
+    <string name="Sending_SMS_Fail">Sending SMS Fail</string>
+    <string name="Meri_Dairy">Meri Dairy</string>
+    <string name="Date">Date</string>
+    <string name="Session">Session</string>
+    <string name="Bonus">Bonus</string>
+    <!--  <string name="Average_Rate">AVG RATE</string>-->
+    <string name="TOTAL_BONUS">Total Bonus</string>
+    <string name="Rs">Rs.</string>
+    <string name="Meri_Dairy_Download_App_Now">Meri Dairy Download App Now :</string>
+    <string name="OPen_PDF">PDF Downloaded In your Storage, You have to Seen it in MeriDairy Folder.</string>
+    <string name="Submit">Submit</string>
+    <string name="Select">Select</string>
+    <string name="Print_And_Send_Message">Print and Send Message</string>
+    <string name="Print">Print</string>
+    <string name="Send_Message">Send Message</string>
+    <string name="Start_Date">Start Date</string>
+    <string name="End_Date">End Date</string>
+    <string name="BUYER_BHUGTAN">Buyer-Bhugtan</string>
+    <string name="Evening_Total">Evening Total</string>
+    <string name="Morning_Total">Morning Total</string>
+    <string name="Ltr">Ltr</string>
+    <string name="Create_New_Password">Create New Password</string>
+    <string name="Your_new_password_successfully_Created">Your new password successfully Created</string>
+    <string name="Please_enter_your_correct_OTP">Please enter your correct OTP</string>
+    <string name="Your_password_can_matches_please_enter_correct_password">Your password can\'t matches, please enter correct password</string>
+    <string name="Please_enter_new_password_to_your_account">Please enter new password to your account</string>
+    <string name="Enter_OTP">Enter OTP</string>
+    <string name="Enter_new_password">Enter new password</string>
+    <string name="Confirm_Password">Confirm Password</string>
+    <string name="Your_Old_Password_is_Not_Matching">Your Old Password is Not Matching</string>
+    <string name="Field_Can_be_empty">Field Can\'t be empty</string>
+    <string name="Old_Password">Old Password</string>
+    <string name="New_Password">New Password</string>
+    <string name="CHAT_LIST">Chat List</string>
+    <string name="Customer_Profile">Customer Profile</string>
+    <string name="SALE_MILK_ENTRY">Sell Milk Entry</string>
+    <string name="Total_Remaining">Total Remaining</string>
+    <string name="Total_Sell">Total Sell</string>
+    <string name="STATUS">Status</string>
+    <string name="ERASE_MILK_HISTORY">Erase Milk History</string>
+    <string name="Please_select_start_date_first">Please select start date first</string>
+    <string name="OK">OK</string>
+    <string name="Cancel">Cancel</string>
+    <string name="PIN_Changed_Successfully">PIN Changed Successfully</string>
+    <string name="PIN_Must_be_4_Digit">PIN Must be 4 Digit</string>
+    <string name="Your_Current_PIN_is_not_match">Your Current PIN is not match</string>
+    <string name="PIN_Saved_Successfully">PIN Saved Successfully</string>
+    <string name="New_PIN">New PIN</string>
+    <string name="Re_enter_PIN">Re enter PIN</string>
+    <string name="LoginFailed_Enter_Correct_Mobile_Password">Login Faild! Please Enter Correct Mobile Number And Password</string>
+    <string name="Please_Generate_PIN_Number">Please Generate PIN Number</string>
+    <string name="Password">Password</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="FORGET_PASSWORD">FORGET PASSWORD</string>
+    <string name="SIGNUP">SIGNUP</string>
+    <string name="NEW_REGISTER">New Register for Dairy</string>
+    <string name="login_using_qr_code">Login Using QR Code</string>
+    <string name="LOGIN_CUSTOMER">Login Customer</string>
+    <string name="Exyt_App">Are You Sure Want To Exit From मेरी डेयरी?</string>
+    <string name="SET_PIN">SET PIN</string>
+    <string name="CHANGE_PIN">CHANGE PIN</string>
+    <string name="PIN_Set_Successfull">PIN Set Successful</string>
+    <string name="PIN_Updated_Successfull">PIN Updated Successful</string>
+    <string name="Change_Password">Change Password</string>
+    <string name="Please_Verify_OTP_and_create_new_Password">Please Verify OTP and create new Password</string>
+    <string name="We_are_unable_to_get_your_OTP">We are unable to get your OTP</string>
+    <string name="Please_enter_valid_mobile_number">Please enter valid mobile number</string>
+    <string name="OtpActTxt">We will send you OTP to your registered mobile using which you will be able to create a new password</string>
+    <string name="Countinue">Continue</string>
+    <string name="NEW_USER">New User</string>
+    <string name="Please_enter_either_morning_or_evening_session_milk_weight">Please enter either morning or evening session milk weight</string>
+
+    <string name="Morning_Milk">Morning Milk</string>
+    <string name="Evening_Milk">Evening Milk</string>
+    <string name="Next">Next</string>
+    <string name="PIN_CODE">Pin Code</string>
+    <string name="Update_Rate">Update Rate</string>
+    <string name="Rate_Updating_Failed">Rate Updating Failed</string>
+    <string name="Please_Enter_Bonus_Amount">Please Enter Bonus Amount.</string>
+    <string name="Please_Enter_Amount">Please Enter  Amount.</string>
+    <string name="Your_Bonus_is_Updated_Success">Your Bonus is Updated Success.</string>
+    <string name="Updating_Failed">Updating Failed.</string>
+    <string name="Milk_Buy_Rate">Milk Buy Rate</string>
+    <string name="Rate_by_FAT_Only">Rate by FAT Only</string>
+    <string name="Rate_by_SNF_FAT">Rate by SNF / FAT</string>
+    <string name="UPDATE_SNF_CHART">Update SNF CHART</string>
+    <string name="Update_Bonus">Update Bonus</string>
+    <string name="Bonus_per_ltr">Bonus per ltr</string>
+    <string name="Milk_Sale_Rate">Milk Sell Rate</string>
+    <string name="RECEIVE_CASH">Receive Cash</string>
+    <string name="Pay">Pay</string>
+    <string name="Are_You_Sure_Want_To_Exit_From_Registration">Are You Sure Want To Exit From Registration?</string>
+    <string name="Center_Name">Center Name</string>
+    <string name="Please_Enter_Collection_Center_Name">Enter Collection Center Name</string>
+    <string name="Please_Enter_Dairy_Name">Enter Dairy Name</string>
+    <string name="Please_Enter_Correct_Phone_Number">Enter Correct Phone Number</string>
+    <string name="Please_Enter_Owner_Name">Enter Owner Name</string>
+    <string name="Please_Select_State">Select State</string>
+    <string name="Please_Select_City">Select City</string>
+    <string name="Please_Enter_Street_Address">Enter Street Address</string>
+    <string name="Registration_Successfull">Registration Successful</string>
+    <string name="Take_Photo">Take Photo</string>
+    <string name="SALE_PRODUCT">Sell Product</string>
+    <string name="Please_Select_your_item">Please Select your item</string>
+    <string name="Product_Selling_Fail">Product Selling Fail</string>
+    <string name="Sale">Sell</string>
+    <string name="Please_Edit_Sale_Milk_Weight_It_not_to_be_0">Please Edit Sell Milk Weight. It not to be 0.</string>
+    <string name="Updating_Success">Updating Success</string>
+    <string name="Cancel_Success">Cancel Success</string>
+    <string name="Cancel_Failed">Cancel Failed</string>
+    <string name="Milk_Removed_Successfull">Milk Removed Successful</string>
+    <string name="Milk_Sale_Successfull">Milk Sell Successful</string>
+    <string name="Milk_Saling_failed">Milk Saling failed</string>
+    <string name="MILK_RATE">Milk Rate</string>
+    <string name="Customer_Name">Customer Name</string>
+    <string name="MILK_BUYER_LIST">Buyer Milk List</string>
+    <string name="Edit_Milk">Edit Milk</string>
+    <string name="Edit_Profile">Edit Profile</string>
+    <string name="Please_Do_Signature_And_Then_Click_Save">Please Do Signature And Then Click Save</string>
+    <string name="Signature_Uploaded_Succesfully">Signature Uploaded Successfully</string>
+    <string name="Enter_Your_Signature">Enter Your Signature</string>
+    <string name="Clear">Clear</string>
+
+
+    <string name="Incomplete_Entry">Incomplete Entry</string>
+    <string name="TRANSACTION_HISTORY">Transaction History</string>
+
+    <string name="WeeklyTotal">Weekly Total</string>
+
+    <string name="TOTAL">TOTAL</string>
+    <string name="Quantity">Quantity</string>
+    <string name="You_have_no_entry_to_Print">You have no entry to Print</string>
+    <string name="Fat_Rat">Fat Rate</string>
+
+
+    <string name="Please_Select_Customer">  Please Select Customer</string>
+    <string name="rupees">rupees</string>
+
+    <string name="Are_you_want_to_work_offline"> Are you want to work offline</string>
+    <string name="Please_Do_Amount_Type_And_Amount_to_pay_amount">Please Do Amount Type And Amount to pay amount</string>
+
+
+    <string name="CASH_RECEIVE">Cash Receive</string>
+    <string name="you_are_not_connected_to_internet">You are not  connected to internet  </string>
+
+    you are not connected to internet
+    <string name="Evening">Evening</string>
+    <string name="Mobileno">Mobile number</string>
+    <string name="viewEntry">View Entry</string>
+
+    <string name="Printing">Printing</string>
+    <string name="Please_Wait">Please Wait...</string>
+
+    <string name="View_All_Entry">View All Entry</string>
+    <string name="Selling_History">Selling History</string>
+    <string name="Total_Selling_Price">Total Selling Price</string>
+    <string name="MILK_HISTORY">Milk History</string>
+    <string name="Please_select_end_date_first">Please select end date first</string>
+    <string name="Date_range_should_be_1_to_10_days">Date range should be 1 to 10 days</string>
+    <string name="Please_Select_Date">Please Select Date</string>
+    <string name="No_Data_of_Morning_List_to_Print">No Data of Morning List to Print</string>
+    <string name="No_Data_of_Evening_List_to_Print">No Data of Evening List to Print</string>
+
+    <string name="Amount_Paying_Fail"> Amount Paying Fail</string>
+    <string name="Total_Credit"> Total Credit</string>
+    <string name="Total_Debit"> Total Debit</string>
+    <string name="Remaining">Remaining</string>
+    <string name="Please_Enter_All_Field">Please Enter All Field</string>
+    <string name="TITLE">Title</string>
+    <string name="Cradit">Credit</string>
+    <string name="DEBIT">Debit</string>
+    <string name="SNF_FAT_CHART"> SNF FAT Chart Of</string>
+
+    <string name="DAIRY_LIST">Dairy List</string>
+    <string name="Profile">Profile</string>
+    <string name="Transaction">Transaction</string>
+    <string name="Product">Product</string>
+    <string name="Please_Contact_Your_Dairy_Owner">Please Contact Your Dairy Owner</string>
+    <string name="Login_Success">Login Success</string>
+    <string name="You_Are_Not_a_Customer_please_Login_as_Dairy_Owne">You Are Not a Customer please Login as Dairy Owner</string>
+    <string name="No_Data_Found">No Data Found</string>
+    <string name="SELLER_PROFILE">Seller Profile</string>
+    <string name="BUYER_PROFILE">Buyer Profile</string>
+
+    <string name="BUFFALO_SNF">Buffalo SNF</string>
+    <string name="SALE_ITEM">Sell Item</string>
+
+    <string name="Time">Time</string>
+    <string name="COW_SNF">Cow SNF</string>
+    <string name="Enter_your_passcode">Enter Your Pass Code</string>
+    <string name="Logout">Logout</string>
+    <string name="print_sms_setting">Print and Message Setting</string>
+    <string name="print_sms">Print and Message</string>
+
+
+    <string name="PRINT_MORNING_PDF">Print Morning PDF</string>
+    <string name="PRINT_EVENING_PDF">Print Evening PDF</string>
+    <string name="SELLER_LIST">Seller List</string>
+    <string name="BUYER_LIST">Buyer List</string>
+    <string name="Amount_Type">Amount Type</string>
+    <string name="Message_Sent_Successfully">Message Sent Successfully</string>
+    <string name="Please_wait_Updating_Your_SNF_Chart">Please wait...Updating Your SNF Chart</string>
+    <string name="PAID_AMOUNT">Paid Amount</string>
+    <string name="REMAIN_AMOUNT">Remain Amount</string>
+    <string name="MORE_DETAILS">More Details</string>
+    <string name="For_Complaint">For Complaint    +919772196666</string>
+    <string name="For_Support">For Support   +919772196777</string>
+    <string name="No_inetnetConnection">You have no internet connection, Please Connect to Internet</string>
+    <string name="Save_Data_Offline">Online</string>
+    <string name="OfflineDataAlert">You are storing offline data, Message can\'t be send during offline Mode.</string>
+    <string name="You_are_storing_Online_Mode">You are storing Online Mode.</string>
+    <string name="NoInternetForSwitch">You have no internet connection, Data Storing Offline Mode.</string>
+
+    <string name="offline">Offline</string>
+    <string name="entry">Entry</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="dialog_sms_title">Send Message</string>
+    <string name="dialog_sms_text">Do you want to send message to the customer using the mobile? </string>
+    <!-- <string name="dialog_sms_note">Note: This SMS will be chargeable if you have not message pack in mobile.</string>-->
+    <string name="dialog_sms_note">Note: SMS cost will be applicable from your career.</string>
+
+    <string name="Choose_from">Choose   From</string>
+    <string name="Shift">Shift</string>
+    <string name="InstallMeriDairy">Install Meri Dairy</string>
+    <string name="CLR">CLR</string>
+    <string name="Plan">Plan</string>
+    <string name="validity">Validity</string>
+    <string name="Rupee_symbol">\u20B9</string>
+    <string name="Downloaded_PDF">Download  PDF</string>
+    <string name="print_reciept">Print Receipt</string>
+    <string name="bluetooth_connection">Bluetooth Connection</string>
+    <string name="connect">connect</string>
+    <string name="SelectPrinter">Select Printer</string>
+    <string name="bluetooth_printer">Bluetooth Printer</string>
+    <string name="are_you_sure_wantot_print_reciept">Are you sure want to print receipt</string>
+    <string name="message_setting">Message Setting</string>
+    <string name="sim">SIM</string>
+    <string name="web">WEB</string>
+    <string name="alwyason">Always Send</string>
+
+    <string name="off">OFF</string>
+    <string name="sms_setting">SMS Setting</string>
+    <string name="ask_every_time">Ask Each Time</string>
+    <string name="Printer_Not_Connect">Printer Not Connect</string>
+    <string name="Please_Select_SIMorWeb">Please Select SIM or Web</string>
+    <string name="Daily_Message_Limit_Reached">Limit of sending your daily message has been completed.</string>
+    <string name="Fromdate">From Date</string>
+    <string name="Todate">To Date</string>
+    <string name="Please_Select_AlwyasOrAsk">Please Select Alwyas On Or Ask Each Time</string>
+    <string name="Either_there_was_network_issue_orsomeerror_occurred">Either there was network issue or some error occurred in submitting request, please try again...</string>
+    <string name="PleaseON_Bluetooth_of_device">Please ON Bluetooth of device</string>
+    <string name="Password_will_besendto_your_mobile_number">Password will be send to your mobile number.</string>
+    <string name="Please_Wait_for_otp30">Please wait 60 seconds for OTP.</string>
+    <string name="Are_You_Sure_Want_To_Exit_From_Login">Are You Sure Want To Exit From Login?</string>
+    <string name="Dairy">Dairy</string>
+
+    <string name="Are_You_Sure_Want_Send_SMS">Are you sure want to send message?</string>
+    <string name="download_chart">Download SNF Chart</string>
+    <string name="CustomerhelpMessage">For customer Registration Please contact to your dairy owner.\n\n\nकस्टमर रजिस्ट्रेशन के लिए अपने डेयरी मालिक से संपर्क करे.\nHelp line\n<b>9772196777</b>\nधन्यवाद </string>
+    <string name="webSMSPlanExpireMessage">Your message plan has expired, please use the SIM to send the message or else contact our helpline number 9772196777. Thank you.</string>
+    <string name="FORGOT_PIN">Forgot Pin</string>
+    <string name="Are_You_Sure_Want_To_Logout">Are you sure want to logout?</string>
+    <string name="addNewAccount">Add New Account</string>
+    <string name="loginAccountList">Accounts List</string>
+    <string name="user_already_login_in_this_app_message">This user is already logged in this software, please login in the Dairy Profile screen from the login user account list. Thank you .</string>
+    <string name="help">Help</string>
+    <string name="play">Play</string>
+    <string name="how_to_use_Meridairy">How to use Meri dairy ?</string>
+    <string name="Loginon_multiple_evices">Login on multiple mobile using qr code scan</string>
+    <string name="MeriDairy_Introduction">Meri Dairy Introduction</string>
+    <string name="How_to_sale_milk_to_customeronMeri_Dairyapp">How to sale milk to customer on Meri Dairy app?</string>
+    <string name="Howto_updateSNFandFATrate_in_MeriDairyapp">How to update SNF and FAT rate in Meri Dairy ?</string>
+    <string name="How_to_editCustomer">How to edit Customer?</string>
+    <string name="Howto_add_a_payment_with_signatureMERIDAIRY">How to add a payment with signature MERI DAIRY?</string>
+    <string name="MERIDAIRY_milk_sowtware_mini_printer_printreciept_by_phone">Print receipt from bluetooth printer  by mobile</string>
+    <string name="notification">Notification</string>
+    <string name="milk_sowtware_COMPUTER_KEYBOARD">How to enter milk with computer keyboard?</string>
+    <string name="LoginWithPpassword">Login With Password</string>
+    <string name="login_with_passHelpMessage">To login with password, please use the old password sent to your mobile number. Otherwise go back from here and login with the mobile number page.</string>
+    <string name="Purchase">Purchase</string>
+    <string name="Months">Months</string>
+    <string name="Year">Year</string>
+    <string name="PricingTable">Pricing Plan</string>
+    <string name="Do_You_Want_duplicate_Entry">Do you want to duplicate entries?</string>
+    <string name="PaymentSuccessful">Payment Successful</string>
+    <string name="OrderId">Order Id</string>
+    <string name="Done">Done</string>
+    <string name="PaymentFailed">Payment Failed</string>
+    <string name="YoucanSkip">Skip</string>
+    <string name="dayleft">Days Remaining</string>
+    <string name="ExpiryDate">Expiry Date</string>
+    <string name="messageBuy">Buy Message</string>
+    <string name="pleaseUpdateApp">Please, update app to new version and continue.</string>
+    <string name="newUpdateAvailable">New Update available</string>
+    <string name="legalPolicies"><u>Legal Policies</u></string>
+    <string name="Shopping">Shopping</string>
+    <string name="Add">Add</string>
+    <string name="rsSymbol">\u20B9</string>
+    <string name="MyCart">My Cart</string>
+    <string name="MyOrder">My Order</string>
+    <string name="resendOtp">Resend OTP</string>
+    <string name="PlanList">Membership Plan List</string>
+
+    <string name="ViewCart">View Cart</string>
+    <string name="navUpgradePrimium">Upgrade Premium (New)</string>
+    <string name="LEGALPOLICIES">Legal Policies</string>
+    <string name="navMyOrder">My Order</string>
+    <string name="AboutUs">About Us</string>
+    <string name="PrivacyPolicy">Privacy Policy</string>
+    <string name="TermsandConditions">Terms and Conditions</string>
+    <string name="RefundCancellationPolicy">Refund and Cancellation Policy</string>
+    <string name="ContactUs">Contact Us</string>
+    <string name="TryAgain">Try Again</string>
+    <string name="Skip"><![CDATA[Skip ad >>]]></string>
+    <string name="LoginWithOTP">Login using OTP</string>
+    <string name="UpdateApp">Update App</string>
+    <string name="SNF_FAT_Chart_Table">View SNF FAT Chart Table</string>
+    <string name="computerLogin">Computer Login</string>
+    <string name="Description">Description</string>
+    <string name="SelectPicture">Select Picture</string>
+    <string name="AddPhoto">Add Photo!</string>
+    <string name="ChoosefromGallery">Choose from Gallery</string>
+    <string name="Price">Price</string>
+    <string name="PleaseUploadImageFile">Please Upload Image File</string>
+
+    <string name="Success">Success</string>
+    <string name="failed">Failed</string>
+    <string name="MyAdvertisement">My Advertisement</string>
+    <string name="text_upload_images">Upload Images</string>
+
+    <string name="upload_videos">Upload Videos</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="LactationNo">Lactation No.</string>
+    <string name="LastCalvingOccured">Last Calving Occurred</string>
+    <string name="MilkingStatus">Milking Status</string>
+    <string name="InMilk">In Milk</string>
+    <string name="Dry">Dry</string>
+    <string name="PeakMilkYield">Peak Milk Yield</string>
+    <string name="Gender_of_calf_at_foot">Gender of calf at foot</string>
+    <string name="Inter_CalvingPeriod">Inter Calving Period</string>
+    <string name="less_than_oneYear">Less than 1 year</string>
+    <string name="one_onepointFive">1-1.5 years</string>
+    <string name="onePointFive_to_two">1.5-2 years</string>
+    <string name="more_than_twoYear">More than 2 years</string>
+    <string name="H_S_Vaccination_done">H.S. Vaccination done ?</string>
+    <string name="AnimalList">Animal List</string>
+    <string name="Are_you_sure_to_delete_the_animal">Are you sure want to delete the animal ?</string>
+    <string name="FMD_Vaccination_period">FMD Vaccination Period?</string>
+    <string name="BlackQuarter_VaccinationDone">Black Quarter Vaccination done ?</string>
+    <string name="Brucellousis_VaccinationatCalf_Foot">Brucellousis Vaccination at Calf Foot?</string>
+    <string name="Deworming">Deworming</string>
+    <string name="Deworming_done">Deworming done ?</string>
+    <string name="FMD_Vaccination_done">FMD Vaccination done ?</string>
+    <string name="Vaccination">Vaccination</string>
+    <string name="Preganancy_Day">Preganancy Day</string>
+    <string name="Preganancy_Month">Preganancy Month</string>
+    <string name="Is_pregnant">Is pregnant?</string>
+    <string name="Gender">Gender</string>
+    <string name="Age">Age</string>
+    <string name="Tag_No">Tag No.(if tagged)</string>
+    <string name="Register">Register</string>
+    <string name="video_play">Video Play</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="dialog_permission_title">Allow Permission</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="AnimalForSale">Animal For Sell</string>
+    <string name="Choose_Breed">Choose Breed</string>
+    <string name="rearing">Rearing</string>
+    <string name="sold">Sold</string>
+    <string name="died">Died</string>
+    <string name="CalfStatus">Calf Status</string>
+    <string name="how_many_month_before_fmd_vaccination_done">How many months before was the FMD Vaccination done?</string>
+    <string name="how_manyBefore_H_S_Vaccination_done">How many months before was the HS Vaccination done?</string>
+    <string name="how_manyMonth_black_quarter_vaccination_period">How many months before was the HS Black Quarter Vaccination done?</string>
+    <string name="how_many_month_before_brucellousis_vaccination_done">How many months before was the HS Brucellousis Vaccination done?</string>
+    <string name="how_many_month_before_deworming_vaccination_done">How many months before was the HS Deworming Vaccination done?</string>
+    <string name="Selling_Price">Selling Price</string>
+    <string name="Castration">Castration</string>
+    <string name="SelectVideoFromGallery">Select video from gallery</string>
+    <string name="RecordVideoFromCamera">Record video from Camera</string>
+    <string name="PleaseEnterName">Please Enter Name</string>
+    <string name="YearIsRequired">Year is required !</string>
+    <string name="MaximumPhotosUpload">\"Maximum 5 Photos Can be Uploaded</string>
+    <string name="Please_select_deworming_status">Please select deworming status</string>
+    <string name="AddAnimal">Add Animal</string>
+    <string name="DewormingPeriod">Deworming Period</string>
+    <string name="Breed">Breed</string>
+    <string name="Category">Category</string>
+    <string name="Milk_Buy">Milk Buy</string>
+    <string name="classifieds">Classifieds</string>
+    <string name="strType">TYPE</string>
+    <string name="Please_enable_Bluetooth_device">Please turn on Bluetooth</string>
+    <string name="SelectRateType">Select  the type of Rate</string>
+    <string name="PrintMulTilanguage">Print in all Languages</string>
+    <string name="Current_Location">Current Location</string>
+    <string name="Use_GPS">Use GPS</string>
+    <string name="MapRoute">Map Route</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="upload">Upload</string>
+    <string name="Vacation">Vacation</string>
+    <string name="ViewInvoice">View Invoice</string>
+    <string name="Home">Home</string>
+    <string name="titleProfile">Profile</string>
+    <string name="ViewEventDetais">View Event Details</string>
+    <string name="NoEventAvailable">No Event Available!</string>
+    <string name="BuyMilkProduct">BuyMilkProduct</string>
+    <string name="AddVacation">Add Vacation</string>
+    <string name="UpdateVacation">Update Vacation</string>
+    <string name="DairyOwnerDetails">Dairy Owner Details</string>
+    <string name="ChooseShift">Choose Shift</string>
+    <string name="ChooseMilkPlan">Choose Milk Plan</string>
+    <string name="MyPlan">My Plan</string>
+    <string name="note_dairy_details">Note: if you know any dairy owner who sale milk to you or where from you buy milk .you can fill details of him .</string>
+    <string name="CowMilkPlan">Cow Milk Plan</string>
+    <string name="BuffaloMilkPlan">Buffalo Milk Plan</string>
+    <string name="Add_Milk_Plan">Add Milk Plan</string>
+    <string name="PlanStatus">Plan Status</string>
+    <string name="Enable">Enable</string>
+    <string name="Disable">Disable</string>
+    <string name="On">On</string>
+    <string name="product_OutOf_Stock">Product Out Of Stock</string>
+    <string name="updatePlan">update Plan</string>
+    <string name="TrackingOrder">Tracking Order</string>
+    <string name="order_Details">Order Details</string>
+    <string name="printInvoice">Print Invoice</string>
+    <string name="cancelReason">Cancel Reason</string>
+    <string name="product_item_details">Product Item Details</string>
+    <string name="shipped">Shipped</string>
+    <string name="recieved">Received</string>
+    <string name="delivered">Delivered</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="reason">Reason</string>
+    <string name="are_you_sure_want_cancel_entry">Are you sure you want to cancel this entry?</string>
+    <string name="pending">Pending</string>
+    <string name="Click_on_Login_and_scan_your_QR_code">1. Go to meridairy.in website\n2. Click on Dairy Login Button in right side corner \n3. Scan your QR code</string>
+    <string name="Update_Entry">Update Entry</string>
+    <string name="Employee">Employee</string>
+    <string name="DeliveryBoy">Delivery Boy</string>
+    <string name="all">All</string>
+    <string name="This_is_Vacation">This is Vacation</string>
+    <string name="milk_Vacation">Milk Vacation</string>
+    <string name="Milk">Milk</string>
+    <string name="Order">Order</string>
+    <string name="TrackingId">Tracking id</string>
+    <string name="shippingId">shipping id</string>
+    <string name="Action">Action</string>
+    <string name="Accept">Accept</string>
+    <string name="invoice">Invoice</string>
+    <string name="bulkMilkHistory">Bulk Milk History</string>
+    <string name="myRequest">My Request</string>
+    <string name="gst">GST</string>
+    <string name="invoiceValue">Invoice Value</string>
+    <string name="devideFactor">Divide Factor</string>
+    <string name="multiplyFactor">Multiply Factor</string>
+    <string name="addFactor">Add Factor</string>
+    <string name="clrSetting">CLR Setting</string>
+    <string name="Rate_by_CLR">Rate by CLR Only</string>
+    <string name="clrChart">CLR Chart</string>
+    <string name="chart">Chart</string>
+    <string name="selectChartCategory">Select Chart  Category</string>
+    <string name="generalChart">General  Chart</string>
+    <string name="downloadsampleExcel">Download Sample Excel</string>
+    <string name="list">List</string>
+    <string name="group">Group</string>
+    <string name="brand">Brand</string>
+    <string name="strReturn">Return</string>
+    <string name="product_SaleAndBuy">Product Sell And Buy</string>
+    <string name="tax">Tax</string>
+    <string name="lowStockQuantity">Low Stock Quantity</string>
+    <string name="openingQuantity">Opening Quantity</string>
+    <string name="openingRate">Opening Rate</string>
+    <string name="OpeningAmount">Opening Amount</string>
+    <string name="unit">Unit</string>
+    <string name="includingTax">Including Tax</string>
+    <string name="salePrice">Sell Price</string>
+    <string name="invoiceNo">Invoice No</string>
+    <string name="includingDiscountWith">Including Discount With %</string>
+    <string name="discount">Discount</string>
+    <string name="cashDiscount">Cash Discount</string>
+    <string name="otherCharges">Other Charges</string>
+    <string name="subTotal">Sub Total</string>
+    <string name="invoiceAmount">Invoice Amount</string>
+    <string name="sgst">SGST</string>
+    <string name="cgst">CGST</string>
+    <string name="igst">IGST</string>
+    <string name="referenceNo">Reference No</string>
+    <string name="bankName">Bank Name</string>
+    <string name="accountNo">Account No</string>
+    <string name="chequeNo">Cheque No</string>
+    <string name="paymentType">Payment Type</string>
+    <string name="cash">Cash</string>
+    <string name="bank">Bank</string>
+    <string name="cheque">Cheque</string>
+    <string name="voucher">Voucher</string>
+    <string name="recieve">Receive</string>
+    <string name="my">My</string>
+    <string name="expenses">Expenses</string>
+    <string name="code">Code</string>
+    <string name="taxable">Taxable</string>
+    <string name="membership">Membership</string>
+    <string name="message">Message</string>
+    <string name="day">Day</string>
+    <string name="IFSC_Code">IFSC Code</string>
+    <string name="village">Village</string>
+    <string name="credit">Credit</string>
+    <string name="debit">Debit</string>
+    <string name="general">General</string>
+    <string name="plantMilkCollection">Plant Milk Collection</string>
+    <string name="balance">Balance</string>
+    <string name="other">Other</string>
+    <string name="advance">Advance</string>
+    <string name="screen">"Screen "</string>
+    <string name="automatic">Automatic</string>
+    <string name="start">Start</string>
+    <string name="history">History</string>
+    <string name="payment">Payment</string>
+    <string name="byDate">By Date</string>
+    <string name="milk">Milk</string>
+    <string name="bulk">Bulk</string>
+    <string name="switchInCustomerApp">Switch In Customer App</string>
+    <string name="switchIn">Switch In</string>
+    <string name="switchInDairy">Switch in Dairy App</string>
+    <string name="addNewMessage">Add New Message</string>
+    <string name="Send">Send</string>
+    <string name="UploadingOnline">Uploading Online,Please wait...</string>
+    <string name="syncMilkData">Sync Milk Data</string>
+    <string name="installSmsApp">Install SMS App</string>
+    <string name="vNo">V.No.</string>
+    <string name="strOldTransMessage">This Screen is Old  Transaction, Please use new Payment Register Screen for new Transaction</string>
+    <string name="New">New</string>
+    <string name="strSaleProductScreenMsg">This is an old Product Selling page. Please Use New Product Buy and Sell page from Side Menu</string>
+    <string name="khata">Khata</string>
+    <string name="milkBill">Milk Bill</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="phone">Phone</string>
+    <string name="app">App</string>
+    <string name="step">Step</string>
+    <string name="refresh">Refresh</string>
+    <string name="lastRefreshOn">Last Refresh  On</string>
+    <string name="clrFormulaDescription">"Note: For example according all india Dairy Standard \n1. Divide Factor=4.0, \n2. Multiply Factor=0.20, \n3. Add Factor=0.66  "</string>
+    <string name="print_reciept_title_font_size">Print receipt title font size</string>
+    <string name="print_receipt_message_font_size">Print receipt message font size</string>
+    <string name="share">Share App</string>
+    <string name="lacto_scale">Lacto Scale</string>
+    <string name="eko_milk">EKO Milk</string>
+    <string name="emt_serial">EMT Serial</string>
+    <string name="emt_parallel">EMT  Parllel</string>
+    <string name="eko_pro">EKO Pro</string>
+    <string name="lacten">Lacten</string>
+    <string name="master_classic">Master Classic</string>
+    <string name="machine_set_up">Machine Set Up</string>
+    <string name="select_machine">Select Machine</string>
+    <string name="change_machine">Change Machine</string>
+    <string name="machine_setting">Machine Settings</string>
+    <string name="whatsApp_message">WhatsApp Message</string>
+    <array name="machine_list">
+        <item>@string/select</item>
+        <item>@string/lacto_scale</item>
+        <item>@string/eko_milk</item>
+        <item>@string/emt_serial</item>
+        <item>@string/emt_parallel</item>
+        <item>@string/eko_pro</item>
+        <item>@string/lacten</item>
+        <item>@string/master_classic</item>
+    </array>
+
+
+
+    <string name="under_text"><u>Underline me</u></string>
+</resources>

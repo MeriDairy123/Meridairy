@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:elevation="@dimen/_5sdp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:orientation="vertical">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@drawable/layout_border"
+       
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:text="Close"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_13sdp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/colorGray"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:text="Date :"
+        android:textSize="@dimen/_13sdp" />
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvTrackId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone"
+
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:textColor="@color/colorGray"
+        android:text="Tracking Id"
+        android:textSize="@dimen/_13sdp" />
+
+    <LinearLayout
+        android:id="@+id/layoutShipOrCancelReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvLabelShipOrCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="Cancel Reason : "
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_12sdp" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvshipDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/colorGray"
+            android:text="Close"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:id="@+id/tvDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_regular"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/colorGray"
+        android:drawableTint="@color/colorPrimary"
+        android:drawablePadding="@dimen/_10sdp"
+        android:drawableRight="@drawable/ic_download"
+        android:drawableLeft="@drawable/ic_invoice"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:visibility="gone"
+        android:text="Download Invoice"
+
+        android:textSize="@dimen/_12sdp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:id="@+id/imginvoice"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:src="@drawable/app_icon"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+</LinearLayout>

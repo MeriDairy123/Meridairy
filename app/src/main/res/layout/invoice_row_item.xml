@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:elevation="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:textAllCaps="true"
+
+                android:textColor="@color/color_darkGray"
+                android:padding="5dp"
+                android:text="This is my plan  "
+
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:text="Weight:15"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/dark_gray"
+
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:text="@string/Pay"
+            android:layout_above="@+id/tvPrice"
+            android:foreground="@drawable/ripple"
+            android:gravity="center"
+            android:minWidth="50dp"
+            android:backgroundTint="@color/color_blue"
+            android:padding="5dp"
+            android:background="@drawable/btn_shape_global"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"
+            />
+
+        <ImageView
+            android:id="@+id/imgPaid"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            android:layout_above="@+id/tvPrice"
+            app:srcCompat="@drawable/ic_checked"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:textStyle="italic"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="\u20B9  1300"
+            android:textColor="@color/colorCandyApple"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_list_gray" />
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+
+        android:id="@+id/monthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@+id/toolbar"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="0.65"
+                android:background="@drawable/textbox_rectangle_background_shape"
+                android:orientation="horizontal">
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/transparent"
+
+                    android:gravity="center"
+                    android:hint="@string/Date"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+
+
+                <ImageView
+                    android:id="@+id/imgStartDate"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:background="@drawable/calendar_icon" />
+
+            </LinearLayout>
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_weight="0.35"
+                android:background="@drawable/btn_shape_global"
+                android:text="@string/Submit"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

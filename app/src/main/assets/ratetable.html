@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+         font-size: 14px;
+         line-height: 20px;
+         color: #333;
+         }
+         .fixed-table-container {
+         height: #HEIGHT;
+         box-sizing: border-box;
+         border: 1px solid #ccc;
+         }
+         .fixed-table-container table {
+         border-collapse: collapse;
+         width: 100%;
+         }
+         .fixed-table-container th,
+         .fixed-table-container td {
+         border-right: 1px solid #ccc;
+         border-bottom: 1px solid #ccc;
+         padding: 4px;
+         text-align: center;
+         vertical-align: center;
+         /**
+         * Current implementation doesn't work when
+         * cells in a row have different heights
+         */
+         white-space: nowrap !important;
+         }
+         .fixed-table-container th {
+         background: #eee;
+         font-size: 12px;
+         line-height: 16px;
+         padding-top: 4px;
+         padding-bottom: 4px;
+         }
+         .fixed-table-container td:first-child {
+         background: #eee;
+         }
+         .fixed-table-container tr:last-child td {
+         border-bottom: 0;
+         }
+         .fixed-table-container th:last-child,
+         .fixed-table-container td:last-child {
+         border-right: 0;
+         }
+
+    </style>
+</head>
+<body>
+<div id="fixed-table-container-1" class="fixed-table-container">
+    #TABLE
+</div>
+<script>
+         fixTable(document.getElementById('fixed-table-container-1'));
+
+function fixTable(container) {
+	// Store references to table elements
+	var thead = container.querySelector('thead');
+	var tbody = container.querySelector('tbody');
+
+	// Style container
+	container.style.overflow = 'auto';
+	container.style.position = 'relative';
+
+	// Add inline styles to fix the header row and leftmost column
+	function relayout() {
+		var ths = [].slice.call(thead.querySelectorAll('th'));
+		var tbodyTrs = [].slice.call(tbody.querySelectorAll('tr'));
+
+		/**
+		 * Remove inline styles so we resort to the default table layout algorithm
+		 * For thead, th, and td elements, don't remove the 'transform' styles applied
+		 * by the scroll event listener
+		 */
+		tbody.setAttribute('style', '');
+		thead.style.width = '';
+		thead.style.position = '';
+		thead.style.top = '';
+		thead.style.left = '';
+		thead.style.zIndex = '';
+		ths.forEach(function (th) {
+			th.style.display = '';
+			th.style.width = '';
+			th.style.position = '';
+			th.style.top = '';
+			th.style.left = '';
+		});
+		tbodyTrs.forEach(function (tr) {
+			tr.setAttribute('style', '');
+		});
+		[].slice.call(tbody.querySelectorAll('td'))
+			.forEach(function (td) {
+				td.style.width = '';
+				td.style.position = '';
+				td.style.left = '';
+			});
+
+		/**
+		 * Store width and height of each th
+		 * getBoundingClientRect()'s dimensions include paddings and borders
+		 */
+		var thStyles = ths.map(function (th) {
+			var rect = th.getBoundingClientRect();
+			var style = document.defaultView.getComputedStyle(th, '');
+			return {
+				boundingWidth: rect.width,
+				boundingHeight: rect.height,
+				width: parseInt(style.width, 10),
+				paddingLeft: parseInt(style.paddingLeft, 10)
+			};
+		});
+
+		// Set widths of thead and tbody
+		var totalWidth = thStyles.reduce(function (sum, cur) {
+			return sum + cur.boundingWidth;
+		}, 0);
+		tbody.style.display = 'block';
+		tbody.style.width = totalWidth + 'px';
+		thead.style.width = totalWidth - thStyles[0].boundingWidth + 'px';
+
+		// Position thead
+		thead.style.position = 'absolute';
+		thead.style.top = '0';
+		thead.style.left = thStyles[0].boundingWidth + 'px';
+		thead.style.zIndex = 10;
+
+		// Set widths of the th elements in thead. For the fixed th, set its position
+		ths.forEach(function (th, i) {
+			th.style.width = thStyles[i].width + 'px';
+			if (i === 0) {
+				th.style.position = 'absolute';
+				th.style.top = '0';
+				th.style.left = -thStyles[0].boundingWidth + 'px';
+			}
+		});
+
+		// Set margin-top for tbody - the fixed header is displayed in this margin
+		tbody.style.marginTop = thStyles[0].boundingHeight + 'px';
+
+		// Set widths of the td elements in tbody. For the fixed td, set its position
+		tbodyTrs.forEach(function (tr, i) {
+			tr.style.display = 'block';
+			tr.style.paddingLeft = thStyles[0].boundingWidth + 'px';
+			[].slice.call(tr.querySelectorAll('td'))
+				.forEach(function (td, j) {
+					td.style.width = thStyles[j].width + 'px';
+					if (j === 0) {
+						td.style.position = 'absolute';
+						td.style.left = '0';
+					}
+				});
+		});
+	}
+
+	// Initialize table styles
+	relayout();
+
+	// Update table cell dimensions on resize
+	window.addEventListener('resize', resizeThrottler, false);
+	var resizeTimeout;
+
+	function resizeThrottler() {
+		if (!resizeTimeout) {
+			resizeTimeout = setTimeout(function () {
+				resizeTimeout = null;
+				relayout();
+			}, 500);
+		}
+	}
+
+	// Fix thead and first column on scroll
+	container.addEventListener('scroll', function () {
+		thead.style.transform = 'translate3d(0,' + this.scrollTop + 'px,0)';
+		var hTransform = 'translate3d(' + this.scrollLeft + 'px,0,0)';
+		thead.querySelector('th').style.transform = hTransform;
+		[].slice.call(tbody.querySelectorAll('tr > td:first-child'))
+			.forEach(function (td, i) {
+				td.style.transform = hTransform;
+			});
+	});
+
+	/**
+	 * Return an object that exposes the relayout function so that we can
+	 * update the table when the number of columns or the content inside columns changes
+	 */
+	return {
+		relayout: relayout
+	};
+}
+
+</script>
+</body>
+</html>

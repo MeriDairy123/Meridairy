@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        app:navigationIcon="@drawable/ic_nav_drawer"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/DeliveryBoy"
+        app:titleTextColor="@color/colorWhite">
+
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/btnAddNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/NEW_USER"
+            android:gravity="center_vertical"
+            android:layout_gravity="end"
+            android:padding="@dimen/_5sdp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableRight="@drawable/ic_plus_symbol"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@color/colorBtnRed"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_10sdp" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/textbox_rectangle_background_shape"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:background="@drawable/search_icon" />
+
+            <EditText
+                android:id="@+id/et_Search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="@string/Search_Here"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:visibility="gone"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="@string/ID"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="@string/Name"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+            <TextView
+                android:id="@+id/tvFatherName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|center_vertical"
+                android:layout_weight="1.1"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:text="@string/Father_Name"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/Phone_Number"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:text="@string/STATUS"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+        </LinearLayout>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/pullToRefresh"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

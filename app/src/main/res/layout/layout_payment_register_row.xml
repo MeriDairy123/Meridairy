@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:background="@color/color_bg"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp">
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightGray"
+            android:minWidth="40dp"
+            android:padding="5dp"
+            android:minHeight="50dp"
+            android:id="@+id/bottomWrapper">
+
+            <TextView
+                android:id="@+id/tvViewEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:text="@string/viewEntry"
+                android:background="@drawable/btn_shape_global"
+                android:foreground="@drawable/ripple"
+                android:layout_gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/tvPay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="70dp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:text="@string/Pay"
+                android:background="@drawable/btn_shape_green"
+                android:foreground="@drawable/ripple"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/tvReceive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="70dp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:text="@string/recieve"
+                android:background="@drawable/btn_redcolor_shape"
+                android:foreground="@drawable/ripple"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutUpper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:background="@color/color_bg"
+
+            android:weightSum="3"
+
+            android:orientation="horizontal">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvID"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="2dp"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="101"
+
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.45"
+                android:gravity="start|center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9"
+                android:gravity="start|center_vertical"
+                android:text="1780"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+            <CheckBox
+                android:id="@+id/chkSelect"
+                android:layout_width="wrap_content"
+                android:layout_weight="0.05"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_weight="0.05"
+                android:layout_height="20dp"
+                android:id="@+id/imgMoreDetail"
+
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_three_dot"/>
+        </LinearLayout>
+    </com.daimajia.swipe.SwipeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.01dp"
+        android:background="@color/colorLightGray"/>
+
+</LinearLayout>

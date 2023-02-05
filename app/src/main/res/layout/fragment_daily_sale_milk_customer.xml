@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom2"
+
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_toolbar"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_20sdp"
+            android:background="@drawable/textbox_rectangle_background_shape"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:background="@drawable/search_icon" />
+
+            <EditText
+                android:id="@+id/et_Search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="@string/Search_Here"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                
+                android:id="@+id/s_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:text="S.NO"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp"
+                android:visibility="gone" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                
+                android:id="@+id/id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="@string/ID"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                
+                android:id="@+id/txtCustomerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_weight="0.8"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="@string/Name"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                
+                android:id="@+id/tvWeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_weight="1.2"
+                android:gravity="center_vertical"
+                android:text="@string/Weight"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+                
+                android:id="@+id/tvStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_weight="0.7"
+                app:textAllCaps="true"
+                android:gravity="center_vertical"
+                android:text="@string/STATUS"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_buyerCustomerList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorSubheader"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvTotalWeight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvTotalSell"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvTotalRemaining"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</RelativeLayout>

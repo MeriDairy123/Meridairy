@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutMorning"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp">
+
+        <EditText
+            android:id="@+id/ediMorningMilk"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/Morning_Milk"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textSize="@dimen/_14sdp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/morningView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/color_bottom_light_gray" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEvening"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp">
+
+        <EditText
+
+            android:id="@+id/ediEveningMilk"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/Evening_Milk"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/eveningView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/color_bottom_light_gray" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutMilkRate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edtMilkRate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="start"
+            android:hint="@string/MILK_RATE"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/priceView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/color_bottom_light_gray"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_shape_global"
+        android:text="@string/Save"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+</LinearLayout>

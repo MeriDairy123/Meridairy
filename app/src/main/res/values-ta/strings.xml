@@ -1,0 +1,736 @@
+<resources>
+    <!-- Strings related to DashBoard -->
+    <string name="app_name">मेरी डेयरी</string>
+    <string name="poweredByB2infosoft">Powered By B2infosoft</string>
+    <string name="invalid_login_title">அமர்வின் முடிவு</string>
+    <string name="invalid_login_message">உங்கள் கணக்கு மற்றொரு மொபைலில் உள்நுழைந்துள்ளது. மீண்டும் உள்நுழைக. </string>
+
+    // language
+    <string name="change_language">மொழி மாற்றம்</string>
+    <string name="select">தேர்வு</string>
+
+    <string name="english">English</string>
+    <string name="spanish">española</string>
+    <string name="hindi">हिंदी</string>
+    <string name="gujrati">ગુજરાતી</string>
+    <string name="marathi">मराठी</string>
+    <string name="punjabi">ਪੰਜਾਬੀ</string>
+    <string name="telugu">తెలుగు</string>
+    <string name="tamil">தமிழ்</string>
+    <string name="kannad">ಕನ್ನಡ</string>
+
+    <string-array name="language">
+        <item>@string/english</item>
+        <item>@string/spanish</item>
+        <item>@string/hindi</item>
+        <item>@string/gujrati</item>
+        <item>@string/marathi</item>
+        <item>@string/punjabi</item>
+        <item>@string/telugu</item>
+        <item>@string/tamil</item>
+        <item>@string/kannad</item>
+    </string-array>
+    // Navigation menu
+    <string-array name="nav_drawer_array">
+        <item>@string/Deshbord</item>
+        <item>@string/Profile</item>
+        <item>@string/CreateAdvertise</item>
+        <item>@string/navUpgradePrimium</item>
+        <item>@string/myRequest</item>
+        <item>@string/DeliveryBoy</item>
+        <item>@string/View_All_Entry</item>
+        <item>@string/MILK_HISTORY</item>
+        <item>@string/Buyer</item>
+        <item>@string/Order</item>
+        <item>@string/Product</item>
+        <item>@string/product_SaleAndBuy</item>
+        <!--<item>@string/Setting</item>-->
+        <item>@string/Transaction</item>
+        <item>@string/LEGALPOLICIES</item>
+        <item>@string/share</item>
+        <item>@string/Logout</item>
+    </string-array>
+    <string-array name="nav_array_product">
+        <item>@string/Add_Product</item>
+        <item>@string/Selling_History</item>
+    </string-array>
+
+    <string-array name="setting_update">
+        <item>@string/Update_Rate</item>
+        <item>@string/Print_And_Send_Message</item>
+    </string-array>
+
+    // SMS
+    <string name="send_sms_off">செய்தியை அனுப்புங்கள் </string>
+    <string name="sms_from_sim">சிம் மூலம் செய்தி அனுப்பவும்</string>
+    <string name="sms_from_api">வலையிலிருந்து செய்தியை அனுப்பவும்</string>
+    <string-array name="sms_sendtype">
+
+        <item>@string/send_sms_off</item>
+        <item>@string/sms_from_sim</item>
+        <item>@string/sms_from_api</item>
+
+    </string-array>
+    <!-- Language name : Tamil -->
+    <string name="dairy_Address">பால் முகவரி</string>
+    <string name="mobile_number">கைபேசி எண்</string>
+
+    <string name="WhatsAppSmssettings">WhatsApp/Sms அமைப்புகள்</string>
+    <string name="AreYouUsingWhatsappBusiness">நீங்கள் Whatsapp வணிகத்தைப் பயன்படுத்துகிறீர்களா?</string>
+
+
+    <string name="Add_Milk_Entry">பால் செருகலைச் சேர்க்கவும்</string>
+    <string name="login_using_qr_code"> QR குறியீட்டைப் பயன்படுத்தி உள்நுழைக </string>
+    <string name="View_Entry_By_Date">தேதி படி காட்சி நுழைவு</string>
+    <string name="Customer">வாடிக்கையாளர்</string>
+    <string name="Customers">வாடிக்கையாளர்</string>
+    <string name="Payment_Register">செல்லப்பிராணி பதிவு</string>
+    <string name="Products">தயாரிப்பு</string>
+    <string name="transactions">பரிவர்த்தனை</string>
+    <string name="Sale_Product">விற்பனை பொருட்கள்</string>
+    <string name="MILK_Sale">பால் விற்பனை</string>
+    <string name="Select_Date">தேதியைத் தேர்வுசெய்க</string>
+    <string name="MORNING">காலை</string>
+    <string name="EVENING">மாலை</string>
+    <string name="ADD_ENTRY">உள்ளீட்டைச் சேர்க்கவும்</string>
+    <string name="SALE_MILK">பால் விற்பனை</string>
+    <string name="App_activation">பயன்பாடு செயல்படுத்தல்</string>
+    <string name="YourAccountisActivated">உங்கள் கணக்கு செயலில் உள்ளது</string>
+    <string name="Please_enter_activation_key">செயல்படுத்தும் விசையை உள்ளிடவும்</string>
+    <string name="Enter_6_digit_key">6 இலக்க விசையை உள்ளிடவும்ं</string>
+    <string name="Activate">செயல்படுத்தவும்</string>
+    <string name="ActivateRequestTxt">உங்களிடம் ACTIVATION KEY இல்லையென்றால் +919772196777 அல்லது 9772196666 அல்லது WhatsApp ஐ தொடர்பு கொள்ளவும்</string>
+    <string name="Buyer">வாங்குபவர்</string>
+    <string name="Seller">விற்பனையாளர்</string>
+    <string name="ADD_Customer">வாடிக்கையாளர்களைச் சேர்க்கவும்</string>
+    <string name="Edit_Customer">வாடிக்கையாளர்களைத் திருத்து</string>
+    <string name="UPDATE">புதுப்பிக்கப்பட்டது</string>
+    <string name="Please_Enter_Customer_Name">வாடிக்கையாளரின் பெயரை உள்ளிடவும்</string>
+    <string name="Please_Enter_Father_Name">தந்தையின் பெயரை உள்ளிடவும்</string>
+    <string name="please_fill_correct_mobile_number">சரியான மொபைல் எண்ணை உள்ளிடவும்</string>
+    <string name="PleaseSelectCustomerType">வாடிக்கையாளர் வகையைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="Customer_Added_Successfully">வாடிக்கையாளர் வெற்றிகரமாக சேர்க்கப்பட்டார்</string>
+    <string name="Please_Enter_Milk_Rate">பால் விகிதத்தை உள்ளிடவும்</string>
+    <string name="Rate_Updated_Successfully">விகிதம் வெற்றிகரமாக புதுப்பிக்கப்பட்டது</string>
+    <string name="Phone_Number">தொலைபேசி எண்</string>
+    <string name="Customer_ID">வாடிக்கையாளர் ஐடி</string>
+    <string name="Name">பெயர்</string>
+    <string name="Father_Name">தந்தையின் பெயர்</string>
+    <string name="Address">முகவரி</string>
+    <string name="Adhar_Number">அடிப்படை எண்</string>
+    <string name="Save">சேமி</string>
+    <string name="Edit_Rate">வீதத்தைத் திருத்து</string>
+    <string name="Rate_Per_KG">ஒரு கிலோகிராம் வீதம்</string>
+    <string name="Save_Rate">வீதத்தை சேமிக்கவும்ं</string>
+    <string name="MILK_ENTRY">பால் நுழைவு</string>
+    <string name="Please_Update_Milk_Rate_Type">பால் வீத வகையை புதுப்பிக்கவும்.</string>
+    <string name="Fixed_Price">நிலையான விலை</string>
+    <string name="Rate_Not_Found">மதிப்பிடப்படவில்லை</string>
+    <string name="Please_Add_Complete_Entry">முழு உள்ளீட்டைச் சேர்க்கவும்</string>
+    <string name="Please_Update_SNF_Fat">SNF அல்லது கொழுப்பை புதுப்பிக்கவும்</string>
+    <string name="Offline_Entry_Successfully_Uploaded_to_Server">ஆஃப்லைன் பட்டியல் சேவையகத்தில் வெற்றிகரமாக பதிவேற்றப்பட்டது</string>
+    <string name="Entry_Uploading_Failed_Please_Try_again">உள்ளீட்டைப் பதிவேற்றுவதில் தோல்வி, தயவுசெய்து மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="Entry_Update_Successfully">பட்டியல் வெற்றிகரமாக புதுப்பிக்கப்பட்டது.</string>
+    <string name="Entry_Updating_Failed">பட்டியல் புதுப்பிப்பு தோல்வியுற்றது.</string>
+    <string name="Entry_Added_Successfully">நுழைவு வெற்றிகரமாக சேர்க்கப்பட்டது.</string>
+    <string name="Entry_Adding_Failed">உள்ளீட்டைச் சேர்ப்பதில் தோல்வி.</string>
+    <string name="Please_Add_Customer">வாடிக்கையாளரைச் சேர்க்கவும்.</string>
+    <string name="Average_Fat">சராசரி கொழுப்பு</string>
+    <string name="Total_Weight">மொத்த எடை</string>
+    <string name="Total_Amount">மொத்த தொகை</string>
+    <string name="ID">ஐடி</string>
+    <string name="User_all_info">வாடிக்கையாளர் தகவல்</string>
+    <string name="Weight">எடை</string>
+    <string name="Rs_Per_ltr">லிட்டருக்கு ரூ</string>
+    <string name="Fat">கொழுப்பு</string>
+    <string name="Total_Rs">மொத்த ரூபாய்</string>
+    <string name="Week_Total_Rs">வாரம்</string>
+    <string name="SNF">சோலிட்ஸ்</string>
+    <string name="SNF_CLR">சோலிட்ஸ்/சி எல் ஆர்</string>
+    <string name="Cow">மாடு</string>
+    <string name="Buff">பஃபலோ</string>
+    <string name="Sr">சீனியர்</string>
+    <!--  <string name="Sr">क्रमांक</string>-->
+    <string name="Fat_SNF">கொழுப்பு / எஸ்.என்.எஃப்</string>
+    <string name="Rate">மதிப்பீடு</string>
+    <string name="Amount">தொகை</string>
+    <string name="Are_You_Sure_Want_To_Delete_Entry">நீங்கள் நிச்சயமாக நீக்க விரும்புகிறீர்களா?</string>
+    <string name="Entry_Deleted_Successfully">நுழைவு வெற்றிகரமாக நீக்கப்பட்டது</string>
+    <string name="Entry_Deleting_Failed">நுழைவு நீக்குதல் தோல்வியுற்றது</string>
+    <string name="Edit">திருத்தं</string>
+    <string name="Delete">நீக்கு</string>
+    <string name="Add_Product">தயாரிப்புகளைச் சேர்க்கவும்</string>
+    <string name="Product_Added_Successfully">தயாரிப்புகள் வெற்றிகரமாக சேர்க்கப்பட்டன</string>
+    <string name="Product_Adding_Failed">தயாரிப்பைச் சேர்ப்பதில் தோல்வி</string>
+    <string name="Product_Updated_Successfully">தயாரிப்பு வெற்றிகரமாக புதுப்பிக்கப்பட்டது</string>
+    <string name="Product_Updating_failed">தயாரிப்பு புதுப்பிப்பு தோல்வியுற்றது</string>
+    <string name="Products_List_is_Empty_Please_add_Any_Products">தயாரிப்பு பட்டியல் காலியாக உள்ளது, தயவுசெய்து தயாரிப்பு சேர்க்கவும்ं</string>
+    <string name="Product_Name">தயாரிப்பு பெயர்</string>
+    <string name="Item">பொருட்களை</string>
+    <string name="Product_Deleted_Successfully">தயாரிப்பு வெற்றிகரமாக அகற்றப்பட்டது</string>
+    <string name="Product_Deleting_Failed">தயாரிப்பு நீக்கம் தோல்வியுற்றது</string>
+    <string name="Search_Here">இங்கே தேடுங்கள்</string>
+    <string name="USER_LIST">பயனர் பட்டியல்</string>
+    <string name="Customer_Deleted_Successfully">வாடிக்கையாளர் வெற்றிகரமாக நீக்கப்பட்டார்</string>
+    <string name="Customer_Deleting_Failed">வாடிக்கையாளரை நீக்குவதில் தோல்வி</string>
+    <string name="Chat">அரட்டை</string>
+    <string name="Printing_Please_Wait">அச்சிடுதல், தயவுசெய்து காத்திருங்கள் ...</string>
+    <string name="SELLER_BHUGTAN">விற்பனையாளர் கட்டணம்</string>
+    <string name="Please_Select_User_to_print_PDF_and_Send_Message">PDF ஐ அச்சிட்டு செய்தியை அனுப்ப பயனரைத் தேர்ந்தெடுக்கவும்.</string>
+    <string name="Please_Select_User_to_print_PDF">PDF ஐ அச்சிட பயனரைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="Please_Enter_Start_Date_and_End_Date">தொடக்க தேதி மற்றும் இறுதி தேதியை உள்ளிடவும்.</string>
+    <string name="Sending_SMS_Fail">எஸ்எம்எஸ் அனுப்புவது தோல்வியடைந்தது</string>
+    <string name="Meri_Dairy">என் பால்</string>
+    <string name="Date">மீது</string>
+    <string name="Session">அமர்வு</string>
+    <string name="Bonus">போனஸ்</string>
+    <string name="TOTAL_BONUS">மொத்த போனஸ்</string>
+    <string name="Rs">ரூ.</string>
+    <string name="Meri_Dairy_Download_App_Now">எனது பால் பதிவிறக்க பயன்பாடு இப்போது:</string>
+    <string name="OPen_PDF">உங்கள் சேமிப்பகத்திற்கு PDF பதிவிறக்கம் செய்யப்பட்டுள்ளது, நீங்கள் அதை எனது பால் கோப்புறையில் பார்க்க வேண்டும்.</string>
+    <string name="Submit">சமர்ப்பி</string>
+    <string name="Select">தேர்வு</string>
+    <string name="Print_And_Send_Message">அச்சிட்டு செய்தி அனுப்புங்கள்</string>
+    <string name="Print">அச்சு</string>
+    <string name="Send_Message">செய்தி அனுப்பு</string>
+    <string name="Start_Date">தொடக்க தேதி</string>
+    <string name="End_Date">இறுதி தேதி</string>
+    <string name="BUYER_BHUGTAN">வாங்குபவரின் ஊதியம்</string>
+    <string name="Evening_Total">மாலை மொத்தம்</string>
+    <string name="Morning_Total">காலை மொத்தம்</string>
+    <string name="Ltr">லிட்டர்</string>
+    <string name="Create_New_Password">புதிய கடவுச்சொல்லை உருவாக்கவும்</string>
+    <string name="Your_new_password_successfully_Created">உங்கள் புதிய கடவுச்சொல் வெற்றிகரமாக உருவாக்கப்பட்டது</string>
+    <string name="Please_enter_your_correct_OTP">உங்கள் சரியான OTP ஐ உள்ளிடவும்</string>
+    <string name="Your_password_can_matches_please_enter_correct_password">உங்கள் கடவுச்சொல்லை பொருத்த முடியவில்லை, சரியான கடவுச்சொல்லை உள்ளிடவும்ं</string>
+    <string name="Please_enter_new_password_to_your_account">உங்கள் கணக்கில் புதிய கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="Enter_OTP">OTP ஐ உள்ளிடவும்</string>
+    <string name="Enter_new_password">புதிய கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="Confirm_Password">கடவுச்சொல்லை உறுதிப்படுத்தவும்</string>
+    <string name="Your_Old_Password_is_Not_Matching">உங்கள் பழைய கடவுச்சொல் சரியாக இல்லை</string>
+    <string name="Field_Can_be_empty">புலம் காலியாக இருக்க முடியாது</string>
+    <string name="Old_Password">பழைய கடவுச்சொல்</string>
+    <string name="New_Password">புதிய கடவுச்சொல்</string>
+    <string name="CHAT_LIST">அரட்டை பட்டியல்</string>
+    <string name="Customer_Profile">வாடிக்கையாளர் சுயவிவரம்</string>
+    <string name="SALE_MILK_ENTRY">விற்பனை பால் நுழைவு</string>
+    <string name="Total_Remaining">மொத்த இருப்பு</string>
+    <string name="Total_Sell">மொத்த விற்பனை</string>
+    <string name="STATUS">புள்ளிவிவரங்கள்</string>
+    <string name="ERASE_MILK_HISTORY">பால் விவரங்களை நீக்குதல்</string>
+    <string name="Please_select_start_date_first">முதலில் தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="OK">ஆமாம்</string>
+    <string name="Cancel">இல்லை</string>
+    <string name="PIN_Changed_Successfully">பின் வெற்றிகரமாக மாற்றப்பட்டது</string>
+    <string name="PIN_Must_be_4_Digit">பின் 4 இலக்கங்களாக இருக்க வேண்டும்</string>
+    <string name="Your_Current_PIN_is_not_match">உங்கள் தற்போதைய பின் பொருந்தவில்லை</string>
+    <string name="PIN_Saved_Successfully">பின் வெற்றிகரமாக சேமிக்கப்பட்டது</string>
+    <string name="New_PIN">புதிய முள்</string>
+    <string name="Re_enter_PIN">பின்னை மீண்டும் உள்ளிடவும்</string>
+    <string name="LoginFailed_Enter_Correct_Mobile_Password">உள்நுழைவு தோல்வியடைந்தது! சரியான மொபைல் எண் மற்றும் கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="Please_Generate_PIN_Number">பின் எண்ணை உருவாக்கவும்</string>
+    <string name="Password">கடவுச்சொல்</string>
+    <string name="LOGIN">உள்நுழைக</string>
+    <string name="FORGET_PASSWORD">கடவுச்சொல்லை மறந்துவிட்டேன்</string>
+    <string name="SIGNUP">பதிவுபெறுக</string>
+    <string name="NEW_REGISTER">பால் புதிய பதிவு</string>
+    <string name="LOGIN_CUSTOMER">\t\tவாடிக்கையாளர் உள்நுழைந்துள்ளார்</string>
+    <string name="Exyt_App">நீங்கள் உண்மையில் என் பாலில் இருந்து வெளியேற விரும்புகிறீர்களா?</string>
+    <string name="SET_PIN">முள் அமை</string>
+    <string name="CHANGE_PIN">பின் மாற்றவும்</string>
+    <string name="PIN_Set_Successfull">முள் தொகுப்பு வெற்றிகரமாக</string>
+    <string name="PIN_Updated_Successfull">பின் வெற்றிகரமாக புதுப்பிக்கப்பட்டது</string>
+    <string name="Change_Password">கடவுச்சொல்லை மாற்றவும்</string>
+    <string name="Please_Verify_OTP_and_create_new_Password">OTP ஐ சரிபார்த்து புதிய கடவுச்சொல்லை உருவாக்கவும்</string>
+    <string name="We_are_unable_to_get_your_OTP">உங்கள் OTP ஐ எங்களால் பெற முடியவில்லை</string>
+    <string name="Please_enter_valid_mobile_number">செல்லுபடியாகும் மொபைல் எண்ணை உள்ளிடவும்</string>
+    <string name="OtpActTxt">உங்கள் பதிவு செய்யப்பட்ட மொபைலில் OTP ஐ உங்களுக்கு அனுப்புவோம், இது புதிய கடவுச்சொல்லை உருவாக்க நீங்கள் பயன்படுத்த முடியும்</string>
+    <string name="Countinue">தொடர்ந்து</string>
+    <string name="NEW_USER">புதிய பயனர்</string>
+    <string name="Please_enter_either_morning_or_evening_session_milk_weight">காலையிலோ அல்லது மாலையிலோ பால் எடையை உள்ளிடவும்</string>
+    <string name="Morning_Milk">காலை பால்</string>
+    <string name="Evening_Milk">மாலை பால்</string>
+    <string name="Next">அடுத்தது</string>
+    <string name="PIN_CODE">ஜிப் குறியீடு</string>
+    <string name="Update_Rate">புதிய வீதம்</string>
+    <string name="Rate_Updating_Failed">புதுப்பித்தல் வீதம் தோல்வியடைந்தது</string>
+    <string name="Please_Enter_Bonus_Amount">போனஸ் தொகையை உள்ளிடவும்.</string>
+    <string name="Please_Enter_Amount">தொகையை உள்ளிடவும்.</string>
+    <string name="Your_Bonus_is_Updated_Success">உங்கள் போனஸ் வெற்றிகரமாக புதுப்பிக்கப்பட்டது.</string>
+    <string name="Updating_Failed">புதுப்பித்தல் தோல்வியுற்றது.</string>
+    <string name="Milk_Buy_Rate">பால் கொள்முதல் வீதம்</string>
+    <string name="Rate_by_FAT_Only">விகிதத்தால் மட்டுமே கொழுப்பு</string>
+    <string name="Rate_by_SNF_FAT">எஸ்.என்.எஃப் / கொழுப்பு மூலம் விகிதம்</string>
+    <string name="UPDATE_SNF_CHART">SNF விளக்கப்படத்தைப் புதுப்பிக்கவும்</string>
+    <string name="Update_Bonus">போனஸைப் புதுப்பிக்கவும்</string>
+    <string name="Bonus_per_ltr">லிட்டருக்கு போனஸ்</string>
+    <string name="Milk_Sale_Rate">பால் விற்பனை வீதம்</string>
+    <string name="RECEIVE_CASH">பணத்தைப் பெறுங்கள்</string>
+    <string name="Pay">கொடுப்பனவு</string>
+    <string name="Are_You_Sure_Want_To_Exit_From_Registration">நீங்கள் உண்மையில் பதிவிலிருந்து வெளியேற விரும்புகிறீர்களா?</string>
+    <string name="Center_Name">மையத்தின் பெயர்</string>
+    <string name="logout_from_another_device">பிற மொபைலில் இருந்து வெளியேறு</string>
+    <string name="Please_Enter_Collection_Center_Name">சேகரிப்பு மையத்தின் பெயரை உள்ளிடவும்</string>
+    <string name="Please_Enter_Dairy_Name">பால் பெயரை உள்ளிடவும்</string>
+    <string name="Please_Enter_Correct_Phone_Number"> சரியான தொலைபேசி எண்ணை உள்ளிடவும்</string>
+    <string name="Please_Enter_Owner_Name">உரிமையாளர் பெயரை உள்ளிடவும்</string>
+    <string name="Please_Select_State">மாநிலத்தைத் தேர்ந்தெடுக்கவும்ं</string>
+    <string name="Please_Select_City">நகரத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="Please_Enter_Street_Address">நிரந்தர முகவரியை உள்ளிடவும்</string>
+    <string name="Registration_Successfull">பதிவு வெற்றிகரமாக</string>
+    <string name="Take_Photo">புகைப்படம் எடுக்கவும்</string>
+    <string name="SALE_PRODUCT">விற்பனை தயாரிப்பு</string>
+    <string name="Please_Select_your_item">உங்கள் உருப்படியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="Product_Selling_Fail">தயாரிப்பு விற்பனை தோல்வியுற்றது</string>
+    <string name="Sale">செல்</string>
+    <string name="Please_Edit_Sale_Milk_Weight_It_not_to_be_0">விற்பனை பால் எடையைத் திருத்தவும். இது 0 ஆக இருக்கக்கூடாது.</string>
+    <string name="Updating_Success">புதுப்பிப்பு வெற்றிகரமாக</string>
+    <string name="Cancel_Success">வெற்றிகரமாக ரத்து செய்யப்பட்டது</string>
+    <string name="Cancel_Failed">ரத்துசெய்தல் தோல்வியடைந்தது</string>
+    <string name="Milk_Removed_Successfull">பால் வெற்றிகரமாக அகற்றப்பட்டது</string>
+    <string name="Milk_Sale_Successfull">பால் விற்பனை வெற்றிகரமாக</string>
+    <string name="Milk_Saling_failed">பால் விற்பனை தோல்வியுற்றது</string>
+    <string name="MILK_RATE">பால் விலை</string>
+    <string name="Customer_Name">வாடிக்கையாளரின் பெயர்</string>
+    <string name="MILK_BUYER_LIST">பால் வாங்குபவர் பட்டியல்</string>
+    <string name="Edit_Milk">பாலைத் திருத்துங்கள்</string>
+    <string name="Edit_Profile">சுயவிவரத்தைத் திருத்து</string>
+    <string name="Please_Do_Signature_And_Then_Click_Save">தயவுசெய்து கையொப்பமிட்டு சேமி என்பதைக் கிளிக் செய்க</string>
+    <string name="Signature_Uploaded_Succesfully">கையொப்பம் வெற்றிகரமாக பதிவேற்றப்பட்டது</string>
+    <string name="Enter_Your_Signature">உங்கள் கையொப்பத்தை உள்ளிடவும்</string>
+    <string name="Clear">சுத்தமான</string>
+
+
+    <string name="Incomplete_Entry">முழுமையற்ற நுழைவு</string>
+    <string name="TOTAL">மொத்தம்</string>
+    <string name="WeeklyTotal">வாராந்திர மொத்தம்</string>
+    <string name="Quantity">அளவு</string>
+    <string name="You_have_no_entry_to_Print">அச்சிட உங்களுக்கு நுழைவு இல்லை</string>
+
+    <string name="Fat_Rat">கொழுப்பு வீதம்</string>
+    <string name="rupees">ஆர்எஸ்</string>
+    <string name="Mobileno">மொபைல் எண்</string>
+    <string name="View_All_Entry">எல்லா உள்ளீடுகளையும் காண்க</string>
+    <string name="Selling_History">விற்பனையைக் காண்க</string>
+    <string name="Total_Selling_Price">மொத்த விற்பனை</string>
+    <string name="MILK_HISTORY">பால் விவரங்கள்</string>
+    <string name="Please_select_end_date_first">முதலில் கடைசி தேதியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="Date_range_should_be_1_to_10_days">தேதி வரம்பு 1 முதல் 10 நாட்கள் வரை இருக்க வேண்டும்</string>
+    <string name="Evening">மாலை</string>
+    <string name="viewEntry">உள்ளீட்டைக் காண்க</string>
+    <string name="Printing">அச்சிடுதல்</string>
+    <string name="Please_Wait">தயவுசெய்து காத்திருங்கள் ...</string>
+    <string name="Please_Select_Date">தேதியைத் தேர்ந்தெடுக்கவும்</string>
+
+
+    <string name="Cradit">கடன்</string>
+    <string name="Remaining">மீதமுள்ளவை</string>
+    <string name="TITLE">தலைப்பு</string>
+    <string name="Please_Enter_All_Field">அனைத்தையும் நிரப்பவும்</string>
+
+    <string name="No_Data_of_Morning_List_to_Print">அச்சிட காலை தகவல் இல்லை</string>
+
+
+    <string name="No_Data_of_Evening_List_to_Print">அச்சிடுவதற்கு மாலையில் பட்டியல் தரவு இல்லை</string>
+
+    <string name="TRANSACTION_HISTORY">பரிவர்த்தனை விவரங்கள்</string>
+    <string name="Please_Select_Customer"> வாடிக்கையாளரைத் தேர்ந்தெடுக்கவும்</string>
+
+    <string name="Please_Do_Amount_Type_And_Amount_to_pay_amount">தயவுசெய்து தொகை தொகை மற்றும் செலுத்த வேண்டிய தொகை</string>
+    <string name="CASH_RECEIVE">பணத்தைப் பெறுங்கள்</string>
+    <string name="DEBIT">வைப்புத்தொகை</string>
+    <string name="Total_Credit">மொத்த கடன்</string>
+    <string name="Total_Debit">மொத்த பற்று</string>
+
+    <string name="Amount_Paying_Fail">தொகை செலுத்துதல் தோல்வியுற்றது</string>
+    <string name="you_are_not_connected_to_internet">நீங்கள் இணையத்துடன் இணைக்கப்படவில்லை</string>
+    <string name="Are_you_want_to_work_offline">நீங்கள் ஆஃப்லைனில் வேலை செய்ய விரும்புகிறீர்களா?</string>
+    <string name="SNF_FAT_CHART">எஸ்.என்.எஃப் கொழுப்பு விளக்கப்படம்</string>
+    <string name="SNF_FAT_Chart">எஸ்.என்.எஃப் கொழுப்பு விளக்கப்படம்</string>
+
+    <string name="DAIRY_LIST">பால் பட்டியல்</string>
+    <string name="Profile">விவரம்</string>
+    <string name="Transaction">பரிவர்த்தனை</string>
+    <string name="Product">தயாரிப்பு</string>
+    <string name="Please_Contact_Your_Dairy_Owner">பால் உரிமையாளருடன் தொடர்பு கொள்ளவும்</string>
+    <string name="Login_Success">உள்நுழைவு வெற்றிகரமாக</string>
+    <string name="You_Are_Not_a_Customer_please_Login_as_Dairy_Owne">நீங்கள் ஒரு வாடிக்கையாளர் அல்ல, தயவுசெய்து பால் உரிமையாளராக உள்நுழைகं</string>
+    <string name="No_Data_Found">தரவு எதுவும் கிடைக்கவில்லை</string>
+    <string name="SELLER_PROFILE">விற்பனையாளரின் சுயவிவரம்</string>
+    <string name="BUYER_PROFILE">வாங்குபவரின் சுயவிவரம்</string>
+    <string name="SALE_ITEM">விற்பனை உருப்படி</string>
+    <string name="Time">நேரம்</string>
+    <string name="COW_SNF">மாடு எஸ்.என்.எஃப்</string>
+    <string name="Enter_your_passcode">உங்கள் கடவுக்குறியீட்டை உள்ளிடவும்</string>
+    <string name="Logout">மக்கள் வெளியே</string>
+    <string name="print_sms_setting">அச்சு மற்றும் செய்தி அமைப்புகள்</string>
+    <string name="print_sms">அச்சிட்டு செய்தி</string>
+
+    <string name="whatsapp_support">வாட்ஸ்அப் உதவி</string>
+    <string name="Setting">அமைப்புகள்</string>
+    <string name="Deshbord">டாஷ்போர்டு</string>
+    <string name="PRINT_MORNING_PDF">விடியல் பி.டி.எஃப்</string>
+    <string name="PRINT_EVENING_PDF">மாலை பி.டி.எஃப்</string>
+    <string name="SELLER_LIST">விற்பனையாளர் பட்டியல்</string>
+    <string name="BUYER_LIST">வாங்குபவர் பட்டியல்</string>
+    <string name="Amount_Type">தொகை வகை</string>
+    <string name="Message_Sent_Successfully">செய்தி வெற்றிகரமாக அனுப்பப்பட்டது</string>
+    <string name="BUFFALO_SNF">எருமை sfn</string>
+    <string name="Please_wait_Updating_Your_SNF_Chart">தயவுசெய்து காத்திருங்கள் ... உங்கள் SNF விளக்கப்படத்தைப் புதுப்பிக்கிறது</string>
+    <string name="PAID_AMOUNT">கொடுப்பனவு தொகை</string>
+    <string name="REMAIN_AMOUNT">இருப்பு</string>
+    <string name="MORE_DETAILS">மேலும் தகவல்</string>
+    <string name="For_Complaint">புகாருக்கு   +919772196666</string>
+    <string name="For_Support">உதவிக்கு  +919772196777</string>
+    <string name="No_inetnetConnection">உங்களிடம் இணைய இணைப்பு எதுவும் இல்லை, தயவுசெய்து இணையத்துடன் இணைக்கவும்</string>
+    <string name="Save_Data_Offline">ஆன்லைன்</string>
+    <string name="OfflineDataAlert">நீங்கள் ஆஃப்லைன் தரவை சேமிக்கிறீர்கள், ஆஃப்லைன் பயன்முறையில் செய்தியை அனுப்ப முடியாது.</string>
+    <string name="You_are_storing_Online_Mode">நீங்கள் ஆன்லைன் பயன்முறையை குவிக்கிறீர்கள்.</string>
+    <string name="NoInternetForSwitch">உங்களிடம் இணைய இணைப்பு இல்லை, தரவு சேமிப்பு ஆஃப்லைன் பயன்முறையாகும்.</string>
+    <string name="offline">ஆஃப்லைன்</string>
+    <string name="entry">நுழைவு</string>
+    <string name="yes">ஆமாம்</string>
+    <string name="no">இல்லை</string>
+    <string name="dialog_sms_title">செய்தி அனுப்பு</string>
+    <string name="dialog_sms_text">மொபைலைப் பயன்படுத்தி வாடிக்கையாளருக்கு ஒரு செய்தியை அனுப்ப விரும்புகிறீர்களா?</string>
+    <string name="dialog_sms_note">குறிப்பு: எஸ்எம்எஸ் செலவுகள் உங்கள் வாழ்க்கைக்கு பொருந்தும்.</string>
+
+    <string name="Choose_from">தேர்வு</string>
+    <string name="Shift">இன்னிங்ஸ்</string>
+    <string name="InstallMeriDairy">எனது பால் நிறுவவும்</string>
+    <string name="CLR">சி எல் ஆர்</string>
+    <string name="Plan">திட்டம்</string>
+    <string name="validity">சட்டப்பூர்வத்தன்மை</string>
+    <string name="Rupee_symbol">\u20B9</string>
+    <string name="Downloaded_PDF">பி.டி.எஃப் பதிவிறக்கவும்</string>
+    <string name="print_reciept">ரசீது அச்சிடுக</string>
+    <string name="bluetooth_connection">புளூடூத் இணைப்பு</string>
+    <string name="connect">Judiye</string>
+    <string name="SelectPrinter">அச்சுப்பொறியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="bluetooth_printer">புளூடூத் அச்சுப்பொறி</string>
+    <string name="are_you_sure_wantot_print_reciept">நீங்கள் ரசீதை அச்சிட விரும்புகிறீர்களா?</string>
+    <string name="message_setting">செய்தி அமைப்புகள்</string>
+    <string name="sim">சிம்</string>
+    <string name="web">வலை</string>
+    <string name="alwyason">எப்போதும் அனுப்புங்கள்</string>
+    <string name="off">ஆஃப்</string>
+    <string name="sms_setting">எஸ்எம்எஸ் அமைப்பு</string>
+    <string name="ask_every_time">ஒவ்வொரு முறையும் கேளுங்கள்</string>
+    <string name="Printer_Not_Connect">அச்சுப்பொறி இணைக்கப்படவில்லை</string>
+    <string name="Please_Select_SIMorWeb">சிம் அல்லது வலை என்பதைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="Daily_Message_Limit_Reached">உங்கள் தினசரி செய்தியை அனுப்புவதற்கான வரம்பு முடிந்தது.</string>
+    <string name="Fromdate">தேதி முதல்</string>
+    <string name="Todate">இன்றுவரை</string>
+    <string name="Please_Select_AlwyasOrAsk">கேட்க எப்போதும் விருப்பங்களை அனுப்பவும் அல்லது தேர்வு செய்யவும்</string>
+    <string name="Either_there_was_network_issue_orsomeerror_occurred">கோரிக்கையைச் சமர்ப்பிப்பதில் பிணைய சிக்கல் இருந்தது அல்லது பிழை ஏற்பட்டது, தயவுசெய்து மீண்டும் முயற்சிக்கவும்</string>
+    <string name="PleaseON_Bluetooth_of_device">சாதனத்தின் புளூடூத்தை இயக்கவும்.</string>
+    <string name="Password_will_besendto_your_mobile_number">கடவுச்சொல் உங்கள் மொபைல் எண்ணுக்கு அனுப்பப்படும்.</string>
+    <string name="Please_Wait_for_otp30">OTP க்கு 60 வினாடிகள் காத்திருக்கவும்.</string>
+    <string name="Are_You_Sure_Want_To_Exit_From_Login">நீங்கள் உண்மையில் உள்நுழைவிலிருந்து வெளியேற விரும்புகிறீர்களா?</string>
+    <string name="Dairy">பால்</string>
+    <string name="download_chart">எஸ்.என்.எஃப் விளக்கப்படத்தைப் பதிவிறக்குக</string>
+    <string name="CustomerhelpMessage">For customer Registration Please contact to your dairy owner.\n\n\nவாடிக்கையாளர் பதிவுக்காக உங்கள் பால் உரிமையாளரைத் தொடர்பு கொள்ளுங்கள்.\nHelp line\n<b>977219677</b>\nधन्यवाद </string>
+    <string name="webSMSPlanExpireMessage">உங்கள் செய்தி தொகுப்பு காலாவதியானது, தயவுசெய்து சிம் பயன்படுத்தி செய்தியை அனுப்ப எங்கள் இல்லையெனில் எங்கள் ஹெல்ப்லைன் எண் <b>9772196777</b> पर संपर्क करें। \nधन्यवाद।</string>
+    <string name="FORGOT_PIN">பின் மறந்துவிட்டேன்</string>
+    <string name="Are_You_Sure_Want_To_Logout">நீங்கள் நிச்சயமாக வெளியேற விரும்புகிறீர்களா?</string>
+    <string name="addNewAccount">புதிய கணக்கைச் சேர்க்கவும்</string>
+    <string name="loginAccountList">கணக்கு பட்டியல்</string>
+    <string name="user_already_login_in_this_app_message">இந்த பயனர் ஏற்கனவே இந்த மென்பொருளில் உள்நுழைந்துள்ளார், தயவுசெய்து உள்நுழைவு பயனர் கணக்கு பட்டியலிலிருந்து பால் சுயவிவரத் திரையில் உள்நுழைக.\nधन्यवाद</string>
+    <string name="help">உதவும்</string>
+    <string name="play">விளையாட</string>
+    <string name="how_to_use_Meridairy">எனது பால் எவ்வாறு பயன்படுத்துவது</string>
+    <string name="Loginon_multiple_evices">QR குறியீடு ஸ்கேன் பயன்படுத்தி பல மொபைலில் உள்நுழைக</string>
+    <string name="MeriDairy_Introduction">எனது பால் அறிமுகம்</string>
+    <string name="How_to_sale_milk_to_customeronMeri_Dairyapp">எனது பால் பயன்பாட்டில் வாடிக்கையாளருக்கு பால் விற்பனை செய்வது எப்படி?</string>
+    <string name="Howto_updateSNFandFATrate_in_MeriDairyapp">எனது பாலில் SNF மற்றும் FAT விகிதங்களை எவ்வாறு புதுப்பிப்பது?</string>
+    <string name="How_to_editCustomer">வாடிக்கையாளரை எவ்வாறு திருத்துவது?</string>
+    <string name="Howto_add_a_payment_with_signatureMERIDAIRY">எனது நாட்குறிப்பில் ஒரு அடையாளத்துடன் கட்டணத்தை எவ்வாறு சேர்ப்பது?</string>
+    <string name="MERIDAIRY_milk_sowtware_mini_printer_printreciept_by_phone">மொபைல் மூலம் புளூடூத் அச்சுப்பொறியிலிருந்து ரசீதை அச்சிடுக</string>
+    <string name="notification">அறிவிப்புகள்</string>
+    <string name="milk_sowtware_COMPUTER_KEYBOARD">கணினி விசைப்பலகை மூலம் பால் உள்ளிடுவது எப்படி?</string>
+    <string name="LoginWithPpassword">கடவுச்சொல்லுடன் உள்நுழைக</string>
+    <string name="login_with_passHelpMessage">கடவுச்சொல்லுடன் உள்நுழைய, உங்கள் மொபைல் எண்ணுக்கு அனுப்பப்பட்ட பழைய கடவுச்சொல்லைப் பயன்படுத்தவும். இல்லையெனில் திரும்பிச் சென்று மொபைல் எண் பக்கத்திலிருந்து உள்நுழைக.</string>
+    <string name="Purchase">வாங்க</string>
+
+    <string name="Months">மாதம்</string>
+    <string name="Year"> ஆண்டு </string>
+    <string name="PricingTable">திட்ட அட்டவணை</string>
+    <string name="Do_You_Want_duplicate_Entry">உள்ளீடுகளை நகல் எடுக்க விரும்புகிறீர்களா?</string>
+    <string name="PaymentSuccessful">கட்டணம் வெற்றிகரமாக</string>
+    <string name="OrderId">Order Id</string>
+    <string name="Done">சரி</string>
+    <string name="PaymentFailed">கட்டணம் தோல்வியடைந்தது!</string>
+    <string name="YoucanSkip">விட்டு</string>
+    <string name="ExpiryDate">காலாவதி தேதி</string>
+    <string name="messageBuy">செய்தி வாங்க</string>
+    <string name="newUpdateAvailable">புதிய புதுப்பிப்பு கிடைக்கிறது</string>
+    <string name="pleaseUpdateApp">பயன்பாட்டை புதிய பதிப்பிற்கு புதுப்பித்து தொடரவும்.</string>
+    <string name="dayleft">மீதமுள்ள நாள்</string>
+
+    <string name="legalPolicies"><u>சட்ட பாலியஸ்</u></string>
+    <string name="Shopping">வாங்க</string>
+    <string name="Add">அதைச் சேர்க்கவும்</string>
+    <string name="rsSymbol">\u20B9</string>
+    <string name="MyCart">என் வண்டி </string>
+    <string name="MyOrder">எனது ஆர்டர்</string>
+    <string name="resendOtp">OTP ஐ மீண்டும் அனுப்பு</string>
+    <string name="PlanList">உறுப்பினர் திட்ட பட்டியல்</string>
+    <string name="ViewCart">வண்டியைப் பாருங்கள்</string>
+    <string name="navUpgradePrimium">பிரீமியத்தை மேம்படுத்தவும் (புதியது)</string>
+    <string name="LEGALPOLICIES">சட்ட பாலியஸ்</string>
+    <string name="navMyOrder">எனது ஆர்டர்</string>
+    <string name="AboutUs">எங்களைப் பற்றி</string>
+    <string name="PrivacyPolicy">தனியுரிமைக் கொள்கை</string>
+    <string name="TermsandConditions">விதிமுறைகள் மற்றும் நிபந்தனைகள்</string>
+    <string name="RefundCancellationPolicy">வருவாய் மற்றும் ரத்து கொள்கை</string>
+    <string name="ContactUs">எங்களை தொடர்பு கொள்ளவும்</string>
+    <string name="TryAgain">மீண்டும் முயற்சிக்கவும்</string>
+    <string name="Skip"><![CDATA[விட்டு >>]]></string>
+    <string name="LoginWithOTP">OTP से लॉगिन कर </string>
+    <string name="UpdateApp">பயன்பாட்டைப் புதுப்பிக்கவும்</string>
+    <string name="SNF_FAT_Chart_Table">எஸ்.என்.எஃப் கொழுப்பு விளக்கப்படத்தைப் பார்க்கவும்</string>
+    <string name="computerLogin">கணினி உள்நுழைவு</string>
+    <string name="Description">விவரங்கள்</string>
+    <string name="SelectPicture">படத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="AddPhoto">புகைப்படங்களைச் சேர்!</string>
+    <string name="ChoosefromGallery">கேலரியில் இருந்து தேர்வு செய்யவும்</string>
+    <string name="Price">விலை</string>
+    <string name="PleaseUploadImageFile">படக் கோப்பைப் பதிவேற்றவும்</string>
+    <string name="CreateAdvertise">ஒரு விளம்பரத்தை உருவாக்கவும்</string>
+    <string name="Success">வெற்றி</string>
+    <string name="failed">अनुत्तीर्ण होना</string>
+    <string name="MyAdvertisement">எனது விளம்பரம்</string>
+    <string name="text_upload_images">புகைப்படங்களை பதிவேற்றவும்</string>
+    <string name="upload_videos">வீடியோவைப் பதிவேற்றுக </string>
+    <string name="Male">पुरुषஆண்கள்</string>
+    <string name="Female">பெண்</string>
+    <string name="LactationNo">எண்ணிக்கையில் எண்</string>
+    <string name="LastCalvingOccured">எத்தனை மாதங்களுக்கு முன்பு திருமணம் </string>
+    <string name="MilkingStatus">दபால் கறக்கும் நிலை</string>
+    <string name="InMilk">பாலில்</string>
+    <string name="Dry">வறட்சி</string>
+    <string name="PeakMilkYield">அதிகபட்ச தினசரி பால் உற்பத்தி</string>
+    <string name="Gender_of_calf_at_foot">கன்று செக்ஸ்</string>
+    <string name="Inter_CalvingPeriod">இரண்டு நேர இடைவெளி</string>
+    <string name="less_than_oneYear">ஒரு வருடத்திற்கும் குறைவானது</string>
+    <string name="one_onepointFive">1-1.5 वर्ष</string>
+    <string name="onePointFive_to_two">1.5-2 साल</string>
+    <string name="more_than_twoYear">2 வருடங்களுக்கும் மேலாக</string>
+    <string name="H_S_Vaccination_done">சிராகொண்டு தடுப்பூசி?</string>
+    <string name="AnimalList">கால்நடை பட்டியல்</string>
+    <string name="Are_you_sure_to_delete_the_animal">நீங்கள் நிச்சயமாக விலங்கை நீக்க விரும்புகிறீர்களா?</string>
+    <string name="FMD_Vaccination_period">முழங்கால் வாய் தடுப்பூசி நேரம்</string>
+    <string name="BlackQuarter_VaccinationDone">நொண்டி காய்ச்சல் தடுப்பூசி?</string>
+    <string name="Brucellousis_VaccinationatCalf_Foot">புருசெல்லோசிஸ் தடுப்பூசி போடப்பட்டது</string>
+    <string name="Deworming">வயிற்றுப் புழுக்கள்</string>
+    <string name="Deworming_done">செய்தீர்களா?</string>
+    <string name="FMD_Vaccination_done">தடுப்பூசி தடுப்பூசி?</string>
+    <string name="Vaccination">தடுப்பூசி</string>
+    <string name="Preganancy_Day"> கர்ப்ப நாள்</string>
+    <string name="Preganancy_Month">கர்ப்ப மாதம்</string>
+    <string name="Is_pregnant">கர்ப்பமாக உள்ளது</string>
+    <string name="Gender">பாலினம்</string>
+    <string name="Age">வயது</string>
+    <string name="Tag_No">குறிச்சொல் எண் (குறிக்கப்பட்டிருந்தால்)</string>
+    <string name="Register"> பதிவு </string>
+    <string name="video_play">வீடியோவை இயக்கு</string>
+    <string name="go_to_settings">அமைப்புகளுக்குச் செல்லவும்</string>
+    <string name="dialog_permission_title">அனுமதி கொடுங்கள்</string>
+    <string name="dialog_permission_message">இந்த அம்சத்தைப் பயன்படுத்த இந்த பயன்பாட்டிற்கு அனுமதி தேவை. பயன்பாட்டு அமைப்புகளில் அவற்றை வழங்கலாம்.</string>
+    <string name="AnimalForSale">விலங்குகள் விற்பனைக்கு</string>
+    <string name="Choose_Breed">இனத்தைத் தேர்வுசெய்க</string>
+    <string name="rearing">இணங்குதல்</string>
+    <string name="sold">விற்கப்பட்டது</string>
+    <string name="died">இறந்தார் சென்றார்</string>
+    <string name="CalfStatus">கன்று நிலை</string>
+    <string name="how_many_month_before_fmd_vaccination_done">எத்தனை மாதங்களுக்கு முன்பு எஃப்எம்டி நோய்த்தடுப்பு செய்யப்பட்டது?</string>
+    <string name="how_manyBefore_H_S_Vaccination_done">எச்.எஸ் நோய்த்தடுப்பு எவ்வளவு காலம் செய்யப்பட்டது?</string>
+    <string name="how_manyMonth_black_quarter_vaccination_period"> எச்.எஸ் பிளாக் காலாண்டு தடுப்பூசி எவ்வளவு காலம் செய்யப்பட்டது?</string>
+    <string name="how_many_month_before_brucellousis_vaccination_done"> HS Brucellousis முன்பு எத்தனை தடுப்பூசிகள் செய்யப்பட்டன?</string>
+    <string name="how_many_month_before_deworming_vaccination_done">எச்.எஸ். டைவர்மிங் நோய்த்தடுப்பு எவ்வளவு காலம் செய்யப்பட்டது?</string>
+    <string name="Castration">Spay</string>
+    <string name="Category">சதுரம்</string>
+    <string name="DewormingPeriod"> விழுங்கும் காலம்</string>
+
+    <string name="Selling_Price"> விற்பனை விலை</string>
+    <string name="SelectVideoFromGallery">கேலரியில் இருந்து வீடியோவைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="RecordVideoFromCamera">கேமராவிலிருந்து வீடியோவைப் பதிவுசெய்க</string>
+    <string name="PleaseEnterName">ஒரு பெயரை உள்ளிடவும்</string>
+    <string name="YearIsRequired"> ஆண்டு தேவை!</string>
+    <string name="MaximumPhotosUpload">அதிகபட்சம் 5 புகைப்படங்களை பதிவேற்றலாம்</string>
+    <string name="Please_select_deworming_status">தயவுசெய்து ஒரு ஓய்வெடுக்கும் நிலையைத் தேர்வுசெய்க</string>
+    <string name="AddAnimal">விலங்குகளைச் சேர்க்கவும்</string>
+    <string name="Milk_Buy">பால் வாங்கினார்</string>
+    <string name="classifieds">விளம்பரம்</string>
+    <string name="Breed">இனம்</string>
+    <string name="strType">கைண்ட்</string>
+    <string name="Please_enable_Bluetooth_device">புளூடூத்தை இயக்கவும்.</string>
+    <string name="SelectRateType">வீத வகையைத் தேர்வுசெய்க</string>
+    <string name="PrintMulTilanguage">எல்லா மொழிகளிலும் அச்சிடுங்கள்</string>
+    <string name="Current_Location">தற்போதைய இடம்</string>
+    <string name="Use_GPS">ஜி.பி.எஸ் பயன்படுத்தவும்</string>
+    <string name="MapRoute">வரைபட பாதை</string>
+    <string name="navigation_drawer_open">திறந்த</string>
+    <string name="navigation_drawer_close">நெருக்கமான</string>
+    <string name="upload">பதிவேற்றம்</string>
+    <string name="upload_image">படத்தை பதிவேற்றம் செய்யவும்</string>
+    <string name="Click_on_Login_and_scan_your_QR_code">1. meridairy.in வலைத்தளத்திற்குச் செல்லவும் \n2. பால் உள்நுழைவு பொத்தானைக் கிளிக் செய்க \n3. உங்கள் QR குறியீட்டை ஸ்கேன் செய்யுங்கள்</string>
+    <string name="Vacation">விடுமுறை</string>
+    <string name="ViewInvoice">விலைப்பட்டியல் காண்க</string>
+    <string name="Home">முகப்பு</string>
+    <string name="titleProfile">விவரம்</string>
+    <string name="ViewEventDetais">நிகழ்வு விவரங்களைக் காண்க</string>
+    <string name="NoEventAvailable">எந்த நிகழ்வும் கிடைக்கவில்லை!</string>
+    <string name="BuyMilkProduct">பால் தயாரிப்பு வாங்க</string>
+    <string name="AddVacation"> விடுமுறை சேர்க்கவும்</string>
+    <string name="UpdateVacation"> புதுப்பிப்பு விடுமுறை</string>
+    <string name="DairyOwnerDetails"> பால் உரிமையாளர் விவரங்கள்</string>
+    <string name="ChooseShift">Shift ஐத் தேர்வுசெய்க</string>
+    <string name="ChooseMilkPlan">பால் திட்டத்தைத் தேர்வுசெய்க</string>
+    <string name="MyPlan">என் திட்டம்</string>
+    <string name="note_dairy_details">குறிப்பு: உங்களுக்கு பால் விற்கும் எந்த பால் உரிமையாளரை நீங்கள் அறிந்திருந்தால் அல்லது நீங்கள் எங்கிருந்து பால் வாங்குகிறீர்கள் .நீங்கள் அவரைப் பற்றிய விவரங்களை நிரப்பலாம்.</string>
+    <string name="CowMilkPlan">மாடு பால் திட்டம்</string>
+    <string name="BuffaloMilkPlan">எருமை பால் திட்டம்</string>
+    <string name="Add_Milk_Plan">பால் திட்டத்தைச் சேர்க்கவும்</string>
+    <string name="PlanStatus">திட்ட நிலை</string>
+    <string name="Enable">இயக்கு</string>
+    <string name="Disable">முடக்கு</string>
+    <string name="On">மீது</string>
+    <string name="product_OutOf_Stock">தயாரிப்பு வெளியே உள்ளது</string>
+    <string name="updatePlan">புதுப்பிப்பு திட்டம்</string>
+    <string name="TrackingOrder">கண்காணிப்பு ஆணை</string>
+    <string name="order_Details">ஆணை விவரங்கள்</string>
+    <string name="printInvoice">விலைப்பட்டியல் அச்சிடுக</string>
+    <string name="cancelReason">காரணத்தை ரத்துசெய்</string>
+    <string name="product_item_details">தயாரிப்பு பொருள் விவரங்கள்</string>
+    <string name="shipped">அனுப்பப்பட்டது</string>
+    <string name="recieved">பெற்ற</string>
+    <string name="delivered">டெலிவரி செய்யப்பட்டது</string>
+    <string name="cancelled">ரத்து</string>
+    <string name="reason">காரணம்</string>
+    <string name="are_you_sure_want_cancel_entry">இந்த இடுகையை ரத்து செய்ய விரும்புகிறீர்களா?</string>
+    <string name="pending">நிலுவையில்</string>
+    <string name="Update_Entry">உள்ளீட்டைப் புதுப்பிக்கவும்</string>
+    <string name="Employee">பணியாளர்</string>
+    <string name="DeliveryBoy">டெலிவரி பாய்</string>
+    <string name="all">அனைத்து</string>
+    <string name="This_is_Vacation">இது விடுமுறை</string>
+    <string name="milk_Vacation"> பால் விடுமுறை</string>
+    <string name="Milk">பால்</string>
+    <string name="Order">ஆணை</string>
+    <string name="TrackingId">கண்காணிப்பு ஐடி</string>
+    <string name="shippingId">கப்பல் ஐடி</string>
+    <string name="Action">அதிரடி</string>
+    <string name="Accept">ஏற்கவும்</string>
+    <string name="invoice">விலைப்பட்டியல்</string>
+    <string name="bulkMilkHistory">மொத்த பால் வரலாறு</string>
+    <string name="myRequest">எனது வேண்டுகோள்</string>
+    <string name="gst">ஜிஎஸ்டி</string>
+    <string name="invoiceValue">விலைப்பட்டியல் மதிப்பு</string>
+    <string name="devideFactor"> కారకాన్ని విభజించండి</string>
+    <string name="multiplyFactor">பெருக்கி காரணி</string>
+    <string name="addFactor">காரணி சேர்க்கவும்</string>
+    <string name="clrSetting">சி.எல்.ஆர் அமைப்பு</string>
+    <string name="Rate_by_CLR"> சி.எல்.ஆரால் மட்டுமே மதிப்பிடவும்</string>
+    <string name="clrChart">சி.எல்.ஆர் விளக்கப்படம்</string>
+    <string name="chart">விளக்கப்படம்</string>
+    <string name="selectChartCategory">விளக்கப்பட வகையைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="generalChart">பொது விளக்கப்படம்</string>
+    <string name="downloadsampleExcel">மாதிரி எக்செல் பதிவிறக்கவும்</string>
+    <string name="list">பட்டியல்</string>
+    <string name="group">குழு</string>
+    <string name="brand"> பிராண்ட்</string>
+    <string name="strReturn">திரும்ப</string>
+    <string name="product_SaleAndBuy">தயாரிப்பு விற்பனை மற்றும் வாங்க</string>
+    <string name="tax">வரி</string>
+    <string name="lowStockQuantity">குறைந்த பங்கு அளவு</string>
+    <string name="openingQuantity">திறக்கும் அளவு</string>
+    <string name="openingRate">தொடக்க விகிதம்</string>
+    <string name="OpeningAmount"> திறக்கும் தொகை</string>
+    <string name="unit">அலகு</string>
+    <string name="includingTax">வரி உட்பட</string>
+    <string name="salePrice">விற்பனை விலை</string>
+    <string name="invoiceNo">விலைப்பட்டியல் எண்</string>
+    <string name="includingDiscountWith">% உடன் தள்ளுபடி உட்பட</string>
+    <string name="discount"> தள்ளுபடி</string>
+    <string name="cashDiscount"> பணம் தள்ளுபடி</string>
+    <string name="otherCharges">பிற கட்டணங்கள்</string>
+    <string name="subTotal">கூட்டுத்தொகை</string>
+    <string name="invoiceAmount">விலைப்பட்டியல் தொகை</string>
+    <string name="sgst">Sஜிஎஸ்டி</string>
+    <string name="cgst">Cஜிஎஸ்டி</string>
+    <string name="igst">Iஜிஎஸ்டி</string>
+    <string name="referenceNo">குறிப்பு எண்</string>
+    <string name="bankName"> வங்கி பெயர்</string>
+    <string name="accountNo"> கணக்கு எண்</string>
+    <string name="chequeNo">இல்லை என்பதை சரிபார்க்கவும்</string>
+    <string name="paymentType">கட்டணம் வகை</string>
+    <string name="cash">பணம்</string>
+    <string name="bank">வங்கி</string>
+    <string name="cheque">பார்க்கலாம்</string>
+    <string name="voucher">வவுச்சர்</string>
+    <string name="recieve">பெற்றபின்</string>
+    <string name="my">என்</string>
+    <string name="expenses">செலவுகள்</string>
+    <string name="code">குறியீடு</string>
+    <string name="taxable">வரிவிதிக்கத்தக்க</string>
+    <string name="membership">உறுப்பினர்</string>
+    <string name="message">செய்தி</string>
+    <string name="day">தினம்</string>
+    <string name="IFSC_Code">IFSC குறியீடு</string>
+    <string name="village">கிராமம்</string>
+    <string name="credit">கடன்</string>
+    <string name="debit">டெபிட்</string>
+    <string name="general">பொது</string>
+    <string name="plantMilkCollection">தாவர பால் சேகரிப்பு</string>
+    <string name="balance">இருப்பு</string>
+    <string name="other"> மற்றவை</string>
+    <string name="adavance"> அட்வான்ஸ்</string>
+    <string name="screen"> திரை</string>
+    <string name="automatic"> தானியங்கி</string>
+    <string name="start">தொடங்கு</string>
+    <string name="history">விற்பனையைக்</string>
+    <string name="payment"> கட்டணம்</string>
+    <string name="byDate">தேதி மூலம்</string>
+    <string name="milk">பால்</string>
+    <string name="bulk"> மொத்தமாக</string>
+    <string name="switchInCustomerApp"> வாடிக்கையாளர் பயன்பாட்டில் மாறவும்</string>
+    <string name="switchIn">மாறவும்</string>
+    <string name="switchInDairy">பால் பயன்பாட்டில் மாறவும்</string>
+    <string name="addNewMessage">புதிய செய்தியைச் சேர்க்கவும்</string>
+    <string name="Send">அனுப்புக</string>
+    <string name="UploadingOnline">ஆன்லைனில் பதிவேற்றுகிறது, தயவுசெய்து காத்திருங்கள் ...</string>
+    <string name="syncMilkData">பால் தரவை ஒத்திசைக்கவும்</string>
+    <string name="installSmsApp">எஸ்எம்எஸ் பயன்பாட்டை நிறுவவும்</string>
+    <string name="vNo">V.No.</string>
+    <string name="strOldTransMessage">இந்த திரை பழைய பரிவர்த்தனை, புதிய பரிவர்த்தனைக்கு புதிய கட்டண பதிவு திரையைப் பயன்படுத்தவும்</string>
+    <string name="New">புதியது</string>
+    <string name="strSaleProductScreenMsg">இது பழைய தயாரிப்பு விற்பனை பக்கம். பக்க மெனுவிலிருந்து புதிய தயாரிப்பு வாங்க மற்றும் விற்க பக்கத்தைப் பயன்படுத்தவும்</string>
+    <string name="khata">கணக்கு</string>
+    <string name="milkBill">பால் பில்</string>
+    <string name="to">வரை</string>
+    <string name="from">இருந்து</string>
+    <string name="phone">தொலைபேசி</string>
+    <string name="app">செயலி</string>
+    <string name="step">படி</string>
+    <string name="refresh">புதுப்பிப்பு</string>
+    <string name="lastRefreshOn">முந்தைய புதுப்பிப்பு</string>
+    <string name="clrFormulaDescription">"Note: For example according all india Dairy Standard\n1. Divide Factor=4.0,\n2. Multiply Factor=0.20,\n3. Add Factor=0.66  "</string>
+    <string name="print_reciept_title_font_size">Print reciept title font size</string>
+    <string name="print_receipt_message_font_size">Print receipt message font size</string>
+    <string name="share">பகிர்</string>
+    <string name="lacto_scale">Lacto Scale</string>
+    <string name="eko_milk">EKO Milk</string>
+    <string name="emt_serial">EMT Serial</string>
+    <string name="emt_parallel">EMT  Parllel</string>
+    <string name="eko_pro">EKO Pro</string>
+    <string name="lacten">Lacten</string>
+    <string name="master_classic">Master Classic</string>
+    <string name="machine_set_up">Machine Set Up</string>
+    <string name="select_machine">Select Machine</string>
+    <string name="change_machine">சில்லரையளிக்கும் எந்திரம்</string>
+    <string name="machine_setting">Machine Settings</string>
+    <string name="whatsApp_message">WhatsApp Message</string>
+
+    <string name="under_text"><u>Underline me</u></string>
+</resources>

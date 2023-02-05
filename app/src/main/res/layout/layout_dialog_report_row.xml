@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:orientation="horizontal">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text=""
+
+            android:textColor="@color/color_bg" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvQnty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="@color/color_bg" />
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+            android:id="@+id/tvTotalAmt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+
+            android:textColor="@color/color_bg" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/color_bottom_light_gray" />
+</LinearLayout>

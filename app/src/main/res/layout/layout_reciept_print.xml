@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvReciptTitle"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:text="@string/SelectPrinter"
+        app:fontName="Roboto_Bold"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp" />
+
+    <b2infosoft.milkapp.com.useful.CustomFontTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvReciptBody"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:text="@string/SelectPrinter"
+        android:textAllCaps="true"
+        app:fontName="Roboto_Bold"
+        android:gravity="start"
+        android:lineSpacingExtra="1dp"
+        android:layout_marginBottom="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:id="@+id/imgRecieptPrint"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorWhite"
+        android:text="@string/SelectPrinter"
+        android:textColor="@color/colorBlack"/>
+
+</LinearLayout>

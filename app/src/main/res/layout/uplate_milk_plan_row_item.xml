@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:id="@+id/planView"
+    android:elevation="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="40dp"
+            android:inputType="text"
+            android:text="MyPlan"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13sdp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+
+                android:id="@+id/tvWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:inputType="text"
+                android:text="Weight:"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvName"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:id="@+id/layoutButton"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imgMinus"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_minus" />
+
+            <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="20dp"
+                android:id="@+id/tvQty"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:singleLine="true"
+                android:text="0"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorBlack"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <ImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_plus" />
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignParentRight="true"
+
+            android:inputType="text"
+            android:text="Price:300"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/_11sdp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/viewSelected">
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:buttonTint="@color/colorPrimary" />
+            <ImageView
+                android:id="@+id/imgSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_checked"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/title"
+        android:background="@color/color_list_gray" />
+
+</LinearLayout>

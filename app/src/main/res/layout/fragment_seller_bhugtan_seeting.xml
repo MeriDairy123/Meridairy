@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/rgBuylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/rb_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:checked="true"
+                            android:text="10 Days Listing"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <RadioButton
+                            android:id="@+id/checkBox2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:text="15 Days Listing"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+
+                        <RadioButton
+                            android:id="@+id/checkBox3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:text="1 Month Listing"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_light_white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <b2infosoft.milkapp.com.useful.CustomFontTextView
+                        android:id="@+id/tvMilkBuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="@dimen/_11sdp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:text="Font Size"
+
+
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <RadioGroup
+                        android:id="@+id/rgBuy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rdBuyGeneral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Large"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rdBuyCustom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="Small"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_light_white" />
+
+                <b2infosoft.milkapp.com.useful.CustomFontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:text="@string/other"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichSellerBhugtan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="Show  Fat"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichRate_kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="Show Snf"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichfat_kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="Show Clr"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swichSNF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="12dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="Show Rate"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:theme="@style/MySwitch" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@color/color_bottom_light_gray" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

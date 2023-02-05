@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+
+    android:elevation="@dimen/_2sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@android:drawable/edit_text"
+        android:padding="@dimen/_5sdp">
+
+        <b2infosoft.milkapp.com.useful.CustomFontTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/checkBox"
+            android:inputType="text"
+            android:layout_gravity="center"
+            android:text="@string/Please_Select_City"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/color_darkGray"
+            android:textSize="@dimen/_9sdp" />
+
+        <ImageView
+            android:id="@+id/imgClosed"
+            android:layout_width="@dimen/_15sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_shape"
+            android:backgroundTint="@color/color_list_gray"
+
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:tint="@color/colorRed"
+            android:src="@drawable/close_icon"
+             />
+    </LinearLayout>
+
+
+
+</LinearLayout>
