@@ -74,16 +74,7 @@ public class SerialSocket implements Runnable {
     }
 
     public String getName() {
-        if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return "TODO";
-        }
+
         return device.getName() != null ? device.getName() : device.getAddress();
     }
 
@@ -197,7 +188,8 @@ public class SerialSocket implements Runnable {
         try {
             printLog("socket ", "init");
 
-            socket = device.createRfcommSocketToServiceRecord(BLUETOOTH_SPP);
+            socket = device.createInsecureRfcommSocketToServiceRecord(BLUETOOTH_SPP);
+           // socket = device.createRfcommSocketToServiceRecord(BLUETOOTH_SPP);
             socket.connect();
             mSocket=socket;
             if(listener != null)

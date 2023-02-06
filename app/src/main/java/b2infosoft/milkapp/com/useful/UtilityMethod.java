@@ -1308,8 +1308,6 @@ public class UtilityMethod {
             e.printStackTrace();
         }
         return versionName;
-
-
     }
 
     public static String removeNonNumeric(String text) {

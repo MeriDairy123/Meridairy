@@ -1226,7 +1226,7 @@ public class PurchaseMilkEntryFragment extends Fragment implements RefreshBuyMil
                                 @Override
                                 public void run() {
                                     getMilkEntryList();
-                                    ClearEditTextValue("update");
+                                   // ClearEditTextValue("update");
                                 }
                             },100);
 
@@ -1278,7 +1278,7 @@ public class PurchaseMilkEntryFragment extends Fragment implements RefreshBuyMil
     private void OffLineEntry() {
         entryStatus = 0;
         databaseHandler.addSingleBuyMilkEntry(onLineEntryId, sessionManager.getValueSesion(SessionManager.KEY_UserID), strSelectedId, selectedName, tvAutoCustID.getText().toString(), strSession, SelectedDate, strActualFate, strSNF, strCLR, strRsPerKg, strWeight, strTotalBonus, strTotalPayment, milkRateCategory, fatSnfCategory, entryStatus,milkEntryUniqueId);
-        ClearEditTextValue("update");
+      //  ClearEditTextValue("update");
         getMilkEntryList();
     }
 

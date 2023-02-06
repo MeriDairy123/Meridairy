@@ -31,6 +31,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.util.Objects;
 
 import b2infosoft.milkapp.com.Dairy.Bhugtan.SallerBhugtanFragment;
 import b2infosoft.milkapp.com.Dairy.SellMilk.Bhugtan.ReceiveCashFragment;
@@ -76,10 +77,13 @@ public class VoucharSignatureFragment extends Fragment implements FragmentBackPr
             ActivityCompat.requestPermissions((Activity) mContext, PERMISSIONS, PERMISSION_ALL);
         }
 
-        permissionAccess();
+        permissionStatus = mContext.getSharedPreferences("permissionStatus", MODE_PRIVATE);
+
+        //permissionAccess();
         sessionManager = new SessionManager(mContext);
         bundle = getArguments();
-        permissionStatus = mContext.getSharedPreferences("permissionStatus", MODE_PRIVATE);
+
+       // permissionStatus = mContext.getSharedPreferences(Manifest.permission.WRITE_EXTERNAL_STORAGE, MODE_PRIVATE);
         strFrom = bundle.getString("FromWhere");
         unic_customer = bundle.getString("unic_customer");
         transactionID = bundle.getString("transactionID");
@@ -127,7 +131,7 @@ public class VoucharSignatureFragment extends Fragment implements FragmentBackPr
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                permissionAccess();
+               // permissionAccess();
                 Bitmap signatureBitmap = mSignaturePad.getSignatureBitmap();
                 //call api
                 Activity activity = (Activity) mContext;
@@ -188,7 +192,7 @@ public class VoucharSignatureFragment extends Fragment implements FragmentBackPr
 
     public void permissionAccess() {
         if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale((Activity) mContext, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 //Show Information about why you need the permission
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
                 builder.setTitle("Need Storage Permission");
@@ -207,7 +211,8 @@ public class VoucharSignatureFragment extends Fragment implements FragmentBackPr
                     }
                 });
                 builder.show();
-            } else if (permissionStatus.getBoolean(Manifest.permission.WRITE_EXTERNAL_STORAGE, false)) {
+            }
+            else if (permissionStatus.getBoolean(Manifest.permission.WRITE_EXTERNAL_STORAGE, false)) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
                 builder.setTitle("Need Storage Permission");
@@ -238,6 +243,8 @@ public class VoucharSignatureFragment extends Fragment implements FragmentBackPr
             SharedPreferences.Editor editor = permissionStatus.edit();
             editor.putBoolean(Manifest.permission.WRITE_EXTERNAL_STORAGE, true);
             editor.commit();
+
+        }else{
 
         }
     }

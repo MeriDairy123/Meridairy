@@ -9,8 +9,8 @@ android {
         applicationId "b2infosoft.milkapp.com"
         minSdkVersion 17
         targetSdkVersion 33
-        versionCode 69
-        versionName "6.18"
+        versionCode 68
+        versionName "6.15"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

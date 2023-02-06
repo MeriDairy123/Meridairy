@@ -57,6 +57,7 @@ import b2infosoft.milkapp.com.useful.InstallAPK;
 import static b2infosoft.milkapp.com.appglobal.Constant.AppGooglePlayStoreUrl;
 import static b2infosoft.milkapp.com.appglobal.Constant.FirstTime;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_UserGroupID;
+import static b2infosoft.milkapp.com.useful.ForceUpdateChecker.KEY_CURRENT_VERSION;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.PERMISSIONS;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.PERMISSION_ALL;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.hasPermissions;
@@ -68,6 +69,7 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.play.core.tasks.Task;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -115,8 +117,8 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
                             showOfflineDailog();
                         } else {
 
-//                            appUpdateManager = AppUpdateManagerFactory.create(getApplicationContext());
-//                            checkUpdate();
+//                            appUpdateManager = AppUpdateManagerFactory.create(SplashActivity.this);
+//                           checkUpdate();
 
                             new checkPlayStoreVersion().execute();
                         }
@@ -292,6 +294,7 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
 
     @SuppressLint("StaticFieldLeak")
     class checkPlayStoreVersion extends AsyncTask<String, String, JSONObject> {
+        String element;
 
         ProgressDialog progressDialog;
         boolean isupdateavailable = false;
@@ -310,15 +313,31 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
         protected JSONObject doInBackground(String... params) {
             try {
                 String newVersion = null;
+                String newversiondot = null;
                 String packagename = getPackageName();
-
-                PackageInfo packageInfo = getPackageManager().getPackageInfo(packagename,0);
-
-                newVersion = packageInfo.versionName;
 
 
 //                Document doc = Jsoup.connect("https://play.google.com/store/apps/details?id=" + getPackageName()).get();
 //                latestVersion = Float.parseFloat(doc.getElementsByClass("htlgb").get(6).text());
+
+                Document document = Jsoup.connect("https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "&hl=en")
+                        .timeout(30000)
+                        .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6")
+                        .referrer("http://www.google.com")
+                        .get();
+                if (document != null) {
+                    Elements element = document.getElementsContainingOwnText("Current Version");
+                    for (Element ele : element) {
+                        if (ele.siblingElements() != null) {
+                            Elements sibElemets = ele.siblingElements();
+                            for (Element sibElemet : sibElemets) {
+                                newVersion = sibElemet.text();
+                            }
+                        }
+                    }
+                    this.element = String.valueOf(element);
+                }
+
                 latestVersion = Float.parseFloat(newVersion);
 
             } catch (Exception e) {
@@ -333,24 +352,18 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
             progressDialog.dismiss();
             System.out.println("currentVersion==" + currentVersion);
             System.out.println("latestVersion==" + latestVersion);
+            System.out.println("latest==" + element);
 
-           // if (currentVersion < latestVersion) {
-            if (isupdateavailable) {
+            if (currentVersion < latestVersion) {
                 FirstTime = "Yes";
                 if (!isFinishing()) {
                     showUpdateDialog();
                 }
             } else {
-
+                nextActivity();
             }
             super.onPostExecute(jsonObject);
         }
-
-
-
-
-
-
     }
 
 
@@ -361,12 +374,15 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
         Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
 
         appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
-            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
-                    && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)) {
-                startUpdateFlow(appUpdateInfo);
-            } else if  (appUpdateInfo.updateAvailability() == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS){
-                startUpdateFlow(appUpdateInfo);
-            }else{
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE) {
+
+                showUpdateDialog();
+               // startUpdateFlow(appUpdateInfo);
+            }
+//            else if  (appUpdateInfo.updateAvailability() == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS){
+//                startUpdateFlow(appUpdateInfo);
+//            }
+            else{
                 nextActivity();
             }
         });

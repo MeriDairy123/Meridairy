@@ -104,7 +104,7 @@ public class TransactionTabFragment extends Fragment {
         adapter.addFragment(new UserTransactionFragment(), mContext.getString(R.string.my),
                 "my_transaction");
         adapter.addFragment(new UserTransactionFragment(), mContext.getString(R.string.Customer),
-                "user_customer");
+                "user_transaction");
         adapter.addFragment(new UserExpenceFragment(), mContext.getString(R.string.expenses),
                 "expense_transaction");
         viewPager.setAdapter(adapter);
