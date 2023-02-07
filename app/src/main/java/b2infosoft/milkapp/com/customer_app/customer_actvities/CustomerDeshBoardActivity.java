@@ -805,7 +805,9 @@ public class CustomerDeshBoardActivity extends AppCompatActivity implements View
         recyclerviewMenu.addItemDecoration(new GridSpacingItemDecoration(spaceCount, dpToPx(0), true));
         recyclerviewMenu.setItemAnimator(new DefaultItemAnimator());
         recyclerviewMenu.setAdapter(dashboard_item_adapter);
+
     }
+
 
     public int dpToPx(int dp) {
         Resources r = mContext.getResources();

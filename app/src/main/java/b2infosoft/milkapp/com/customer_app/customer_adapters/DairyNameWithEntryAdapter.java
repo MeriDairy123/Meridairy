@@ -102,65 +102,46 @@ public class DairyNameWithEntryAdapter extends RecyclerView.Adapter<DairyNameWit
             public void handleResponse(String response) {
 
                 try {
-                    JSONArray mainJsonArray = new JSONArray(response);
-                    for (int i = 0; i < mainJsonArray.length(); i++) {
-                        @SuppressLint("StaticFieldLeak") JSONObject jsonObject1 = mainJsonArray.getJSONObject(i);
-                        JSONArray morningArray = jsonObject1.getJSONArray("morning");
-                        if (morningArray.length() != 0) {
-                            for (int j = 0; j < morningArray.length(); j++) {
-                                JSONObject jsonObj = morningArray.getJSONObject(j);
-                                entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), jsonObj.getString("id")
+                    JSONObject jsonObject = new JSONObject(response);
+                    if (jsonObject.getString("status").equals("success")){
+                        JSONArray mainJsonArray = jsonObject.getJSONArray("data");
+                        if (mainJsonArray.length() != 0) {
+                            for (int j = 0; j < mainJsonArray.length(); j++) {
+                                JSONObject jsonObj = mainJsonArray.getJSONObject(j);
+                                entryListPojos.add(new MonthsEntryListPojo(jsonObj.getString("entry_date"), jsonObj.getString("id")
                                         , jsonObj.getString("customer_id"), jsonObj.getString("dairy_id"), jsonObj.getString("fat"), jsonObj.getString("snf")
                                         , jsonObj.getString("entry_date"), jsonObj.getString("per_kg_price"), jsonObj.getString("total_price")
                                         , jsonObj.getString("total_bonus"), jsonObj.getString("total_milk"), jsonObj.getString("shift")));
-
                             }
-                        } else {
-                            entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), ""
+                        }else {
+                            entryListPojos.add(new MonthsEntryListPojo("", ""
                                     , "", "", ""
                                     , "", "", ""
-                                    , "", "", "", "morning"));
+                                    , "", "", "", ""));
 
                         }
 
-                        JSONArray eveningArray = jsonObject1.getJSONArray("evening");
-                        if (eveningArray.length() != 0) {
-                            for (int j = 0; j < eveningArray.length(); j++) {
-                                JSONObject jsonObj = eveningArray.getJSONObject(j);
-                                entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), jsonObj.getString("id")
-                                        , jsonObj.getString("customer_id"), jsonObj.getString("dairy_id"), jsonObj.getString("fat"), jsonObj.getString("snf")
-                                        , jsonObj.getString("entry_date"), jsonObj.getString("per_kg_price"), jsonObj.getString("total_price")
-                                        , jsonObj.getString("total_bonus"), jsonObj.getString("total_milk"), jsonObj.getString("shift")));
 
-                            }
-                        } else {
-                            entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), ""
-                                    , "", "", "", "", ""
-                                    , "", "", ""
-                                    , "", "evening"));
-                        }
-                    }
+                        if (!entryListPojos.isEmpty()) {
+                            holder.bottom2.setVisibility(View.VISIBLE);
+                            double totalWeight = 0d, totalPrice = 0d;
+                            ArrayList<MonthsEntryListPojo> newEntryList = new ArrayList<>();
 
-                    if (!entryListPojos.isEmpty()) {
-                        holder.bottom2.setVisibility(View.VISIBLE);
-                        double totalWeight = 0d, totalPrice = 0d;
-                        ArrayList<MonthsEntryListPojo> newEntryList = new ArrayList<>();
-
-                        for (int i = 0; i < entryListPojos.size(); i++) {
-                            if (!entryListPojos.get(i).total_milk.equals("")) {
-                                totalWeight = totalWeight + Double.parseDouble(entryListPojos.get(i).total_milk);
+                            for (int i = 0; i < entryListPojos.size(); i++) {
+                                if (!entryListPojos.get(i).total_milk.equals("")) {
+                                    totalWeight = totalWeight + Double.parseDouble(entryListPojos.get(i).total_milk);
+                                }
+                                if (!entryListPojos.get(i).total_price.equals("")) {
+                                    totalPrice = totalPrice + Double.parseDouble(entryListPojos.get(i).total_price);
+                                }
+                                newEntryList.add(new MonthsEntryListPojo(
+                                        entryListPojos.get(i).entry_date, entryListPojos.get(i).id,
+                                        entryListPojos.get(i).customer_id, entryListPojos.get(i).dairy_id,
+                                        entryListPojos.get(i).fat,entryListPojos.get(i).snf, entryListPojos.get(i).entry_date2,
+                                        entryListPojos.get(i).per_kg_price, entryListPojos.get(i).total_price,
+                                        entryListPojos.get(i).total_bonus, entryListPojos.get(i).total_milk, entryListPojos.get(i).shift
+                                ));
                             }
-                            if (!entryListPojos.get(i).total_price.equals("")) {
-                                totalPrice = totalPrice + Double.parseDouble(entryListPojos.get(i).total_price);
-                            }
-                            newEntryList.add(new MonthsEntryListPojo(
-                                    entryListPojos.get(i).entry_date, entryListPojos.get(i).id,
-                                    entryListPojos.get(i).customer_id, entryListPojos.get(i).dairy_id,
-                                    entryListPojos.get(i).fat,entryListPojos.get(i).snf, entryListPojos.get(i).entry_date2,
-                                    entryListPojos.get(i).per_kg_price, entryListPojos.get(i).total_price,
-                                    entryListPojos.get(i).total_bonus, entryListPojos.get(i).total_milk, entryListPojos.get(i).shift
-                            ));
-                        }
 
 //                        if (mDay >= 1 && mDay <= 10) {
 //                            System.out.println("Days Data" + "getTenDaysData: " + "b/w 1-10");
@@ -225,19 +206,165 @@ public class DairyNameWithEntryAdapter extends RecyclerView.Adapter<DairyNameWit
 //                        }
 
 
-                      //  mList.get(position).visibility = true;
+                            //  mList.get(position).visibility = true;
 //                        holder.recyclerLayout.setVisibility(View.VISIBLE);
 //                        holder.layoutHeader.setVisibility(View.VISIBLE);
 //                        holder.bottom2.setVisibility(View.VISIBLE);
 
-                        holder.tvTotalWeight.setText(mContext.getString(R.string.Total_Weight) + ": \n" + String.format("%.2f", totalWeight) + " " + mContext.getString(R.string.Ltr));
-                        holder.tvTotalAmt.setText(mContext.getString(R.string.Total_Amount) + ": \n" + String.format("%.2f", totalPrice) + " " + mContext.getString(R.string.Rs));
-                        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(mContext, 1);
-                        MonthlyEntryListAdapter monthsListAdapter = new MonthlyEntryListAdapter(mContext, newEntryList);
-                        holder.recycler_tenDaysEntry.setLayoutManager(mLayoutManager);
-                        holder.recycler_tenDaysEntry.setAdapter(monthsListAdapter);
-                        monthsListAdapter.notifyDataSetChanged();
+                            holder.tvTotalWeight.setText(mContext.getString(R.string.Total_Weight) + ": \n" + String.format("%.2f", totalWeight) + " " + mContext.getString(R.string.Ltr));
+                            holder.tvTotalAmt.setText(mContext.getString(R.string.Total_Amount) + ": \n" + String.format("%.2f", totalPrice) + " " + mContext.getString(R.string.Rs));
+                            RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(mContext, 1);
+                            MonthlyEntryListAdapter monthsListAdapter = new MonthlyEntryListAdapter(mContext, newEntryList);
+                            holder.recycler_tenDaysEntry.setLayoutManager(mLayoutManager);
+                            holder.recycler_tenDaysEntry.setAdapter(monthsListAdapter);
+                            monthsListAdapter.notifyDataSetChanged();
+                        }
+
+
                     }
+
+
+
+//                    JSONArray mainJsonArray = new JSONArray(response);
+//
+//                    for (int i = 0; i < mainJsonArray.length(); i++) {
+//                        @SuppressLint("StaticFieldLeak") JSONObject jsonObject1 = mainJsonArray.getJSONObject(i);
+//                        JSONArray morningArray = jsonObject1.getJSONArray("morning");
+//                        if (morningArray.length() != 0) {
+//                            for (int j = 0; j < morningArray.length(); j++) {
+//                                JSONObject jsonObj = morningArray.getJSONObject(j);
+//                                entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), jsonObj.getString("id")
+//                                        , jsonObj.getString("customer_id"), jsonObj.getString("dairy_id"), jsonObj.getString("fat"), jsonObj.getString("snf")
+//                                        , jsonObj.getString("entry_date"), jsonObj.getString("per_kg_price"), jsonObj.getString("total_price")
+//                                        , jsonObj.getString("total_bonus"), jsonObj.getString("total_milk"), jsonObj.getString("shift")));
+//
+//                            }
+//                        } else {
+//                            entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), ""
+//                                    , "", "", ""
+//                                    , "", "", ""
+//                                    , "", "", "", "morning"));
+//
+//                        }
+//
+//                        JSONArray eveningArray = jsonObject1.getJSONArray("evening");
+//                        if (eveningArray.length() != 0) {
+//                            for (int j = 0; j < eveningArray.length(); j++) {
+//                                JSONObject jsonObj = eveningArray.getJSONObject(j);
+//                                entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), jsonObj.getString("id")
+//                                        , jsonObj.getString("customer_id"), jsonObj.getString("dairy_id"), jsonObj.getString("fat"), jsonObj.getString("snf")
+//                                        , jsonObj.getString("entry_date"), jsonObj.getString("per_kg_price"), jsonObj.getString("total_price")
+//                                        , jsonObj.getString("total_bonus"), jsonObj.getString("total_milk"), jsonObj.getString("shift")));
+//
+//                            }
+//                        } else {
+//                            entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), ""
+//                                    , "", "", "", "", ""
+//                                    , "", "", ""
+//                                    , "", "evening"));
+//                        }
+//                    }
+//
+//                    if (!entryListPojos.isEmpty()) {
+//                        holder.bottom2.setVisibility(View.VISIBLE);
+//                        double totalWeight = 0d, totalPrice = 0d;
+//                        ArrayList<MonthsEntryListPojo> newEntryList = new ArrayList<>();
+//
+//                        for (int i = 0; i < entryListPojos.size(); i++) {
+//                            if (!entryListPojos.get(i).total_milk.equals("")) {
+//                                totalWeight = totalWeight + Double.parseDouble(entryListPojos.get(i).total_milk);
+//                            }
+//                            if (!entryListPojos.get(i).total_price.equals("")) {
+//                                totalPrice = totalPrice + Double.parseDouble(entryListPojos.get(i).total_price);
+//                            }
+//                            newEntryList.add(new MonthsEntryListPojo(
+//                                    entryListPojos.get(i).entry_date, entryListPojos.get(i).id,
+//                                    entryListPojos.get(i).customer_id, entryListPojos.get(i).dairy_id,
+//                                    entryListPojos.get(i).fat,entryListPojos.get(i).snf, entryListPojos.get(i).entry_date2,
+//                                    entryListPojos.get(i).per_kg_price, entryListPojos.get(i).total_price,
+//                                    entryListPojos.get(i).total_bonus, entryListPojos.get(i).total_milk, entryListPojos.get(i).shift
+//                            ));
+//                        }
+//
+////                        if (mDay >= 1 && mDay <= 10) {
+////                            System.out.println("Days Data" + "getTenDaysData: " + "b/w 1-10");
+////
+////                            //  int size = mMaxDay * 2;
+////                            for (int i = 0; i < 20; i++) {
+////                                if (!entryListPojos.get(i).total_milk.equals("")) {
+////                                    totalWeight = totalWeight + Double.parseDouble(entryListPojos.get(i).total_milk);
+////                                }
+////                                if (!entryListPojos.get(i).total_price.equals("")) {
+////                                    totalPrice = totalPrice + Double.parseDouble(entryListPojos.get(i).total_price);
+////                                }
+////                                newEntryList.add(new MonthsEntryListPojo(
+////                                        entryListPojos.get(i).entry_date, entryListPojos.get(i).id,
+////                                        entryListPojos.get(i).customer_id, entryListPojos.get(i).dairy_id,
+////                                        entryListPojos.get(i).fat,entryListPojos.get(i).snf, entryListPojos.get(i).entry_date2,
+////                                        entryListPojos.get(i).per_kg_price, entryListPojos.get(i).total_price,
+////                                        entryListPojos.get(i).total_bonus, entryListPojos.get(i).total_milk, entryListPojos.get(i).shift
+////                                ));
+////                            }
+////
+////                        }
+////                        else if (mDay >= 11 && mDay <= 20) {
+////
+////                            System.out.println("==getTenDaysData: " + "b/w 11-20");
+////
+////                            for (int i = 21; i < 40; i++) {
+////                                if (!entryListPojos.get(i).total_milk.equals("")) {
+////                                    totalWeight = totalWeight + Double.parseDouble(entryListPojos.get(i).total_milk);
+////                                }
+////                                if (!entryListPojos.get(i).total_price.equals("")) {
+////                                    totalPrice = totalPrice + Double.parseDouble(entryListPojos.get(i).total_price);
+////                                }
+////                                newEntryList.add(new MonthsEntryListPojo(
+////                                        entryListPojos.get(i).entry_date, entryListPojos.get(i).id, entryListPojos.get(i).customer_id,
+////                                        entryListPojos.get(i).dairy_id, entryListPojos.get(i).fat,entryListPojos.get(i).snf, entryListPojos.get(i).entry_date2,
+////                                        entryListPojos.get(i).per_kg_price, entryListPojos.get(i).total_price, entryListPojos.get(i).total_bonus, entryListPojos.get(i).total_milk,
+////                                        entryListPojos.get(i).shift
+////                                ));
+////
+////                            }
+////
+////
+////                        }
+////                        else if (mDay >= 21 && mDay <= mMaxDay) {
+////
+////
+////                            for (int i = 41; i < entryListPojos.size(); i++) {
+////                                if (!entryListPojos.get(i).total_milk.equals("")) {
+////                                    totalWeight = totalWeight + Double.parseDouble(entryListPojos.get(i).total_milk);
+////                                }
+////                                if (!entryListPojos.get(i).total_price.equals("")) {
+////                                    totalPrice = totalPrice + Double.parseDouble(entryListPojos.get(i).total_price);
+////                                }
+////                                newEntryList.add(new MonthsEntryListPojo(
+////                                        entryListPojos.get(i).entry_date, entryListPojos.get(i).id, entryListPojos.get(i).customer_id,
+////                                        entryListPojos.get(i).dairy_id, entryListPojos.get(i).fat,entryListPojos.get(i).snf, entryListPojos.get(i).entry_date2,
+////                                        entryListPojos.get(i).per_kg_price, entryListPojos.get(i).total_price,
+////                                        entryListPojos.get(i).total_bonus,entryListPojos.get(i).total_milk, entryListPojos.get(i).shift
+////                                ));
+////                            }
+////                        }
+//
+//
+//                      //  mList.get(position).visibility = true;
+////                        holder.recyclerLayout.setVisibility(View.VISIBLE);
+////                        holder.layoutHeader.setVisibility(View.VISIBLE);
+////                        holder.bottom2.setVisibility(View.VISIBLE);
+//
+//                        holder.tvTotalWeight.setText(mContext.getString(R.string.Total_Weight) + ": \n" + String.format("%.2f", totalWeight) + " " + mContext.getString(R.string.Ltr));
+//                        holder.tvTotalAmt.setText(mContext.getString(R.string.Total_Amount) + ": \n" + String.format("%.2f", totalPrice) + " " + mContext.getString(R.string.Rs));
+//                        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(mContext, 1);
+//                        MonthlyEntryListAdapter monthsListAdapter = new MonthlyEntryListAdapter(mContext, newEntryList);
+//                        holder.recycler_tenDaysEntry.setLayoutManager(mLayoutManager);
+//                        holder.recycler_tenDaysEntry.setAdapter(monthsListAdapter);
+//                        monthsListAdapter.notifyDataSetChanged();
+//                    }
+//
+
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

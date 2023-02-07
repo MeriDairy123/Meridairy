@@ -273,7 +273,7 @@ public class DairyDeshboardFragment extends Fragment implements View.OnClickList
 
                     Calendar c = Calendar.getInstance();
                     @SuppressLint("SimpleDateFormat")
-                    SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+                    SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy",Locale.ENGLISH);
                     String formattedDate = df.format(c.getTime());
 
                     get20daysdata(mContext,true,formattedDate);
@@ -431,7 +431,7 @@ public class DairyDeshboardFragment extends Fragment implements View.OnClickList
 
                 Calendar c = Calendar.getInstance();
                 @SuppressLint("SimpleDateFormat")
-                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy",Locale.ENGLISH);
                 String formattedDate = df.format(c.getTime());
                 get20daysdata(mContext,true,formattedDate);
             }

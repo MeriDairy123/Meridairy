@@ -117,10 +117,10 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
                             showOfflineDailog();
                         } else {
 
-//                            appUpdateManager = AppUpdateManagerFactory.create(SplashActivity.this);
-//                           checkUpdate();
+                            appUpdateManager = AppUpdateManagerFactory.create(SplashActivity.this);
+                           checkUpdate();
 
-                            new checkPlayStoreVersion().execute();
+                            //new checkPlayStoreVersion().execute();
                         }
                     }
                 }, 100);
@@ -260,7 +260,6 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
 
     }
 
-
     private void showUpdateDialog() {
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle(mContext.getString(R.string.newUpdateAvailable))
@@ -325,6 +324,7 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
                         .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6")
                         .referrer("http://www.google.com")
                         .get();
+
                 if (document != null) {
                     Elements element = document.getElementsContainingOwnText("Current Version");
                     for (Element ele : element) {
@@ -376,7 +376,11 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
         appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
             if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE) {
 
-                showUpdateDialog();
+                FirstTime = "Yes";
+                if (!isFinishing()) {
+                    showUpdateDialog();
+                }
+
                // startUpdateFlow(appUpdateInfo);
             }
 //            else if  (appUpdateInfo.updateAvailability() == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS){
@@ -404,6 +408,7 @@ public class SplashActivity extends Activity implements ForceUpdateChecker.OnUpd
                 Toast.makeText(getApplicationContext(), "Update canceled by user! Result Code: " + resultCode, Toast.LENGTH_LONG).show();
             } else if (resultCode == RESULT_OK) {
                 Toast.makeText(getApplicationContext(), "Update success! Result Code: " + resultCode, Toast.LENGTH_LONG).show();
+                checkUpdate();
             } else {
                 Toast.makeText(getApplicationContext(), "Update Failed! Result Code: " + resultCode, Toast.LENGTH_LONG).show();
                 checkUpdate();

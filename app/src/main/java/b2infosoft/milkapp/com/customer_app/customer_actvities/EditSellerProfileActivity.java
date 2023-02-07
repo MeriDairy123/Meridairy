@@ -80,6 +80,7 @@ public class EditSellerProfileActivity extends Activity {
         ediAddress = findViewById(R.id.ediAddress);
 
         ediDairyOwnerMobileno = findViewById(R.id.ediDairyOwnerMobileno);
+        ediDairyOwnerMobileno.setEnabled(false);
         ediDairyOwnerName = findViewById(R.id.ediDairyOwnerName);
         btnUpdate = findViewById(R.id.btnUpdate);
         toolbar.setNavigationIcon(R.drawable.ic_nav_drawer);

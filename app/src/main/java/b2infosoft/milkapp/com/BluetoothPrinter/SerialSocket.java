@@ -188,8 +188,8 @@ public class SerialSocket implements Runnable {
         try {
             printLog("socket ", "init");
 
-            socket = device.createInsecureRfcommSocketToServiceRecord(BLUETOOTH_SPP);
-           // socket = device.createRfcommSocketToServiceRecord(BLUETOOTH_SPP);
+          //  socket = device.createInsecureRfcommSocketToServiceRecord(BLUETOOTH_SPP);
+            socket = device.createRfcommSocketToServiceRecord(BLUETOOTH_SPP);
             socket.connect();
             mSocket=socket;
             if(listener != null)

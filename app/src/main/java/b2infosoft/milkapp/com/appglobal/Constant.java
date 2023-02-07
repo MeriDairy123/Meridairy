@@ -313,7 +313,7 @@ public class Constant {
     public static final String getCustomerTransactionList = ApiUrl + "admin/get-user-transactions-new";
     //Seller Customer
     public static final String getSellerCustomerMonthlyData = ApiUrl + "admin/get-seller-month-wise-data-new";
-    public static final String getMonthMilkEntry = ApiUrl + "admin/get-monthly-milk-entry-new";
+    public static final String getMonthMilkEntry = ApiUrl + "admin/get-monthly-milk-entry-news";
     public static String getProductList2 = ApiUrl + "admin/get-customer-product?";
     public static String getCustomerProductDetailsListAPI = ApiUrl + "admin/get-customer-product-details";
 
