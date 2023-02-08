@@ -1,5 +1,6 @@
 package b2infosoft.milkapp.com.Dairy.ViewMilkEntry;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -13,13 +14,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
@@ -54,6 +59,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 import b2infosoft.milkapp.com.Dairy.ViewMilkEntry.Adapter.ViewEntryRecyclerViewAdapter;
@@ -61,6 +67,8 @@ import b2infosoft.milkapp.com.Dairy.ViewMilkEntry.Adapter.ViewEntryRecyclerViewA
 import b2infosoft.milkapp.com.Model.ViewEntryByDatePojo;
 import b2infosoft.milkapp.com.R;
 import b2infosoft.milkapp.com.appglobal.Constant;
+import b2infosoft.milkapp.com.customer_app.customer_adapters.DairyNameWithEntryAdapter;
+import b2infosoft.milkapp.com.customer_app.customer_pojo.DairyNamePojo;
 import b2infosoft.milkapp.com.sharedPreference.SessionManager;
 import b2infosoft.milkapp.com.useful.UtilityMethod;
 import b2infosoft.milkapp.com.webservice.NetworkTask;
@@ -68,7 +76,7 @@ import b2infosoft.milkapp.com.webservice.NetworkTask;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.getMonthList;
 
 
-public class ViewEntryByDateFragment extends Fragment implements View.OnClickListener {
+public class ViewEntryByDateFragment extends Fragment implements View.OnClickListener,AdapterView.OnItemSelectedListener {
 
     Context mContext;
     RecyclerView recyclerMorning, recyclerEvening;
@@ -95,7 +103,8 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
             totAmtEvening = 0.0, totMorningBonus = 0, totEveningBonus = 0;
 
     View view;
-    String FILE = "";
+    String FILE = "",SpinSelectedItem="";
+    Spinner sp_DairyList;
     private int mYear, mMonth, mDay;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -119,6 +128,7 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
         progressDialog.setMessage(mContext.getString(R.string.Printing_Please_Wait));
         progressDialog.setCancelable(false);
         toolbar = view.findViewById(R.id.toolbar);
+        sp_DairyList = view.findViewById(R.id.sp_pname);
         toolbar_title = toolbar.findViewById(R.id.toolbar_title);
         imgPrint = toolbar.findViewById(R.id.imgPrint);
         toolbar_title.setText(mContext.getString(R.string.viewEntry));
@@ -130,17 +140,18 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
         tv_MorningTotalAmt = viewMorning.findViewById(R.id.tvTotalAmt);
         tv_MorningTotalBonus = viewMorning.findViewById(R.id.tv_TotalBonus);
 
-        viewEvening = view.findViewById(R.id.viewEvening);
-
-        tvEveningTotalWeight = viewEvening.findViewById(R.id.tvTotalWeight);
-        tvEveningTotalFat = viewEvening.findViewById(R.id.tvTotalFat);
-        tvEveningTotalAmt = viewEvening.findViewById(R.id.tvTotalAmt);
-        tv_EveningTotalBonus = viewEvening.findViewById(R.id.tv_TotalBonus);
+//        viewEvening = view.findViewById(R.id.viewEvening);
+//
+//        tvEveningTotalWeight = viewEvening.findViewById(R.id.tvTotalWeight);
+//        tvEveningTotalFat = viewEvening.findViewById(R.id.tvTotalFat);
+//        tvEveningTotalAmt = viewEvening.findViewById(R.id.tvTotalAmt);
+//        tv_EveningTotalBonus = viewEvening.findViewById(R.id.tv_TotalBonus);
 
         date = view.findViewById(R.id.date);
         btnSubmit = view.findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(this);
         date.setOnClickListener(this);
+        sp_DairyList.setOnItemSelectedListener(this);
         Calendar c = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
         String formattedDate = df.format(c.getTime());
@@ -153,10 +164,11 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
             toolbar.setVisibility(View.GONE);
             imgRecieptPrint.setVisibility(View.VISIBLE);
         }
-        getCustomerEntryList(mContext, sessionManager.getValueSesion(SessionManager.KEY_UserID),
-                date.getText().toString().trim(), "both", "ViewEntryByDate");
+//        getCustomerEntryList(mContext, sessionManager.getValueSesion(SessionManager.KEY_UserID),
+//                date.getText().toString().trim(), "both", "ViewEntryByDate");
+//
 
-
+        setDataList();
         toolbarManage();
 
     }
@@ -211,13 +223,51 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
                 break;
             case R.id.btnSubmit:
                 if (!date.getText().toString().equals("")) {
-                    getCustomerEntryList(mContext, sessionManager.getValueSesion(SessionManager.KEY_UserID), date.getText().toString().trim(), "both", "ViewEntryByDate");
+                    getCustomerEntryListNew(mContext, sessionManager.getValueSesion(SessionManager.KEY_UserID), date.getText().toString().trim(), SpinSelectedItem, "ViewEntryByDate");
                 } else {
                     UtilityMethod.showAlertBox(mContext, mContext.getString(R.string.Please_Select_Date));
                 }
                 break;
         }
     }
+
+
+    public void setDataList() {
+
+        List<String> list = new ArrayList<String>();
+        list.add("both");
+        list.add("morning");
+        list.add("evening");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(mContext, R.layout.support_simple_spinner_dropdown_item, list);
+        sp_DairyList.setAdapter(adapter);
+
+        sp_DairyList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                SpinSelectedItem  = list.get(position);
+                String selectedname2  = list.get(position);
+                String selectedname1  = list.get(position);
+               // dairyposition = position;
+
+                getCustomerEntryListNew(mContext,sessionManager.getValueSesion(SessionManager.KEY_UserID),
+                        date.getText().toString().trim(), SpinSelectedItem, "ViewEntryByDate");
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
+
+
+    }
+
+
+
 
     private void openDialog() {
 
@@ -226,7 +276,9 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
         dialog.setContentView(R.layout.layout_pdf_options);
         dialog.show();
         Button btnPrintMorning = dialog.findViewById(R.id.btnPrintMorning);
+        btnPrintMorning.setText("PRINT PDF");
         Button btnPrintEvening = dialog.findViewById(R.id.btnPrintEvening);
+        btnPrintEvening.setVisibility(View.GONE);
 
         btnPrintMorning.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -245,7 +297,7 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
                         @Override
                         public void run() {
                             if (Pdfcreted.equals("true")) {
-                                createPDF(morningListPdf, "Morning");
+                                createPDF(morningListPdf, SpinSelectedItem);
                             }
                         }
                     }, 3000);
@@ -256,34 +308,34 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
             }
         });
 
-        btnPrintEvening.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-                if (eveningListPdf.size() != 0) {
-                    Totcount = eveningListPdf.size();
-
-                    Pdfcreted = "true";
-                    if (!progressDialog.isShowing()) {
-
-                        progressDialog.show();
-                    }
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (Pdfcreted.equals("true")) {
-                                createPDF(eveningListPdf, "Evening");
-                                // }
-                            }
-                        }
-                    }, 3000);
-                } else {
-                    //  Toast.makeText(mContext, mContext.getString(R.string.No_Data_of_Evening_List_to_Print),Toast.LENGTH_SHORT).show();
-
-                    UtilityMethod.showAlertBox(mContext, mContext.getString(R.string.No_Data_of_Evening_List_to_Print));
-                }
-            }
-        });
+//        btnPrintEvening.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                dialog.dismiss();
+//                if (eveningListPdf.size() != 0) {
+//                    Totcount = eveningListPdf.size();
+//
+//                    Pdfcreted = "true";
+//                    if (!progressDialog.isShowing()) {
+//
+//                        progressDialog.show();
+//                    }
+//                    new Handler().postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            if (Pdfcreted.equals("true")) {
+//                                createPDF(eveningListPdf, "Evening");
+//                                // }
+//                            }
+//                        }
+//                    }, 3000);
+//                } else {
+//                    //  Toast.makeText(mContext, mContext.getString(R.string.No_Data_of_Evening_List_to_Print),Toast.LENGTH_SHORT).show();
+//
+//                    UtilityMethod.showAlertBox(mContext, mContext.getString(R.string.No_Data_of_Evening_List_to_Print));
+//                }
+//            }
+//        });
 
 
     }
@@ -417,17 +469,24 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
             PdfPTable pTable = new PdfPTable(4);
             pTable.setWidthPercentage(100);
             pTable.getDefaultCell().setHorizontalAlignment(Element.ALIGN_CENTER);
-            if (session.equals("Morning")) {
-                pTable.addCell(new Phrase("Total Weight " + String.format("%.3f", totalWeightMorning), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
-                pTable.addCell(new Phrase("Avg Fat " + String.format("%.2f", avgFatMorning), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
-                pTable.addCell(new Phrase("Total Bonus " + String.format("%.2f", totMorningBonus), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
-                pTable.addCell(new Phrase("Total Amount " + String.format("%.2f", totAmtMorning), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
-            } else {
-                pTable.addCell(new Phrase("Total Weight " + String.format("%.3f", totalWeightEvening), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
-                pTable.addCell(new Phrase("Avg Fat " + String.format("%.2f", avgFatEvening), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
-                pTable.addCell(new Phrase("Total Bonus " + String.format("%.2f", totEveningBonus), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
-                pTable.addCell(new Phrase("Total Amount " + String.format("%.2f", totAmtEvening), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
-            }
+
+            pTable.addCell(new Phrase("Total Weight " + String.format("%.3f", totalWeightMorning), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+            pTable.addCell(new Phrase("Avg Fat " + String.format("%.2f", avgFatMorning), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+            pTable.addCell(new Phrase("Total Bonus " + String.format("%.2f", totMorningBonus), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+            pTable.addCell(new Phrase("Total Amount " + String.format("%.2f", totAmtMorning), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+
+
+//            if (session.equals("Morning")) {
+//                pTable.addCell(new Phrase("Total Weight " + String.format("%.3f", totalWeightMorning), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+//                pTable.addCell(new Phrase("Avg Fat " + String.format("%.2f", avgFatMorning), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+//                pTable.addCell(new Phrase("Total Bonus " + String.format("%.2f", totMorningBonus), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+//                pTable.addCell(new Phrase("Total Amount " + String.format("%.2f", totAmtMorning), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+//            } else {
+//                pTable.addCell(new Phrase("Total Weight " + String.format("%.3f", totalWeightEvening), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+//                pTable.addCell(new Phrase("Avg Fat " + String.format("%.2f", avgFatEvening), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+//                pTable.addCell(new Phrase("Total Bonus " + String.format("%.2f", totEveningBonus), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+//                pTable.addCell(new Phrase("Total Amount " + String.format("%.2f", totAmtEvening), new Font(Font.FontFamily.TIMES_ROMAN, 10, Font.NORMAL)));
+//            }
 
             document.add(pTable);
             // bottom line
@@ -553,12 +612,73 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
 
     }
 
+    public void getCustomerEntryListNew(final Context mContext, String dairy_id, String entry_date, String shift, final String fromWhere) {
+        morningListPdf = new ArrayList<>();
+        eveningListPdf = new ArrayList<>();
+        morngTotfat = 0d;
+        eveTotfat = 0;
+        totalAmt = 0;
+        totalWeightMorning = 0.0;
+        totalWeightEvening = 0.0;
+        avgFatMorning = 0.0;
+        avgFatEvening = 0.0;
+        totAmtMorning = 0.0;
+        totAmtEvening = 0.0;
+        totMorningBonus = 0;
+        totEveningBonus = 0;
+        NetworkTask caller = new NetworkTask(NetworkTask.POST_TASK, mContext, "Please wait...", true) {
+            @Override
+            public void handleResponse(String response) {
+
+                try {
+
+                    JSONObject jsonObject = new JSONObject(response);
+                    if (jsonObject.getString("status").equalsIgnoreCase("success")) {
+
+                      //  JSONObject jsnData = jsonObject.getJSONObject("data");
+
+                        JSONArray morningArray = jsonObject.getJSONArray("data");
+
+                        for (int j = 0; j < morningArray.length(); j++) {
+                            JSONObject morObj = morningArray.getJSONObject(j);
+                            morningListPdf.add(new ViewEntryByDatePojo(morObj.getString("id"),
+                                    morObj.getString("customer_id")
+                                    , morObj.getString("dairy_id"),
+                                    morObj.getString("entry_date"), morObj.getString("shift"),
+                                    morObj.getString("name"), morObj.getString("unic_customer"),
+                                    morObj.getDouble("fat"), morObj.getDouble("snf"),
+                                    morObj.getDouble("total_milk"), morObj.getDouble("per_kg_price"),
+                                    morObj.getDouble("total_bonus"), morObj.getDouble("total_price")));
+                            morngTotfat = morngTotfat + morObj.getDouble("fat");
+                            totalWeightMorning = totalWeightMorning + morObj.getDouble("total_milk");
+                            totAmtMorning = totAmtMorning + morObj.getDouble("total_price");
+                            totMorningBonus = totMorningBonus + morObj.getDouble("total_bonus");
+
+                        }
+                    }
+                    setCustomerEntryList();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
+        RequestBody body = new FormEncodingBuilder()
+                .addEncoded("dairy_id", dairy_id)
+                .addEncoded("entry_date", entry_date)
+                .addEncoded("type", strType)
+                .addEncoded("shift", shift).build();
+        caller.addRequestBody(body);
+        caller.execute(Constant.getViewEntryShiftWiseAPI);
+
+    }
+
     public void setCustomerEntryList() {
 
 
         viewMorning = view.findViewById(R.id.viewMorning);
         recyclerMorning = view.findViewById(R.id.recyclerViewMorning);
-        recyclerEvening = view.findViewById(R.id.recyclerEvening);
+     //   recyclerEvening = view.findViewById(R.id.recyclerEvening);
         tv_MorningTotalFat = view.findViewById(R.id.tvTotalFat);
         tv_MorningTotalWeight = view.findViewById(R.id.tvTotalWeight);
         tv_MorningTotalAmt = view.findViewById(R.id.tvTotalAmt);
@@ -582,21 +702,21 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
         tv_MorningTotalBonus.setText(mContext.getString(R.string.TOTAL_BONUS) + "\n" + mContext.getString(R.string.Rs) + " " + String.format("%.2f", totMorningBonus));
 
 
-        avgFatEvening = eveTotfat / eveningListPdf.size();
-        // tvEveningTotalFat.setText("Average Fat\n" + Math.ceil(avgFatEvening) + "%");
-        tvEveningTotalFat.setText(mContext.getString(R.string.Average_Fat) + "\n" + String.format("%.2f", avgFatEvening) + "%");
-        tvEveningTotalWeight.setText(mContext.getString(R.string.Total_Weight) + "\n" + String.format("%.3f", totalWeightEvening) + mContext.getString(R.string.Ltr));
-        tvEveningTotalAmt.setText(mContext.getString(R.string.Total_Amount) + "\n" + mContext.getString(R.string.Rs) + String.format("%.2f", totAmtEvening));
-        tv_EveningTotalBonus.setText(mContext.getString(R.string.TOTAL_BONUS) + "\n" + mContext.getString(R.string.Rs) + String.format("%.2f", totEveningBonus));
-        ViewEntryRecyclerViewAdapter2 customerListAdapter2 = new ViewEntryRecyclerViewAdapter2(mContext, eveningListPdf);
-        mLayoutManager = new LinearLayoutManager(mContext);
-        recyclerEvening.setLayoutManager(mLayoutManager);
-        recyclerEvening.setAdapter(customerListAdapter2);
-        customerListAdapter2.notifyDataSetChanged();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            recyclerEvening.setNestedScrollingEnabled(false);
-        }
-        recyclerEvening.setHasFixedSize(true);
+//        avgFatEvening = eveTotfat / eveningListPdf.size();
+//        // tvEveningTotalFat.setText("Average Fat\n" + Math.ceil(avgFatEvening) + "%");
+//        tvEveningTotalFat.setText(mContext.getString(R.string.Average_Fat) + "\n" + String.format("%.2f", avgFatEvening) + "%");
+//        tvEveningTotalWeight.setText(mContext.getString(R.string.Total_Weight) + "\n" + String.format("%.3f", totalWeightEvening) + mContext.getString(R.string.Ltr));
+//        tvEveningTotalAmt.setText(mContext.getString(R.string.Total_Amount) + "\n" + mContext.getString(R.string.Rs) + String.format("%.2f", totAmtEvening));
+//        tv_EveningTotalBonus.setText(mContext.getString(R.string.TOTAL_BONUS) + "\n" + mContext.getString(R.string.Rs) + String.format("%.2f", totEveningBonus));
+//        ViewEntryRecyclerViewAdapter2 customerListAdapter2 = new ViewEntryRecyclerViewAdapter2(mContext, eveningListPdf);
+//        mLayoutManager = new LinearLayoutManager(mContext);
+//        recyclerEvening.setLayoutManager(mLayoutManager);
+//        recyclerEvening.setAdapter(customerListAdapter2);
+//        customerListAdapter2.notifyDataSetChanged();
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            recyclerEvening.setNestedScrollingEnabled(false);
+//        }
+//        recyclerEvening.setHasFixedSize(true);
 
     }
 
@@ -614,4 +734,13 @@ public class ViewEntryByDateFragment extends Fragment implements View.OnClickLis
 
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

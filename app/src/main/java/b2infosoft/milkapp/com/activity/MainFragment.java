@@ -20,6 +20,7 @@ import b2infosoft.milkapp.com.sharedPreference.SessionManager;
 import b2infosoft.milkapp.com.useful.UtilityMethod;
 import in.arjsna.passcodeview.PassCodeView;
 
+import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_skip_ad;
 import static b2infosoft.milkapp.com.useful.ConnectivityReceiver.isConnected;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.PERMISSIONS;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.PERMISSION_ALL;
@@ -92,7 +93,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                             Log.d("Passcode", text);
                             //  Intent intent = new Intent(getActivity(), DeshboardActivity.class);
                             // startActivity(intent);
-                            if (isConnected()) {
+                            if (isConnected() && sessionManager.getValueSesion(Key_skip_ad).equals("1")) {
                                 UtilityMethod.goNextClass(mContext, Banner_activity.class);
 
                             } else {

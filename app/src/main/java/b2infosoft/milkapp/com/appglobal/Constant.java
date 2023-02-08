@@ -179,6 +179,7 @@ public class Constant {
     public static String getBuyMilkEntryAPI = ApiUrl + "admin/get-buy-milk-daily-entry";
 
     public static String getViewEntryBothShiftsAPI = ApiUrl + "admin/get-view-entry-both-shifts";
+    public static String getViewEntryShiftWiseAPI = ApiUrl + "admin/get-view-entry-shifts-wise";
     public static String addBuyMilkEntryAPI = ApiUrl + "admin/milk-entry-add?";
     public static String updateBuyMilkEntryAPI = ApiUrl + "admin/milk-entry-update?";
     public static String deleteBuyMilkEntryAPI = ApiUrl + "admin/milk-entry-delete?";
@@ -314,6 +315,7 @@ public class Constant {
     //Seller Customer
     public static final String getSellerCustomerMonthlyData = ApiUrl + "admin/get-seller-month-wise-data-new";
     public static final String getMonthMilkEntry = ApiUrl + "admin/get-monthly-milk-entry-news";
+    public static final String getMonthMilkEntryCustomerapp = ApiUrl + "admin/get-monthly-entry-customer-app";
     public static String getProductList2 = ApiUrl + "admin/get-customer-product?";
     public static String getCustomerProductDetailsListAPI = ApiUrl + "admin/get-customer-product-details";
 
@@ -336,6 +338,9 @@ public class Constant {
 
     public static String smstendayssettingsave = ApiUrl+"admin/sms-tendays-setting-save";
     public static String smstendayssettingget = ApiUrl+"admin/sms-tendays-setting-get";
+
+
+    public static String getBannerSkipOrNot = ApiUrl+"admin/get-banner-skip-setting";
 
 
 

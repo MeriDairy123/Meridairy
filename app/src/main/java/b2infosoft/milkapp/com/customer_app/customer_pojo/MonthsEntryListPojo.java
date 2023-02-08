@@ -65,49 +65,78 @@ public class MonthsEntryListPojo {
             public void handleResponse(String response) {
 
                 try {
-                    JSONArray mainJsonArray = new JSONArray(response);
-                    for (int i = 0; i < mainJsonArray.length(); i++) {
-                        JSONObject jsonObject1 = mainJsonArray.getJSONObject(i);
-
-                        JSONArray morningArray = jsonObject1.getJSONArray("morning");
-                        if (morningArray.length() != 0) {
-                            for (int j = 0; j < morningArray.length(); j++) {
-                                JSONObject jsonObj= morningArray.getJSONObject(j);
-                                entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), jsonObj.getString("id")
+                    JSONObject jsonObject = new JSONObject(response);
+                    if (jsonObject.getString("status").equals("success")){
+                        JSONArray mainJsonArray = jsonObject.getJSONArray("data");
+                        if(mainJsonArray.length()!=0){
+                            for (int i = 0; i < mainJsonArray.length(); i++) {
+                                JSONObject jsonObj= mainJsonArray.getJSONObject(i);
+                                entryListPojos.add(new MonthsEntryListPojo(jsonObj.getString("entry_date"), jsonObj.getString("id")
                                         , jsonObj.getString("customer_id"), jsonObj.getString("dairy_id"), jsonObj.getString("fat"), jsonObj.getString("snf")
                                         , jsonObj.getString("entry_date"), jsonObj.getString("per_kg_price"), jsonObj.getString("total_price")
                                         , jsonObj.getString("total_bonus"), jsonObj.getString("total_milk"), jsonObj.getString("shift")));
                             }
-
-                        } else {
-                            entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), ""
-                                    , "", "", "", "", "", "", "", "", "", "morning"));
-
+                        }else{
+                            entryListPojos.add(new MonthsEntryListPojo("", ""
+                                    , "", "", "", "", "", "", "", "", "", ""));
                         }
 
-                        JSONArray eveningArray = jsonObject1.getJSONArray("evening");
-                        if (eveningArray.length() != 0) {
-                            for (int j = 0; j < eveningArray.length(); j++) {
-                                JSONObject jsonObj = eveningArray.getJSONObject(j);
-                                entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), jsonObj.getString("id")
-                                        , jsonObj.getString("customer_id"), jsonObj.getString("dairy_id"), jsonObj.getString("fat"), jsonObj.getString("snf")
-                                        , jsonObj.getString("entry_date"), jsonObj.getString("per_kg_price"), jsonObj.getString("total_price")
-                                        , jsonObj.getString("total_bonus"), jsonObj.getString("total_milk"), jsonObj.getString("shift")));
+                        if (!entryListPojos.isEmpty()) {
+                            if (fromWhere.equals("EntryMilkActivity")) {
+                                ((MilkEntryActivity) mContext).setMonthEntryList(entryListPojos);
 
                             }
-                        } else {
-                            entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), ""
-                                    , "", "", ""
-                                    , "", "", ""
-                                    , "", "", "", "evening"));
                         }
-                    }
-                    if (!entryListPojos.isEmpty()) {
-                        if (fromWhere.equals("EntryMilkActivity")) {
-                            ((MilkEntryActivity) mContext).setMonthEntryList(entryListPojos);
 
-                        }
+
                     }
+
+//
+//                    JSONArray mainJsonArray = new JSONArray(response);
+//                    for (int i = 0; i < mainJsonArray.length(); i++) {
+//                        JSONObject jsonObject1 = mainJsonArray.getJSONObject(i);
+//
+//                        JSONArray morningArray = jsonObject1.getJSONArray("morning");
+//                        if (morningArray.length() != 0) {
+//                            for (int j = 0; j < morningArray.length(); j++) {
+//                                JSONObject jsonObj= morningArray.getJSONObject(j);
+//                                entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), jsonObj.getString("id")
+//                                        , jsonObj.getString("customer_id"), jsonObj.getString("dairy_id"), jsonObj.getString("fat"), jsonObj.getString("snf")
+//                                        , jsonObj.getString("entry_date"), jsonObj.getString("per_kg_price"), jsonObj.getString("total_price")
+//                                        , jsonObj.getString("total_bonus"), jsonObj.getString("total_milk"), jsonObj.getString("shift")));
+//                            }
+//
+//                        } else {
+//                            entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), ""
+//                                    , "", "", "", "", "", "", "", "", "", "morning"));
+//
+//                        }
+//
+//                        JSONArray eveningArray = jsonObject1.getJSONArray("evening");
+//                        if (eveningArray.length() != 0) {
+//                            for (int j = 0; j < eveningArray.length(); j++) {
+//                                JSONObject jsonObj = eveningArray.getJSONObject(j);
+//                                entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), jsonObj.getString("id")
+//                                        , jsonObj.getString("customer_id"), jsonObj.getString("dairy_id"), jsonObj.getString("fat"), jsonObj.getString("snf")
+//                                        , jsonObj.getString("entry_date"), jsonObj.getString("per_kg_price"), jsonObj.getString("total_price")
+//                                        , jsonObj.getString("total_bonus"), jsonObj.getString("total_milk"), jsonObj.getString("shift")));
+//
+//                            }
+//                        } else {
+//                            entryListPojos.add(new MonthsEntryListPojo(jsonObject1.getString("entry_date"), ""
+//                                    , "", "", ""
+//                                    , "", "", ""
+//                                    , "", "", "", "evening"));
+//                        }
+//                    }
+//                    if (!entryListPojos.isEmpty()) {
+//                        if (fromWhere.equals("EntryMilkActivity")) {
+//                            ((MilkEntryActivity) mContext).setMonthEntryList(entryListPojos);
+//
+//                        }
+//                    }
+
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -122,8 +151,8 @@ public class MonthsEntryListPojo {
                 .addEncoded("phone_number", sessionManager.getValueSesion(SessionManager.KEY_Mobile))
                 .build();
         caller.addRequestBody(body);
-        System.out.println("google>>>" + Constant.getMonthMilkEntry);
-        caller.execute(Constant.getMonthMilkEntry);
+        System.out.println("google>>>" + Constant.getMonthMilkEntryCustomerapp);
+        caller.execute(Constant.getMonthMilkEntryCustomerapp);
 
 
     }

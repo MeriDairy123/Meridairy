@@ -19,6 +19,7 @@ import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerC
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerImage;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerImageId;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerImagePath;
+import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_skip_ad;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.isNetworkAvaliable;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.showToast;
 
@@ -60,7 +61,7 @@ public class BeanOfferBanerList {
                     try {
                         final ArrayList<BeanOfferBanerList> offerList;
                         JSONObject jsonObject = new JSONObject(response);
-                        String imgpath = "", baner_image = "", custom_msg = "";
+                        String imgpath = "", baner_image = "", custom_msg = "",skip_status="";
                         if (jsonObject.getString("status").equalsIgnoreCase("success")) {
                             BaseImageUrl = jsonObject.getString("path");
                             imgpath = jsonObject.getString("path");
@@ -74,10 +75,12 @@ public class BeanOfferBanerList {
 
                                     baner_image = object.getString("image");
                                     custom_msg = object.getString("description");
+                                    skip_status = object.getString("skip_status");
                                     sessionManager.setValueSession(KEY_BannerImageId, String.valueOf(object.getInt("id")));
                                     sessionManager.setValueSession(KEY_BannerImagePath, imgpath);
                                     sessionManager.setValueSession(KEY_BannerImage, baner_image);
                                     sessionManager.setValueSession(KEY_BannerCustomText, custom_msg);
+                                    sessionManager.setValueSession(Key_skip_ad, skip_status);
 
                                 } else {
                                     offerList.add(new BeanOfferBanerList(

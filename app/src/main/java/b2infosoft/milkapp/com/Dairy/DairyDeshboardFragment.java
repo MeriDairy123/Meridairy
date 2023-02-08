@@ -608,10 +608,11 @@ public class DairyDeshboardFragment extends Fragment implements View.OnClickList
         dashboard_items.add(new Dashboard_item("sale_milk", mContext.getResources().getString(R.string.MILK_Sale), "", R.drawable.sale_milk, "#F67570"));
         dashboard_items.add(new Dashboard_item("customer", mContext.getResources().getString(R.string.Customers), "", R.drawable.ic_menu_customer, "#935E88"));
         dashboard_items.add(new Dashboard_item("payment_register", mContext.getResources().getString(R.string.payment) + "\n" + mContext.getResources().getString(R.string.Register), "", R.drawable.customer_entry, "#F39357"));
-        dashboard_items.add(new Dashboard_item("new_payment_register", mContext.getResources().getString(R.string.New) + " " + mContext.getResources().getString(R.string.payment) + "\n" + mContext.getResources().getString(R.string.Register), mContext.getResources().getString(R.string.New), R.drawable.customer_entry, "#F39357"));
+        dashboard_items.add(new Dashboard_item("new_payment_register", mContext.getResources().getString(R.string.New) + " " + mContext.getResources().getString(R.string.payment) + "\n" + mContext.getResources().getString(R.string.Register),"", R.drawable.customer_entry, "#F39357"));
         dashboard_items.add(new Dashboard_item("view_entry", mContext.getResources().getString(R.string.View_All_Entry), "", R.drawable.ic_view_all_entry, "#35CE8E"));
         dashboard_items.add(new Dashboard_item("view_entry_by_date", mContext.getResources().getString(R.string.viewEntry) + "\n" + mContext.getResources().getString(R.string.byDate), "", R.drawable.ic_view_entry, "#35CE8E"));
-        dashboard_items.add(new Dashboard_item("transaction", mContext.getResources().getString(R.string.transactions) + "\n" + mContext.getResources().getString(R.string.history), "", R.drawable.ic_wallet, "#5687BA"));
+        dashboard_items.add(new Dashboard_item("shopping", mContext.getResources().getString(R.string.Shopping), mContext.getResources().getString(R.string.New), R.drawable.ic_shop, "#35CE8E"));
+       // dashboard_items.add(new Dashboard_item("transaction", mContext.getResources().getString(R.string.transactions) + "\n" + mContext.getResources().getString(R.string.history), "", R.drawable.ic_wallet, "#5687BA"));
         dashboard_items.add(new Dashboard_item("sale_product", mContext.getResources().getString(R.string.Sale) + "\n" + mContext.getResources().getString(R.string.Products), "", R.drawable.ic_grain_bag, "#0698D4"));
         dashboard_items.add(new Dashboard_item("sale_purchase", mContext.getResources().getString(R.string.product_SaleAndBuy), "", R.drawable.ic_product_sale_buy, "#0698D4"));
         dashboard_items.add(new Dashboard_item("snf_chart", mContext.getResources().getString(R.string.Fat_SNF) + "\n" + mContext.getResources().getString(R.string.chart), "", R.drawable.ic_snf_chart, "#35CE8E"));
@@ -623,7 +624,7 @@ public class DairyDeshboardFragment extends Fragment implements View.OnClickList
         dashboard_items.add(new Dashboard_item("message", mContext.getResources().getString(R.string.message), userRemainingSMS + "", R.drawable.ic_message, "#5687BA"));
         dashboard_items.add(new Dashboard_item("notification", mContext.getResources().getString(R.string.Send) + " " + mContext.getResources().getString(R.string.notification), "", R.drawable.ic_notifications, "#5687BA"));
 
-        dashboard_items.add(new Dashboard_item("shopping", mContext.getResources().getString(R.string.Shopping), "", R.drawable.ic_shop, "#45464B"));
+        //dashboard_items.add(new Dashboard_item("shopping", mContext.getResources().getString(R.string.Shopping), "", R.drawable.ic_shop, "#45464B"));
         if (intplantId > 0) {
             dashboard_items.add(new Dashboard_item("plant_milk", mContext.getResources().getString(R.string.plantMilkCollection), "", R.drawable.ic_milk_home_marker, "#F67570"));
         }

@@ -18,7 +18,7 @@ import b2infosoft.milkapp.com.customer_app.customer_pojo.MonthsEntryListPojo;
  * Created by Choudhary on 17-Sept-19.
  */
 
-public class MonthlyEntryListAdapter extends RecyclerView.Adapter<MonthlyEntryListAdapter.MyViewHolder> {
+ public class MonthlyEntryListAdapter extends RecyclerView.Adapter<MonthlyEntryListAdapter.MyViewHolder> {
     public Context mContext;
 
     public ArrayList<MonthsEntryListPojo> mList = new ArrayList<>();

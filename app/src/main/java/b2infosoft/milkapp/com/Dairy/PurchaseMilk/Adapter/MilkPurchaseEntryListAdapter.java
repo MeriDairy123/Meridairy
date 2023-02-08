@@ -145,7 +145,7 @@ public class MilkPurchaseEntryListAdapter extends RecyclerView.Adapter<MilkPurch
             holder.imgType.setImageResource(R.drawable.ic_buffalo);
         }
 
-      //  setAnimation(holder.itemView, position);
+      //setAnimation(holder.itemView, position);
 
     }
 
@@ -362,20 +362,28 @@ public class MilkPurchaseEntryListAdapter extends RecyclerView.Adapter<MilkPurch
                         Log.d("TAG", "onMenuItemSelected25: "+mList.get(position).phone_number);
 
                         if (SharedPrefData.retriveDataFromPrefrence(mContext, "WhatsappBusinnesORWhatsapp").equals("on")) {
+
+                            String customerId = viewEntryPojoArrayList.get(position).customer_id;
+                            CustomerListPojo customerListPojo = db.getCustomerDetails(customerId);
+                            String MobileNo = customerListPojo.phone_number;
+
                             if (isPackageInstalled(mContext, "com.whatsapp.w4b")) {
-                                sendDataToWhatsappp("00", "com.whatsapp.w4b", smsContent);
+                                sendDataToWhatsappp(MobileNo, "com.whatsapp.w4b", smsContent);
                             } else {
                                 Toast.makeText(mContext, "Whatsapp Not Installed", Toast.LENGTH_SHORT).show();
                             }
 
                         } else {
+                            String customerId = viewEntryPojoArrayList.get(position).customer_id;
+                            CustomerListPojo customerListPojo = db.getCustomerDetails(customerId);
+                            String MobileNo = customerListPojo.phone_number;
+
                             if (isPackageInstalled(mContext, "com.whatsapp")) {
-                                sendDataToWhatsappp("00", "com.whatsapp", smsContent);
+                                sendDataToWhatsappp(MobileNo, "com.whatsapp", smsContent);
                             } else {
                                 Toast.makeText(mContext, "Whatsapp Not Installed", Toast.LENGTH_SHORT).show();
                             }
                         }
-
 
 //                        try {
 //                            Intent waIntent = new Intent(Intent.ACTION_SEND);

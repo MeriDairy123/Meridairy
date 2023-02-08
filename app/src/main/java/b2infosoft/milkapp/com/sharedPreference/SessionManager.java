@@ -49,7 +49,7 @@ public class SessionManager {
             KeyBuyMilkRateType = "rate_type", KeyBuyFatType = "fat_type_buy",
             Key_SaleRateType = "sale_rate_type", Key_SaleFateType = "sale_fat_type",
             Key_SaleFatPrice = "sale_milk_fat_price", Key_SaleCowFatPrice = "sale_cow_fat_price", Key_SaleBuffaloFatPrice = "sale_buffalo_fat_price",
-            KeyIsOnline = "is_online", Key_SendSmsSetting = "sms_setting_on_off", Key_PhoneSMSApp = "phone_sms_app",
+            KeyIsOnline = "is_online", Key_SendSmsSetting = "sms_setting_on_off", Key_PhoneSMSApp = "phone_sms_app",Key_skip_ad = "skip_ad",
             Key_BalancewWebSMS = "webSMsBalance", Key_smsAlwyasOn_ASk = "smsAlwyasOn_ASk", Key_SellerBhugtanSetting = "seller_bhugtan_setting", Key_FatYES = "fatkg_yes",
             Key_SNFYES = "snfkg_yes", Key_RateYES = "rate_yes", Key_BonusYES = "bonus_yes", Key_SendTotaLYES = "total_yes",
             Key_BuyMilkBonusRate = "buy_milk_bonus_rate", Key_SaleMilkBonusRate = "sale_milk_bonus_rate", Key_ChartType = "milk_chart_type", Key_PurchaseBy = "purchase_by",

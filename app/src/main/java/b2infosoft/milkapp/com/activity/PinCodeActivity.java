@@ -11,9 +11,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 import b2infosoft.milkapp.com.Dairy.PurchaseMilk.PurchaseMilkDateTimeFragment;
+import b2infosoft.milkapp.com.Database.DatabaseHandler;
+import b2infosoft.milkapp.com.Model.BeanOfferBanerList;
 import b2infosoft.milkapp.com.R;
 import b2infosoft.milkapp.com.appglobal.Constant;
 import b2infosoft.milkapp.com.sharedPreference.SessionManager;
@@ -21,8 +24,15 @@ import b2infosoft.milkapp.com.webservice.NetworkTask;
 
 import static b2infosoft.milkapp.com.MilkEntrySMS.MessageSend_Service_SIM_Web.getSMSBalance;
 import static b2infosoft.milkapp.com.Model.BeanOfferBanerList.getBannerOfferList;
+import static b2infosoft.milkapp.com.appglobal.Constant.BaseImageUrl;
 import static b2infosoft.milkapp.com.appglobal.Constant.FirstTime;
+import static b2infosoft.milkapp.com.appglobal.Constant.getBanerAPI;
+import static b2infosoft.milkapp.com.appglobal.Constant.getBannerSkipOrNot;
 import static b2infosoft.milkapp.com.appglobal.Constant.tempMobileNumber;
+import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerCustomText;
+import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerImage;
+import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerImageId;
+import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerImagePath;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KeyBuyFatType;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KeyBuyMilkRateType;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KeyIsOnline;
@@ -49,6 +59,7 @@ import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_SaleRat
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_SellMilkPrice;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_SendSmsSetting;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_User_Status;
+import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_skip_ad;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_smsAlwyasOn_ASk;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.ONE;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.YES;
@@ -56,7 +67,13 @@ import static b2infosoft.milkapp.com.sharedPreference.SessionManager.ZERO;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.PERMISSIONS;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.PERMISSION_ALL;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.hasPermissions;
+import static b2infosoft.milkapp.com.useful.UtilityMethod.isNetworkAvaliable;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.nullCheckFunction;
+import static b2infosoft.milkapp.com.useful.UtilityMethod.showToast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class PinCodeActivity extends AppCompatActivity {
 
@@ -79,6 +96,8 @@ public class PinCodeActivity extends AppCompatActivity {
             firstTimeLoadSetting();
         }
         initView();
+
+      //  Key_skip_ad;
 
     }
 
@@ -127,7 +146,11 @@ public class PinCodeActivity extends AppCompatActivity {
         // Check User Plan Expiry Status
         PurchaseMilkDateTimeFragment.checkUserPlanExpiryStatus(mContext);
 
+
     }
+
+
+
 
     public void setLocale(String lang) {
         Constant.LangLoaded = "Loaded";

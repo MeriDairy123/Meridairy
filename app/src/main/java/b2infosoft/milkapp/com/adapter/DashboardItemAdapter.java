@@ -56,7 +56,7 @@ public class DashboardItemAdapter extends RecyclerView.Adapter<DashboardItemAdap
         holder.item_category_name.setText(album.getName());
         holder.image_category.setImageResource(album.getImage());
         holder.tvCount.setText(album.getCount());
-        if (album.getId().equals("new_payment_register") ||
+        if (album.getId().equals("shopping") ||
                 album.getId().equals("member_ship") || album.getId().equals("message")) {
             holder.tvCount.setVisibility(View.VISIBLE);
 
@@ -76,8 +76,8 @@ public class DashboardItemAdapter extends RecyclerView.Adapter<DashboardItemAdap
 
         if (album.getName().equals(mContext.getResources().getString(R.string.Shopping))) {
 
-            holder.item_category_name.setTextColor(mContext.getResources().getColor(R.color.colorDarkOrange));
-            holder.image_category.setColorFilter(mContext.getResources().getColor(R.color.colorDarkOrange), android.graphics.PorterDuff.Mode.MULTIPLY);
+            holder.item_category_name.setTextColor(mContext.getResources().getColor(R.color.colorDashboardText));
+            holder.image_category.setColorFilter(mContext.getResources().getColor(R.color.colorDashboardIcon), android.graphics.PorterDuff.Mode.MULTIPLY);
         } else {
             holder.item_category_name.setTextColor(mContext.getResources().getColor(R.color.colorDashboardText));
             holder.image_category.setColorFilter(mContext.getResources().getColor(R.color.colorDashboardIcon), android.graphics.PorterDuff.Mode.MULTIPLY);

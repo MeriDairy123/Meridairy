@@ -23,6 +23,7 @@ import b2infosoft.milkapp.com.sharedPreference.SessionManager;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerCustomText;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerImage;
 import static b2infosoft.milkapp.com.sharedPreference.SessionManager.KEY_BannerImagePath;
+import static b2infosoft.milkapp.com.sharedPreference.SessionManager.Key_skip_ad;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.PERMISSIONS;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.PERMISSION_ALL;
 import static b2infosoft.milkapp.com.useful.UtilityMethod.hasPermissions;
@@ -58,8 +59,8 @@ public class Banner_activity extends Activity {
         if (!hasPermissions(this, PERMISSIONS)) {
             ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
         }
-
         initView();
+
     }
 
     private void initView() {

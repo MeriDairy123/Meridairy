@@ -3,6 +3,8 @@ package b2infosoft.milkapp.com.useful;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
+import static b2infosoft.milkapp.com.useful.UtilityMethod.openFolder;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -39,7 +41,7 @@ public class InstallAPK extends AsyncTask<String, Integer, String> {
     int status = 0;
     String path = "";
     File internalStorageDirectory;
-    File myDir;
+    File files;
     File outputFile;
     private Context mContext;
 
@@ -128,8 +130,9 @@ public class InstallAPK extends AsyncTask<String, Integer, String> {
             if (mPDialog != null)
                 mPDialog.dismiss();
 
-            installApk(PATH);
-            OpenNewVersion(PATH);
+            this.files = file;
+//            installApk(PATH);
+//            OpenNewVersion(PATH);
 
         } catch (FileNotFoundException fnfe) {
            // status = 1;
@@ -155,10 +158,14 @@ public class InstallAPK extends AsyncTask<String, Integer, String> {
     public void onPostExecute(String result) {
         if (mPDialog != null)
             mPDialog.dismiss();
-        if (result != null)
+        if (result != null){
             Toast.makeText(mContext, "Download error: " + result, Toast.LENGTH_LONG).show();
-        else
+        }
+        else{
             Toast.makeText(mContext, "File Downloaded", Toast.LENGTH_SHORT).show();
+            openFolder(mContext, files.getAbsolutePath());
+        }
+
 
     }
 
@@ -178,7 +185,6 @@ public class InstallAPK extends AsyncTask<String, Integer, String> {
 
 
             if (checkPermission()) {
-
                 File file = new File(PATH + "/MeriDairySMSApp.apk");
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 if (Build.VERSION.SDK_INT >= 24) {
